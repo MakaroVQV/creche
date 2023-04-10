@@ -14,7 +14,7 @@
     {!! Form::email('email',$usuario->email) !!}<br>
     
     {{ Form::label('password', 'Senha:')}}<br>
-    {{ Form::text('password',$usuario->password)}}<br>
+    {{ Form::password('password')}}<br>
 
     {!! Form::label('profile', 'Perfil') !!}<br>
     {!! Form::select('profile', ['admin' => 'Admin', 'usuario' => 'usuario' , 'responsavel' => 'responsavel' ]) !!}<br>

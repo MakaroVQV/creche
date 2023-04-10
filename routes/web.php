@@ -44,3 +44,7 @@ Route::delete('/usuarios/{id}', [UserController::class, 'destroy'] )
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

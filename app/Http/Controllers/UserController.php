@@ -79,14 +79,15 @@ class UserController extends Controller
         $validated  = $request->validate([
             'name'      => 'required',
             'email'     => 'required|email',
-            'password'  => 'required',
-            'profile'   => 'required',
+            //'password'  => 'required',
+            //'profile'   => 'required',
         ]);
 
             $user = User::find($id);
             $user->name         = $request->input('name');
             $user->email        = $request->input('email');
-            $user->password     = ($request->input('password'));
+            //if (trim($request))
+            $user->password     = Hash::make($request->input('password'));
             $user->profile      = $request->input('profile');
             $user->save();
             
