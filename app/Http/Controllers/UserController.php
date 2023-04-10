@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\models\User;
+use Illuminate\Support\Facades\Hash;
 class UserController extends Controller
 {
     /**
@@ -11,7 +12,7 @@ class UserController extends Controller
     public function index()
     {
 
-        $users= User::orderby('nome')->get();
+        $users= User::orderby('name')->get();
         return view('usuarios.index',['users'=>$users]);
     }
 
@@ -30,7 +31,7 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $validated  = $request->validate([
-        'nome'      => 'required',
+        'name'      => 'required',
         'email'     => 'required|email',
         'password'  => 'required',
         'profile'   => 'required'
@@ -40,9 +41,9 @@ class UserController extends Controller
 
 
         $user = new User;
-        $user->nome = $request->input('nome');
+        $user->name = $request->input('name');
         $user->email = $request->input('email');
-        $user->password = ($request->input('password'));
+        $user->password = Hash::make($request->input('password'));
         $user->profile = $request->input('profile');
 
         $user->save();
@@ -76,14 +77,14 @@ class UserController extends Controller
         
 
         $validated  = $request->validate([
-            'nome'      => 'required',
+            'name'      => 'required',
             'email'     => 'required|email',
             'password'  => 'required',
             'profile'   => 'required',
         ]);
 
             $user = User::find($id);
-            $user->nome         = $request->input('nome');
+            $user->name         = $request->input('name');
             $user->email        = $request->input('email');
             $user->password     = ($request->input('password'));
             $user->profile      = $request->input('profile');

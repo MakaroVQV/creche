@@ -7,8 +7,8 @@
     <h1>Criar Usuários</h1>
     
     {!! Form::open(['url' => 'usuarios/create']) !!}<br>
-    {{ Form::label('nome', 'Nome:')}}<br>
-    {{ Form::text('nome')}}<br>
+    {{ Form::label('name', 'Nome:')}}<br>
+    {{ Form::text('name')}}<br>
     
     {!! Form::label('email', 'Email') !!}<br>
     {!! Form::email('email') !!}<br>
