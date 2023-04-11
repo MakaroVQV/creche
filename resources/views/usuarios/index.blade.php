@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Visualizar Usuários</title>
-</head>
-<body>
+@extends('adminlte::page')
+
+@section('content')
+
     <h1>Visualizar Usuários</h1>
     <a href="{{ url('usuarios/create')}}">CRIAR</a>
     @if (session('status'))
@@ -23,15 +21,15 @@
             <tr>
                 <td>{{ $user->name }}</td>
                 <td>
-                    <a href="{{ url('usuarios/'. $user->id) }}">Vizualizar </a>
-                    <a href="{{ url('usuarios/'. $user->id . '/edit') }}">Editar </a>
+                    <a class="btn btn-primary" href="{{ url('usuarios/'. $user->id) }}">Vizualizar </a>
+                    <a class="btn btn-warning" href="{{ url('usuarios/'. $user->id . '/edit') }}">Editar </a>
                     {!! Form::open(['method' => 'DELETE','route' =>['usuarios.destroy', $user->id],'style'=>'display:inline']) !!}
-                    {{Form::submit('Excluir')}}
+                    {{Form::submit('Excluir', ['class' => 'btn btn-danger'])}}
                     {!! Form::close() !!}
                 </td>
             </tr>
             @endforeach
         </tbody>
     </table>
-</body>
-</html>
+
+@endsection

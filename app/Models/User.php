@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'profile'
     ];
 
     /**
@@ -43,4 +44,14 @@ class User extends Authenticatable
     ];
 
     protected $table='users';
+
+/**
+     * Check if user is an admin.
+     *
+     * @return bool
+     */
+    public function isAdmin()
+    {
+        return $this->profile === 'admin';
+    }
 }
