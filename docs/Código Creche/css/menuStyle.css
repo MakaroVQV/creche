@@ -1,0 +1,156 @@
+    body{
+    background-color:#F5F5F5;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+/* Estilos para o conteúdo do documento quando o menu está expandido */
+body.menu-expandido {
+  margin-left: 200px;
+  /* Estilos adicionais para o conteúdo do documento quando o menu está expandido */
+}
+
+p{
+  font-family: arial;
+}
+
+    .container {
+    background-color:#F5F5F5;
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 50px;
+    margin-top: 30px;
+    white-space: nowrap;
+    justify-content: space-between;
+}
+
+  #img-1 {
+    padding-left: 20px;
+    max-width: 100px;
+    max-height: 200px;
+    cursor: pointer;
+  }
+
+  #img-1:checked + #menu-lateral {
+    left: 0;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+  
+
+  #menu-lateral {
+    border-radius: 10px;
+    border-right: 1px solid #009CDE;
+    position: fixed;
+    top: 0;
+    left: -450px; /* Inicialmente escondido fora da tela */
+    width: 250px;
+    height: 100vh;
+    background-color: rgba(240, 240, 240, 0.0); /* Define a cor de fundo com transparência */
+    transition: left 1.2s ease; /* Adicione transição para animação suave */
+  }
+  .esconder{
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+  }
+
+
+  #img-2 {
+    padding-left: 30px;
+    max-width: 100px;
+    max-height: 200px;
+  }
+
+  #img-3:last-child {
+      margin-right: 0; /* Remova a margem direita da terceira imagem */
+      margin-left: auto; /* Alinhe a terceira imagem à extrema direita */
+      width: 48px;
+      height: 48px;
+      top: 40px;
+    
+}
+
+.texto{
+  text-align: center;
+  margin-right: 0; /* Remova a margem direita da terceira imagem */
+  margin-left: auto; /* Alinhe a terceira imagem à extrema direita */
+  margin-top: 15px;
+  padding-right:15px;
+}
+
+  h5 {
+  font-family: arial;
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.posters{
+  margin: auto;
+  width: 520px;
+  margin-top: 40px;
+  border-top: 1px solid #009CDE;
+  border-bottom: 1px solid #009CDE;
+  border-radius: 12px;
+}
+
+.titulo-1 {
+  width:330px;
+  display: flex; /* Cria um layout flexbox */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+}
+
+.titulo-2 {
+  width:360px;
+  display: flex; /* Cria um layout flexbox */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+}
+
+.titulo-3 {
+  width:340px;
+  display: flex; /* Cria um layout flexbox */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+}
+
+.titulo-1 img, .titulo-2 img, .titulo-3 img{
+  margin-left: 20px;
+  margin-right: auto;
+  height: 30px;
+}
+
+.titulo-1 p{
+  justify-content: center;
+}
+
+.imagem-centro img {
+  width: 520px; /* Largura desejada para a imagem */
+  height: auto; /* Altura ajustada automaticamente para manter a proporção */
+}
+
+.curtir{
+  justify-content: center;
+  align-items: center;
+  display:flex
+}
+.curtir img{
+  cursor: pointer;
+  width: auto;
+  height: auto;
+}
+
+.decoracao{
+      position:absolute;
+      top: calc(30% - 50px);
+      left: calc(90% - 50px);
+      width: 700px;
+      height: 700px;
+      background-color: #009CDE;
+      border-radius: 50%;}
+      

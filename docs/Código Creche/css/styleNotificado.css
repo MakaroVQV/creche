@@ -1,0 +1,88 @@
+body * {
+    overflow: auto;
+  }
+
+.img{
+  width: 5rem;
+  float: left; /* Define a imagem para flutuar à esquerda */
+  padding-bottom: 3rem;
+}
+
+h5{
+  margin-left: 115px;
+  font-family: arial;
+  margin-top: 10px;
+}
+
+a{
+  font-family: arial;
+}
+
+.container {
+  white-space: nowrap;
+  margin-top: 4rem;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Para evitar que a imagem vaze para fora da caixa */
+  width: 300px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+  #form_2{
+    margin-left: auto;
+    margin-right: auto;
+    width: 35rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    height: 22rem;
+    background-color:#F5F5F5;
+    overflow: hidden;
+  }
+
+  .adm{
+    margin-top: 40px;
+    text-align: left;
+    font-family: arial;
+    margin-left: 30px;
+  }
+
+  .principal{
+    padding-bottom: 100px;
+    margin-top: 40px;
+    text-align: left;
+    font-family: arial;
+    margin-left: 30px;
+    margin-right: 50px;
+  }
+  
+  .final{
+    text-align: left;
+    font-family: arial;
+    margin-left: 30px;
+    margin-top: -55px;
+  }
+
+  .entrar{
+    color: #3BA12F;
+    font-family: arial;
+    text-decoration: none;
+  }
+
+  span {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .path{
+    width: 10rem;
+      position: absolute;
+      bottom: 20;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+
