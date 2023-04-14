@@ -1,6 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
+@extends('adminlte::page')
+
+@section('content')
+
     <title>Visualizar Usuários</title>
 </head>
 <body>
@@ -25,4 +26,5 @@
     {!! Form::close() !!}
 
 </body>
-</html>
+
+@endsection

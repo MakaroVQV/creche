@@ -1,5 +1,7 @@
-<!DOCTYPE html>
-<html>
+@extends('adminlte::page')
+
+@section('content')
+
 <head>
     <title>Visualizar Usuários</title>
 </head>
@@ -11,4 +13,4 @@
 <b>Perfil:</b>   {{$usuario->profile}} <br>
 
 </body>
-</html>
+@endsection
