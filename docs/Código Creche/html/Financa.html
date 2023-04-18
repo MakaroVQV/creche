@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styleFinanca.css">
+    <title>Creche</title>
+</head>
+<body>
+  <!-- Menu acima -->
+        <div class="container">
+          <div class="topo-1">
+         <img src="../imagens/icon menu.png" id="img-1">
+        </div>
+          <!-- Menu lateral oculto por padrão -->
+  <div id="menu-lateral">
+    <!-- Conteúdo do menu lateral -->
+    <div class="esconder">
+    <img src="../imagens/seta-azul.png" alt="esconder">
+    </div>
+
+
+     <!-- Fim do conteúdo do menu lateral -->
+  </div>
+          <div class="topo-2"><img src="../imagens/creche.png" id="img-2"></div>
+          <div class="texto"><h5><strong>Aluno(a)</strong></h5></div>
+          <div class="topo-3"><img src="../imagens/icon aluna.png" id="img-3"></div>
+    </div>
+    <div class="Financa">
+        <!---pendentes, pagas, dados--->
+        <ul>
+            <li>Calendario</li>
+            <li>Financeiro</li>
+            <li>Pendentes</li>
+            <li>Pagas</li>
+            <li>Dados</li>
+        </ul>
+    </div>
+    <div class="topnav" id="myTopnav">
+      <a href="#home" class="active">Pedentes</a>
+      <a href="#news" class="active">Pagas</a>
+      <a href="#contact" class="active">Dados</a>
+      <a href="#about">About</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <script>
+        document.getElementById('img-1').addEventListener('click', function() {
+        document.getElementById('menu-lateral').style.left = '0'; /* Mostra o menu lateral quando a imagem é clicada */
+        });
+      </script>
+      </body>
