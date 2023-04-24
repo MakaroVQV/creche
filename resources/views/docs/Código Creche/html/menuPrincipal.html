@@ -8,27 +8,34 @@
     <title>Creche</title>
 </head>
 <body>
-  <!-- Menu acima -->
-        <div class="container">
-          <div class="topo-1">
-         <img src="../imagens/icon menu.png" id="img-1">
-        </div>
-          <!-- Menu lateral oculto por padrão -->
-  <div id="menu-lateral">
-    <!-- Conteúdo do menu lateral -->
-    <div class="esconder">
-    <img src="../imagens/seta-azul.png" alt="esconder">
-    </div>
-
-
-
-
-     <!-- Fim do conteúdo do menu lateral -->
+  <!-- Menu acima-->
+<div class="main">
+<navbar class="navbar">
+  <div class="esquerda-nav">
+    <div onclick="openNav()"><img src="../imagens/icon menu.png" class="menu-azul"></div>
+    <div><img src="../imagens/creche.png" class="logo-navbar"></div>
   </div>
-          <div class="topo-2"><img src="../imagens/creche.png" id="img-2"></div>
-          <div class="texto"><h5><strong>Aluno(a)</strong></h5></div>
-          <div class="topo-3"><img src="../imagens/icon aluna.png" id="img-3"></div>
-    </div>
+  <div class="direita-nav">
+    <div class="texto-user"><h5><strong>Aluno(a)</strong></h5></div>
+    <div><img src="../imagens/icon aluna.png" class="logo-user"></div>
+  </div>
+</navbar>
+
+  <!--Menu lateral-->
+<div id="mySidenav" class="sidenav">
+  <div class="side">
+    <a href="javascript:void(0)" onclick="closeNav()"><img src="../imagens/icon menu.png" class="menu-cinza"></a>
+    <div><img src="../imagens/creche.png" class="logo-sidebar"></div>
+  </div>
+  <a href="javascript:void(0)" onclick="closeNav()"><img src="../imagens/seta-azul.png" class="seta-azul"></a>
+  <div class="iten-menu">
+    <a href="#"><img src="../imagens/icon calendario cinza.png"><p>Calendario</p></a>
+    <a href="financa.html"><img src="../imagens/icon financeiro cinza.png"><p>Financeiro</p></a>
+    <a href="menuPrincipal.html"><img src="../imagens/icon home azul.png"><p>Home</p></a>
+    <a href="#"><img src="../imagens/icon saude cinza.png"><p>Saude</p></a>
+    <a href="#"><img src="../imagens/icon user cinza.png"><p>Perfil</p></a>
+  </div>
+</div>
 <!-- Posters -->
   <div class="posters">
     <div class="titulo-1">
@@ -76,10 +83,23 @@
         </div>
         </div>
       </div>
-      <div class="decoracao"></div>
+</div> 
       <script>
-        document.getElementById('img-1').addEventListener('click', function() {
-        document.getElementById('menu-lateral').style.left = '0'; /* Mostra o menu lateral quando a imagem é clicada */
-        });
+/* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+function openNav() {
+  document.getElementById("mySidenav").style.width = "300px";
+  document.getElementById("main").style.marginLeft = "300PX";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.0)";
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+  document.body.style.backgroundColor = "white";
+}
+        // // document.getElementById('img-1').addEventListener('click', function() {
+        // // document.getElementById('menu-lateral').style.left = '0'; 
+        // });
       </script>
 </body>
