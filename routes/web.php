@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ImagemController;
+use App\Http\Controllers\FinancaController;
+use App\Http\Controllers\NotificadoController;
 use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
@@ -13,9 +15,17 @@ Route::get('/', function () {
 Route::get('/usuarios', [UserController::class, 'index'] )
 ->name('usuarios.index');
 
+//------------------------------ Financa ------------------------------//
 
+Route::get('/financa', [FinancaController::class, 'index'])
+->name('financa');
 
+//------------------------------ notificado ------------------------------//
 
+Route::get('/notificado', [NotificadoController::class, 'index'])
+->name('notificado');
+
+//------------------------------ Usuarios ------------------------------//
 
 //create
 Route::get('/usuarios/create', [UserController::class, 'create'] )
