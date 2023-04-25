@@ -15,6 +15,7 @@ Route::get('/usuarios', [UserController::class, 'index'] )
 
 
 
+
 //create
 Route::get('/usuarios/create', [UserController::class, 'create'] )
 ->name('usuarios.create');
@@ -39,6 +40,10 @@ Route::put('/usuarios/{id}', [UserController::class, 'update'] )
 Route::delete('/usuarios/{id}', [UserController::class, 'destroy'] )
 ->name('usuarios.destroy');
 
+
+//img controller
+
+Route::get('/imagem/{nome}', 'ImagemController@exibir')->name('imagem.exibir');
 
 
 Auth::routes();
