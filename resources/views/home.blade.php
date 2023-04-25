@@ -1,19 +1,19 @@
-@extends('layouts.app')
-
-@section('content')
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/menuStyle.css">
+
+    <link rel="stylesheet" href="/resources/views/css/menuStyle.css">
+    <link rel="stylesheet" href="{{ asset('/resources/views/css/menuStyle.css') }}">
+
     <title>Creche</title>
 </head>
 
 <body>
     <!-- Menu acima -->
     <div class="container">
-        <div class="topo-1"><img src="../imagens/icon menu.png" id="img-1"></div>
+        <div class="topo-1"><img href="{{'/ imagens/icon menu.png'}}" id="img-1"></div>
         <div class="topo-2"><img src="../imagens/creche.png" id="img-2"></div>
         <div class="texto">
             <h5><strong>Aluno(a)</strong></h5>
@@ -78,4 +78,4 @@
         <script src="../script.js"></script>
     </div>
 </body>
-@endsection
+
