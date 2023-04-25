@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ImagemController;
 use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
@@ -43,7 +44,7 @@ Route::delete('/usuarios/{id}', [UserController::class, 'destroy'] )
 
 //img controller
 
-Route::get('/imagem/{nome}', 'ImagemController@exibir')->name('imagem.exibir');
+Route::get('/imagem/{nome}', [ImagemController::class,'exibir' ])->name('imagem.exibir');
 
 
 Auth::routes();

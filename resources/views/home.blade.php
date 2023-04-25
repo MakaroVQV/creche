@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -13,8 +15,8 @@
 <body>
     <!-- Menu acima -->
     <div class="container">
-        <div class="topo-1"><img href="{{'/ imagens/icon menu.png'}}" id="img-1"></div>
-        <div class="topo-2"><img src="../imagens/creche.png" id="img-2"></div>
+        <div class="topo-2"><img src="{{ route('imagem.exibir', ['nome' => 'icon menu.png']) }}" alt="Imagem"></div>
+        <div class="topo-2"><img src="{{ route('imagem.exibir', ['nome' => 'creche.png']) }}" alt="Imagem"></div>
         <div class="texto">
             <h5><strong>Aluno(a)</strong></h5>
         </div>
@@ -79,3 +81,4 @@
     </div>
 </body>
 
+</html>
