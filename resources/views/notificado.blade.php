@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-    <img src="{{ route('imagem.exibir', ['nome' => 'creche.png']) }}" class="img"> <h5>JARDIM DOS SONHOS</h5>
+    <img src="{{ url('/imagens/creche.png') }}" class="img"> <h5>JARDIM DOS SONHOS</h5>
 </div>
 
     <!-- box -->
@@ -24,6 +24,6 @@
             <a><strong>Já tem uma conta? </strong></a><a href="index.html" class="entrar"><strong>Entrar</a></strong>
         </span>
     </form>
-    <img src="{{ route('imagem.exibir', ['nome' => 'new path.png']) }}" class="path">
+    <img src="{{ url('/imagens/new path.png') }}" class="path">
 </body>
 </html>
