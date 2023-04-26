@@ -12,43 +12,43 @@
 <div class="main">
 <navbar class="navbar">
   <div class="esquerda-nav">
-    <div onclick="openNav()"><img src="../imagens/icon menu.png" class="menu-azul"></div>
-    <div><img src="../imagens/creche.png" class="logo-navbar"></div>
+    <div onclick="openNav()"><img src="{{ route('imagem.exibir', ['nome' => 'icon menu.png']) }}" class="menu-azul"></div>
+    <div><img src="{{ route('imagem.exibir', ['nome' => 'creche.png']) }}" class="logo-navbar"></div>
   </div>
   <div class="direita-nav">
     <div class="texto-user"><h5><strong>Aluno(a)</strong></h5></div>
-    <div><img src="../imagens/icon aluna.png" class="logo-user"></div>
+    <div><img src="{{ route('imagem.exibir', ['nome' => 'icon aluna.png']) }}" class="logo-user"></div>
   </div>
 </navbar>
 
   <!--Menu lateral-->
 <div id="mySidenav" class="sidenav">
   <div class="side">
-    <a href="javascript:void(0)" onclick="closeNav()"><img src="../imagens/icon menu.png" class="menu-cinza"></a>
-    <div><img src="../imagens/creche.png" class="logo-sidebar"></div>
+    <a href="javascript:void(0)" onclick="closeNav()"><img src="{{ route('imagem.exibir', ['nome' => 'icon menu.png']) }}" class="menu-cinza"></a>
+    <div><img src="{{ route('imagem.exibir', ['nome' => 'creche.png']) }}" class="logo-sidebar"></div>
   </div>
-  <a href="javascript:void(0)" onclick="closeNav()"><img src="../imagens/seta-azul.png" class="seta-azul"></a>
+  <a href="javascript:void(0)" onclick="closeNav()"><img src="{{ route('imagem.exibir', ['nome' => 'seta-azul.png']) }}" class="seta-azul"></a>
   <div class="iten-menu">
-    <a href="#"><img src="../imagens/icon calendario cinza.png">Calendario</a>
-    <a href="#"><img src="../imagens/icon financeiro cinza.png">Financeiro</a>
-    <a href="menuPrincipal.html"><img src="../imagens/icon home azul.png">Home</a>
-    <a href="#"><img src="../imagens/icon saude cinza.png">Saude</a>
-    <a href="#"><img src="../imagens/icon user cinza.png">Perfil</a>
+    <a href="#"><img src="{{ route('imagem.exibir', ['nome' => 'icon calendario cinza.png']) }}">Calendario</a>
+    <a href="#"><img src="{{ route('imagem.exibir', ['nome' => 'icon financeiro cinza.png']) }}">Financeiro</a>
+    <a href="menuPrincipal.html"><img src="{{ route('imagem.exibir', ['nome' => 'icon home azul.png']) }}">Home</a>
+    <a href="#"><img src="{{ route('imagem.exibir', ['nome' => 'icon saude cinza.png']) }}">Saude</a>
+    <a href="#"><img src="{{ route('imagem.exibir', ['nome' => 'icon menu.png']) }}">Perfil</a>
   </div>
 </div>
   <!--Ficha, Atestado e cardápio-->
 
     <div class="invisible">
     <div class="cards">
-        <img src="../imagens/icon ficha medica.png"> <p>Ficha Médica</p>
+        <img src="{{ route('imagem.exibir', ['nome' => 'icon ficha medica.png']) }}"> <p>Ficha Médica</p>
     </div>
 
     <div class="cards">
-      <img src="../imagens/icon atestados.png"> <p>Atestado</p>
+      <img src="{{ route('imagem.exibir', ['nome' => 'icon atestados.png']) }}"> <p>Atestado</p>
     </div>
 
     <div class="cards">
-      <img src="../imagens/icon cardapio.png"> <p>Cardápio</p>
+      <img src="{{ route('imagem.exibir', ['nome' => 'icon cardapio.png']) }}"> <p>Cardápio</p>
     </div>   
   </div>
 

@@ -12,9 +12,17 @@ Route::get('/', function () {
 Route::get('/usuarios', [UserController::class, 'index'] )
 ->name('usuarios.index');
 
+//------------------------------ Financa ------------------------------//
 
+Route::get('/financa', [FinancaController::class, 'index'])
+->name('financa');
 
+//------------------------------ notificado ------------------------------//
 
+Route::get('/notificado', [NotificadoController::class, 'index'])
+->name('notificado');
+
+//------------------------------ Usuarios ------------------------------//
 
 //create
 Route::get('/usuarios/create', [UserController::class, 'create'] )
