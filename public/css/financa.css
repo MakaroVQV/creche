@@ -7,6 +7,7 @@
     font-family: arial;
   }
   
+
   .navbar{
     display: flex;
     justify-content: space-between;
@@ -183,7 +184,8 @@
     position: relative;
     justify-content: center;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     margin: 0 10px;
     cursor: pointer;
   }
@@ -193,12 +195,13 @@
   }
 
   .cards img{
-    margin: auto; /* adiciona essa linha para centralizar a imagem */
-    justify-content: center;
+    margin: 5px 5px 5px 5px; /* adiciona essa linha para centralizar a imagem */
+    align-self: center;
   }
 
   .cards p {
-  text-align: left;
+    text-align: center;
+    align-self: center;
   }
 
 
@@ -210,3 +213,4 @@
     display:flex;
     align-items: center;
   }
+
