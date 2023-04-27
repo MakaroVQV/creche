@@ -21,7 +21,21 @@
   </div>
 </navbar>
 
-
+  <!--Menu lateral-->
+<div id="mySidenav" class="sidenav">
+  <div class="side">
+    <a href="javascript:void(0)" onclick="closeNav()"><img src="{{asset('/imagens/icon menu.png')}}" class="menu-cinza"></a>
+    <div><img src="{{asset('/imagens/creche.png')}}" class="logo-sidebar"></div>
+  </div>
+  <a href="javascript:void(0)" onclick="closeNav()"><img src="{{ url('/imagens/seta-azul.png')}}" class="seta-azul"></a>
+  <div class="iten-menu">
+    <a href="{{ url('/notificado')}}"><img src="{{asset('/imagens/icon calendario cinza.png')}}">Calendario</a>
+    <a href="{{ url('/financa')}}"><img src="{{asset('/imagens/icon financeiro cinza.png')}}">Financeiro</a>
+    <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home azul.png')}}">Home</a>
+    <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon saude cinza.png')}}">Saude</a>
+    <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon menu.png')}}">Perfil</a>
+  </div>
+</div>
   <!--Ficha, Atestado e cardápio-->
 
     <div class="invisible">
@@ -37,25 +51,6 @@
       <img src="{{asset('/imagens/icon cardapio.png')}}"> <p>Cardápio</p>
     </div>   
   </div>
-
-
-
-  <!--Menu lateral-->
-  <div id="mySidenav" class="sidenav">
-  <div class="side">
-    <a href="javascript:void(0)" onclick="closeNav()"><img src="{{asset('/imagens/icon menu.png')}}" class="menu-cinza"></a>
-    <div><img src="{{asset('/imagens/creche.png')}}" class="logo-sidebar"></div>
-  </div>
-  <a href="javascript:void(0)" onclick="closeNav()"><img src="{{ url('/imagens/seta-azul.png')}}" class="seta-azul"></a>
-  <div class="iten-menu">
-    <a href="{{ url('/notificado')}}"><img src="{{asset('/imagens/icon calendario cinza.png')}}">Calendario</a>
-    <a href="{{ url('/financa')}}"><img src="{{asset('/imagens/icon financeiro cinza.png')}}">Financeiro</a>
-    <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home azul.png')}}">Home</a>
-    <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon saude cinza.png')}}">Saude</a>
-    <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon menu.png')}}">Perfil</a>
-  </div>
-</div>
-
 
 <script>
     /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */

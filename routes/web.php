@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\FinancaController;
 use App\Http\Controllers\NotificadoController;
+use App\Http\Controllers\MedicoController;
 use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
@@ -23,6 +24,13 @@ Route::get('/financa', [FinancaController::class, 'index'])
 
 Route::get('/notificado', [NotificadoController::class, 'index'])
 ->name('notificado');
+
+//------------------------------ notificado ------------------------------//
+
+Route::get('/medico', [MedicoController::class, 'index'])
+->name('medico');
+
+
 
 //------------------------------ Usuarios ------------------------------//
 
