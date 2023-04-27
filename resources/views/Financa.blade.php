@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{asset('/resources/views/css/financa.css')}}">
+    <link rel="stylesheet" href="{{asset('/css/financa.css')}}">
     <title>Creche</title>
 </head>
 <body>
@@ -12,43 +12,43 @@
 <div class="main">
 <navbar class="navbar">
   <div class="esquerda-nav">
-    <div onclick="openNav()"><img src="{{ url('/imagens/icon menu.png') }}" class="menu-azul"></div>
-    <div><img src="{{ url('/imagens/creche.png') }}" class="logo-navbar"></div>
+    <div onclick="openNav()"><img src="{{asset('/imagens/icon menu.png')}}" class="menu-azul"></div>
+    <div><img src="{{asset('/imagens/creche.png')}}" class="logo-navbar"></div>
   </div>
   <div class="direita-nav">
     <div class="texto-user"><h5><strong>Aluno(a)</strong></h5></div>
-    <div><img src="{{ url('/imagens/icon aluna.png') }}" class="logo-user"></div>
+    <div><img src="{{asset('/imagens/icon aluna.png')}}" class="logo-user"></div>
   </div>
 </navbar>
 
   <!--Menu lateral-->
 <div id="mySidenav" class="sidenav">
   <div class="side">
-    <a href="javascript:void(0)" onclick="closeNav()"><img src="{{ url('/imagens/icon menu.png') }}" class="menu-cinza"></a>
-    <div><img src="{{ url('/imagens/creche.png') }}" class="logo-sidebar"></div>
+    <a href="javascript:void(0)" onclick="closeNav()"><img src="{{asset('/imagens/icon menu.png')}}" class="menu-cinza"></a>
+    <div><img src="{{asset('/imagens/creche.png')}}" class="logo-sidebar"></div>
   </div>
-  <a href="javascript:void(0)" onclick="closeNav()"><img src="{{ url('/imagens/seta-azul.png') }}" class="seta-azul"></a>
+  <a href="javascript:void(0)" onclick="closeNav()"><img src="{{ url('/imagens/seta-azul.png')}}" class="seta-azul"></a>
   <div class="iten-menu">
-    <a href="#"><img src="{{ url('/imagens/icon calendario cinza.png') }}">Calendario</a>
-    <a href="#"><img src="{{ url('/imagens/icon financeiro cinza.png') }}">Financeiro</a>
-    <a href="menuPrincipal.html"><img src="{{ url('/imagens/icon home azul.png') }}">Home</a>
-    <a href="#"><img src="{{ url('/imagens/icon saude cinza.png') }}">Saude</a>
-    <a href="#"><img src="{{ url('/imagens/icon menu.png') }}">Perfil</a>
+    <a href="#"><img src="{{asset('/imagens/icon calendario cinza.png')}}">Calendario</a>
+    <a href="#"><img src="{{asset('/imagens/icon financeiro cinza.png')}}">Financeiro</a>
+    <a href="menuPrincipal.html"><img src="{{asset('/imagens/icon home azul.png')}}">Home</a>
+    <a href="#"><img src="{{asset('/imagens/icon saude cinza.png')}}">Saude</a>
+    <a href="#"><img src="{{asset('/imagens/icon menu.png')}}">Perfil</a>
   </div>
 </div>
   <!--Ficha, Atestado e cardápio-->
 
     <div class="invisible">
     <div class="cards">
-        <img src="{{ url('/imagens/icon ficha medica.png') }}"> <p>Ficha Médica</p>
+        <img src="{{asset('/imagens/icon ficha medica.png')}}"> <p>Ficha Médica</p>
     </div>
 
     <div class="cards">
-      <img src="{{ url('/imagens/icon atestados.png') }}"> <p>Atestado</p>
+      <img src="{{asset('/imagens/icon atestados.png')}}"> <p>Atestado</p>
     </div>
 
     <div class="cards">
-      <img src="{{ url('/imagens/icon cardapio.png') }}"> <p>Cardápio</p>
+      <img src="{{asset('/imagens/icon cardapio.png')}}"> <p>Cardápio</p>
     </div>   
   </div>
 
