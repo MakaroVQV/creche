@@ -33,7 +33,7 @@
     <a href="#"><img src="{{asset('/imagens/icon financeiro cinza.png')}}">Financeiro</a>
     <a href="menuPrincipal.html"><img src="{{asset('/imagens/icon home azul.png')}}">Home</a>
     <a href="#"><img src="{{asset('/imagens/icon saude cinza.png')}}">Saude</a>
-    <a href="#"><img src="{{asset('/imagens/icon menu.png')}}">Perfil</a>
+    <a href="#"><img src="{{asset('/imagens/icon perfil.png')}}">Perfil</a>
   </div>
 </div>
   <!--Ficha, Atestado e cardápio-->
@@ -55,8 +55,8 @@
 <script>
     /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
     function openNav() {
-      document.getElementById("mySidenav").style.width = "170px";
-      document.getElementById("main").style.marginLeft = "170px";
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
       document.body.style.backgroundColor = "rgba(0,0,0,0.0)";
     }
     
