@@ -7,6 +7,7 @@
     font-family: arial;
   }
   
+
   .navbar{
     display: flex;
     justify-content: space-between;
@@ -193,12 +194,12 @@
   }
 
   .cards img{
-    margin: auto; /* adiciona essa linha para centralizar a imagem */
+    margin: 5px 5px 5px 5px; /* adiciona essa linha para centralizar a imagem */
     justify-content: center;
   }
 
   .cards p {
-  text-align: left;
+  text-align: center;
   }
 
 
@@ -210,3 +211,4 @@
     display:flex;
     align-items: center;
   }
+

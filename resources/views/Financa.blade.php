@@ -40,7 +40,8 @@
 
     <div class="invisible">
     <div class="cards">
-        <img src="{{asset('/imagens/icon ficha medica.png')}}"> <p>Ficha Médica</p>
+        <img src="{{asset('/imagens/icon ficha medica.png')}}">
+        <figcaption class="caption">Ficha Médica</figcaption>
     </div>
 
     <div class="cards">
