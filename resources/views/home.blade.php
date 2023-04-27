@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="{{asset('/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('/css/menuStyle.css')}}">
 
     <title>Creche</title>
 </head>
@@ -23,7 +23,9 @@
         </div>
         <div class="topo-3"><img src="{{ url('/imagens/icon aluna.png')}}" id="img-3"></div>
     </div>
+    
 
+    
     <!-- Carrosel -->
 
     <div class="carousel">
@@ -77,26 +79,23 @@
             <div class="swiper-pagination"></div>
             <!-- botao JS -->
             <script>
-                /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
-                function openNav() {
-                    document.getElementById("mySidenav").style.width = "250px";
-                    document.getElementById("main").style.marginLeft = "250px";
-                    document.body.style.backgroundColor = "rgba(0,0,0,0.0)";
-                }
-
-                /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
-                function closeNav() {
-                    document.getElementById("mySidenav").style.width = "0";
-                    document.getElementById("main").style.marginLeft = "0";
-                    document.body.style.backgroundColor = "white";
-                }
-
-                // // document.getElementById('img-1').addEventListener('click', function() {
-                // // document.getElementById('menu-lateral').style.left = '0'; 
-                // });
-            </script>
-</body>
-</div>
-</body>
+    /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "170px";
+      document.getElementById("main").style.marginLeft = "170px";
+      document.body.style.backgroundColor = "rgba(0,0,0,0.0)";
+    }
+    
+    /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
+      document.body.style.backgroundColor = "white";
+    }
+            // // document.getElementById('img-1').addEventListener('click', function() {
+            // // document.getElementById('menu-lateral').style.left = '0'; 
+            // });
+          </script>
+          </body>
 
 </html>

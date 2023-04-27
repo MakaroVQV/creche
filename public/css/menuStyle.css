@@ -1,7 +1,9 @@
-  *{
+
+
+*{
   margin: 0;
   padding: 0;
-  }
+}
 
 p{
   font-family: arial;
@@ -173,7 +175,7 @@ input[type="checkbox"] {
   width: 48px;
   height: 48px;
       top: 40px;
-    
+
 }
 
 .texto{
@@ -252,7 +254,7 @@ input[type="checkbox"] {
       height: 700px;
       background-color: #009CDE;
       border-radius: 50%;}
-      
+
 
 
 
