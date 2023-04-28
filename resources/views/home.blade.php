@@ -32,7 +32,7 @@
                 <div><img src="{{asset('/imagens/creche.png')}}" class="logo-sidebar"></div>
             </div>
             <div class="iten-menu">
-            <a href="{{ url('/calendar')}}"><img src="{{asset('/imagens/icon calendario cinza.png')}}">
+                <a href="{{ url('/calendar')}}"><img src="{{asset('/imagens/icon calendario cinza.png')}}">
                     <p>Calendario</p>
                 </a>
                 <a href="{{ url('/financa')}}"><img src="{{asset('/imagens/icon financeiro cinza.png')}}">
@@ -65,17 +65,17 @@
         <!-- Posters -->
         <div class="posters">
             <div class="titulo-1">
-               <img src="{{asset('/imagens/megafone.png')}}">
+                <img src="{{asset('/imagens/megafone.png')}}">
                 <p>Dia Mundial da Água</p>
             </div>
             <div class="imagem-centro">
-               <img src="{{asset('/imagens/luis.jpeg')}}">
+                <img src="{{asset('/imagens/luis.jpeg')}}">
             </div>
             <div class="descricao">
                 <p>Hoje é dia de algo muito importante para todos nós!
                     O objetivo do Dia Mundial da Água é promover conscientização sobre a relevância da água para a nossa sobrevivência e de outros seres vivos.</p>
                 <div class="curtir">
-                   <img src="{{asset('/imagens/coracao.png')}}" class="coracao">
+                    <img src="{{asset('/imagens/coracao.png')}}" class="coracao">
                     <p>Curtir</p>
                 </div>
             </div>
@@ -83,16 +83,16 @@
 
         <div class="posters">
             <div class="titulo-2">
-               <img src="{{asset('/imagens/megafone.png')}}" alt="">
+                <img src="{{asset('/imagens/megafone.png')}}" alt="">
                 <p>Dia internacional da Mulher</p>
             </div>
             <div class="imagem-centro">
-               <img src="{{asset('/imagens/luis.jpeg')}}">
+                <img src="{{asset('/imagens/luis.jpeg')}}">
             </div>
             <div class="descricao">
                 <p>Nós da Jardim dos Sonhos viemos parabenizar todas as mulheres de dentro e fora da nossa instituição. Mas, principalmente a nossa grande equipe, composta quase que totalmente por excepcionais mulheres!</p>
                 <div class="curtir">
-                   <img src="{{asset('/imagens/coracao.png')}}" class="coracao">
+                    <img src="{{asset('/imagens/coracao.png')}}" class="coracao">
                     <p>Curtir</p>
                 </div>
             </div>
@@ -100,17 +100,17 @@
 
         <div class="posters">
             <div class="titulo-3">
-               <img src="{{asset('/imagens/megafone.png')}}" alt="">
+                <img src="{{asset('/imagens/megafone.png')}}" alt="">
                 <p>Dia Mundial do Autismo</p>
             </div>
             <div class="imagem-centro">
-               <img src="{{asset('/imagens/luis.jpeg')}}">
+                <img src="{{asset('/imagens/luis.jpeg')}}">
             </div>
             <div class="descricao">
                 <p>🧩 2 de abril dia mundial do autismo 🧩<br>
                     Um dia especial para pessoas incríveis 💙</p>
                 <div class="curtir">
-                   <img src="{{asset('/imagens/coracao.png')}}" class="coracao">
+                    <img src="{{asset('/imagens/coracao.png')}}" class="coracao">
                     <p>Curtir</p>
                 </div>
             </div>
