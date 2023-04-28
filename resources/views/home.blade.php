@@ -5,97 +5,140 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="{{asset('/css/menuStyle.css')}}">
-
     <title>Creche</title>
 </head>
 
 <body>
-    <!-- Menu acima -->
-    <div class="container">
-        
-        <img src="{{ url('/imagens/icon menu.png') }}" alt="Imagem"></div>
-        <div class="topo-2"><img src="{{ url('/imagens/creche.png') }}" alt="Imagem"></div>
-        <div class="texto">
-            <h5><strong>Aluno(a)</strong></h5>
+    <!-- Menu acima-->
+    <div class="main">
+        <navbar class="navbar">
+            <div class="esquerda-nav">
+                <div onclick="openNav()"><img src="{{asset('/imagens/icon menu.png')}}" class="menu-azul"></div>
+                <div><img src="{{asset('/imagens/creche.png')}}" class="logo-navbar"></div>
+            </div>
+            <div class="direita-nav">
+                <div class="texto-user">
+                    <h5><strong>Aluno(a)</strong></h5>
+                </div>
+                <div><img src="{{asset('/imagens/icon aluna.png')}}" class="logo-user"></div>
+            </div>
+        </navbar>
+
+        <!--Menu lateral-->
+        <div id="mySidenav" class="sidenav">
+            <div class="side">
+                <a href="javascript:void(0)" onclick="closeNav()"><img src="{{asset('/imagens/icon menu.png')}}" class="menu-cinza"></a>
+                <div><img src="{{asset('/imagens/creche.png')}}" class="logo-sidebar"></div>
+            </div>
+            <div class="iten-menu">
+            <a href="{{ url('/calendar')}}"><img src="{{asset('/imagens/icon calendario cinza.png')}}">
+                    <p>Calendario</p>
+                </a>
+                <a href="{{ url('/financa')}}"><img src="{{asset('/imagens/icon financeiro cinza.png')}}">
+                    <p>Financeiro</p>
+                </a>
+                <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home azul.png')}}">
+                    <p>Home</p>
+                </a>
+                <a href="{{ url('/medico')}}"><img src="{{asset('/imagens/icon saude cinza.png')}}">
+                    <p>Saude</p>
+                </a>
+                <a href="{{ url('/perfil')}}"><img src="{{asset('/imagens/icon user cinza.png')}}">
+                    <p>Perfil</p>
+                </a>
+            </div>
+            <!--Footer do menu lateral-->
+            <div class="footer-menu">
+                <a href="index.html"><img src="{{asset('/imagens/sair.png')}}" class="sair">
+                    <p>Sair</p>
+                </a>
+            </div>
+
+            <div class="copyriht">
+                <img src="{{asset('/imagens/icon_copyright.png')}}" class="copyright">
+                <p><strong>2023 FROM NEWPATH</strong></p>
+            </div>
         </div>
-        <div class="topo-3"><img src="{{ url('/imagens/icon aluna.png')}}" id="img-3"></div>
-    </div>
-    
 
-    
-    <!-- Carrosel -->
 
-    <div class="carousel">
-        <div class="carousel-container">
-            <div class="carousel-slide">
-                <div class="carousel-item">
-                    <!-- Div que contem o megafone e texto abaixo-->
-                    <div class="image-title">
-                        <img src="{{url('/imagens/icon megafone.png') }}" class="megafone">
-                        <p>Dia Mundial do Autismo</p>
-                    </div>
-                    <!-- Div que contem o as imagens central abaixo-->
-                    <div class="image-center" id="item-1">
-                    <img src="{{ url('/imagens/luis.jpeg') }}" class="img-center">
-                        <p>🧩 2 de abril dia mundial do autismo 🧩<br>
-                            Um dia especial para pessoas incríveis 💙</p>
-                            <img src="{{ url('/imagens/icon curtir.png') }}" class="img-large-1">
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="image-title">
-                    <img src="{{url('/imagens/icon megafone.png') }}" class="megafone">
-                        <p>Dia Mundial da Água</p>
-                    </div>
-                    <div class="image-center" id="item-2">
-                    <img src="{{ url('/imagens/luis.jpeg') }}" class="img-center">
-                        <p>Hoje é dia de algo muito importante para todos nós!<br>
-                            O objetivo do Dia Mundial da Água é promover<br> conscientização sobre a relevância da água para a nossa<br> sobrevivência e de outros seres vivos.</p>
-                            <img src="{{ url('/imagens/icon curtir.png') }}" class="img-large-2">
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="image-title">
-                    <img src="{{url('/imagens/icon megafone.png') }}" class="megafone">
-                        <p>Dia internacional da Mulher</p>
-                    </div>
-                    <div class="image-center" id="item-3">
-                    <img src="{{ url('/imagens/luis.jpeg') }}" class="img-center">
-                        <p>Dia 08 de Março - Dia Internacional da Mulher.<br>
-                            Nós da Jardim dos Sonhos viemos parabenizar todas as mulheres<br> de dentro e fora da nossa instituição. Mas, principalmente a nossa<br> grande equipe, composta quase que totalmente por excepcionais<br> mulheres!
-                        </p>
-                        <img src="{{ url('/imagens/icon curtir.png') }}" class="img-large-3">
-                        </div>
-                    </div>
+        <!-- Posters -->
+        <div class="posters">
+            <div class="titulo-1">
+               <img src="{{asset('/imagens/megafone.png')}}">
+                <p>Dia Mundial da Água</p>
+            </div>
+            <div class="imagem-centro">
+               <img src="{{asset('/imagens/luis.jpeg')}}">
+            </div>
+            <div class="descricao">
+                <p>Hoje é dia de algo muito importante para todos nós!
+                    O objetivo do Dia Mundial da Água é promover conscientização sobre a relevância da água para a nossa sobrevivência e de outros seres vivos.</p>
+                <div class="curtir">
+                   <img src="{{asset('/imagens/coracao.png')}}" class="coracao">
+                    <p>Curtir</p>
                 </div>
             </div>
-            <!--Fim da div que contem o as imagens central-->
+        </div>
 
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-            <!-- botao JS -->
-            <script>
-    /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
-    function openNav() {
-      document.getElementById("mySidenav").style.width = "170px";
-      document.getElementById("main").style.marginLeft = "170px";
-      document.body.style.backgroundColor = "rgba(0,0,0,0.0)";
-    }
-    
-    /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
-    function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-      document.getElementById("main").style.marginLeft = "0";
-      document.body.style.backgroundColor = "white";
-    }
-            // // document.getElementById('img-1').addEventListener('click', function() {
-            // // document.getElementById('menu-lateral').style.left = '0'; 
-            // });
-          </script>
-          </body>
+        <div class="posters">
+            <div class="titulo-2">
+               <img src="{{asset('/imagens/megafone.png')}}" alt="">
+                <p>Dia internacional da Mulher</p>
+            </div>
+            <div class="imagem-centro">
+               <img src="{{asset('/imagens/luis.jpeg')}}">
+            </div>
+            <div class="descricao">
+                <p>Nós da Jardim dos Sonhos viemos parabenizar todas as mulheres de dentro e fora da nossa instituição. Mas, principalmente a nossa grande equipe, composta quase que totalmente por excepcionais mulheres!</p>
+                <div class="curtir">
+                   <img src="{{asset('/imagens/coracao.png')}}" class="coracao">
+                    <p>Curtir</p>
+                </div>
+            </div>
+        </div>
 
-</html>
+        <div class="posters">
+            <div class="titulo-3">
+               <img src="{{asset('/imagens/megafone.png')}}" alt="">
+                <p>Dia Mundial do Autismo</p>
+            </div>
+            <div class="imagem-centro">
+               <img src="{{asset('/imagens/luis.jpeg')}}">
+            </div>
+            <div class="descricao">
+                <p>🧩 2 de abril dia mundial do autismo 🧩<br>
+                    Um dia especial para pessoas incríveis 💙</p>
+                <div class="curtir">
+                   <img src="{{asset('/imagens/coracao.png')}}" class="coracao">
+                    <p>Curtir</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <div class="footer"></div>
+
+    <script>
+        /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.0)";
+        }
+
+        /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+
+        // // document.getElementById('img-1').addEventListener('click', function() {
+        // // document.getElementById('menu-lateral').style.left = '0'; 
+        // });
+    </script>
+
+
+</body>
