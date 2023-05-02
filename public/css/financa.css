@@ -229,11 +229,11 @@
   }
 
   .financa a{
-    color: #2e2b2b;
+    color: #000000;
     text-decoration: none;
     margin-bottom: 10px;
   }
 
   .financa a:hover{
-    color: #000;
+    font-weight: bold;
   }
