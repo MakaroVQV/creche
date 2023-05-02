@@ -1,3 +1,4 @@
+@extends('adminlte::page')
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -50,7 +51,7 @@
             </div>
             <!--Footer do menu lateral-->
             <div class="footer-menu">
-                <a href="index.html"><img src="{{asset('/imagens/sair.png')}}" class="sair">
+                <a href="{{ route('logout') }}"><img src="{{asset('/imagens/sair.png')}}" class="sair">
                     <p>Sair</p>
                 </a>
             </div>
