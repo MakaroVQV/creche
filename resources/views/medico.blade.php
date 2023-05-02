@@ -35,7 +35,7 @@
             <a href="{{ url('/calendar')}}"><img src="{{asset('/imagens/icon calendario cinza.png')}}">
                     <p>Calendario</p>
                 </a>
-                <a href="{{ url('/financa')}}"><img src="{{asset('/imagens/icon financeiro cinza.png')}}">
+                <a href="{{ url('/Financa')}}"><img src="{{asset('/imagens/icon financeiro cinza.png')}}">
                     <p>Financeiro</p>
                 </a>
                 <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home azul.png')}}">
