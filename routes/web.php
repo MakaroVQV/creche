@@ -17,8 +17,8 @@ Route::get('/usuarios', [UserController::class, 'index'] )
 
 //------------------------------ Financa ------------------------------//
 
-Route::get('/financa', [FinancaController::class, 'index'])
-->name('financa');
+Route::get('/Financa', [FinancaController::class, 'index'])
+->name('Financa');
 
 //------------------------------ notificado ------------------------------//
 
