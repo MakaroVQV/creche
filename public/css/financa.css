@@ -217,8 +217,23 @@
   }
 
   .financa{
+    margin: auto;
+    margin-top: 40px;
     width: 70%;
-    justify-content: space-between;
+    height: 10%;
+    justify-content:space-around;
     display:flex;
     align-items: center;
+    border-bottom: 1px solid #B0ADAD;
+    border-radius: 12px;
+  }
+
+  .financa a{
+    color: #2e2b2b;
+    text-decoration: none;
+    margin-bottom: 10px;
+  }
+
+  .financa a:hover{
+    color: #000;
   }
