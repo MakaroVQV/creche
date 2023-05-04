@@ -7,14 +7,10 @@ use App\Http\Controllers\NotificadoController;
 use App\Http\Controllers\MedicoController;
 use Illuminate\Support\Facades\Auth;
 
-/*
+
 Route::get('/', function () {
-    return view('/home');
+    return redirect('/login');
 });
-*/
-
-Route::redirect('/', '/creche/public/login');
-
 
 Route::get('/usuarios', [UserController::class, 'index'] )
 ->name('usuarios.index');

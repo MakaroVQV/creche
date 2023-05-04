@@ -37,7 +37,7 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
 
-        return redirect('/');
+        return redirect('/creche/public/login');
     }
 
 
