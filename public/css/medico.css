@@ -232,7 +232,7 @@ input[type="checkbox"] {
   flex-direction: row;
   align-items: center;
   cursor: pointer;
-  transition: transform 0.2s ease-in-out;
+  transition: all 0.9s ease-in-out
 }
 
 .cards.card-normal{
@@ -247,7 +247,7 @@ input[type="checkbox"] {
 }
 
 .cards .content{
-  transition: all 0.5s;
+  transition: all 0.9s;
 }
 
 .cards.cor-mudada {
@@ -255,7 +255,7 @@ input[type="checkbox"] {
 }
 
 .cards:hover{
-  transition: all 0.5s ease-in-out; /* adiciona uma transição suave para todas as propriedades */
+  transition: all 0.2s ease-in-out; /* adiciona uma transição suave para todas as propriedades */
 }
 
 .cards img{
@@ -299,10 +299,11 @@ input[type="checkbox"] {
   justify-content: space-between;
   margin-bottom: 4px;
   padding-bottom: 20px;
+  transition: all 0.2s ease-in-out;
 }
 
-.detalhe.mostrar img{
-
+.detalhe.mostrar{
+  transition: all 0.2s ease-in-out;
 }
   
 .detalhe img{
