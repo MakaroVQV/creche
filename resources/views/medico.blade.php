@@ -65,12 +65,12 @@
 
   <div class="invisible">
         <div class="cards" id="ficha-medica">
-          <img src="../imagens/icon ficha medica.png">
+          <img src="{{asset('/imagens/icon ficha medica.png')}}">
           <p>Ficha Médica</p>
           <div class="texto-expandido">
             <h1>alou</h1>
             <div class="detalhe">
-                <div class="info"><img src="../imagens/boneco.png"><p>Atura e peso</p></div><div class="data">fev de 2023</div></div>
+                <div class="info"><img src="{{asset('/imagens/boneco.png')}}"><p>Atura e peso</p></div><div class="data">fev de 2023</div></div>
             <div class="detalhe">
                 <div class="info"><img src="../imagens/boneco.png"></div> <div class="data">fev de 2023</div></div>
             <div class="detalhe">
@@ -85,7 +85,7 @@
         </div>
 
     <div class="cards">
-      <img src="../imagens/icon atestados.png">
+      <img src="{{asset('/imagens/icon atestados.png')}}">
       <p>Atestado</p>
       <div class="texto-expandido">
         <p>Aqui está o texto expandido para a atestado.</p>
@@ -93,7 +93,7 @@
     </div>
 
     <div class="cards">
-      <img src="../imagens/icon cardapio.png">
+      <img src="{{asset('/imagens/icon cardapio.png')}}">
       <p>Cardápio</p>
       <div class="texto-expandido">
         <p>Aqui está o texto expandido para a Cardápio.</p>
