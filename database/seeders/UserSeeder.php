@@ -39,5 +39,11 @@ class UserSeeder extends Seeder
             'password'      => Hash::make('12345678'),
             'profile'       => 'admin'
         ]);
+        DB::table('users')->insert([
+            'name'          => 'Luis',
+            'email'         => 'luis@g.com',
+            'password'      => Hash::make('12345678'),
+            'profile'       => 'responsavel'
+        ]);
     }
 }
