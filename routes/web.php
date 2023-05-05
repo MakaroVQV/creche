@@ -13,7 +13,7 @@ Route::get('/', function () {
 });
 
 Route::get('/usuarios', [UserController::class, 'index'] )
-->name('usuarios.index');
+->name('usuarios.index')->middleware('can:is_admin');
 
 //------------------------------ Financa ------------------------------//
 
@@ -36,27 +36,27 @@ Route::get('/medico', [MedicoController::class, 'index'])
 
 //create
 Route::get('/usuarios/create', [UserController::class, 'create'] )
-->name('usuarios.create');
+->name('usuarios.create')->middleware('can:is_admin');
 
 
 //Salvar
 Route::post('/usuarios/create', [UserController::class, 'store'] )
-->name('usuarios.store');
+->name('usuarios.store')->middleware('can:is_admin');
 
 Route::get('/usuarios/{id}', [UserController::class, 'show'] )
-->name('usuarios.show');
+->name('usuarios.show')->middleware('can:is_admin');
 
 //edit
 Route::get('/usuarios/{id}/edit', [UserController::class, 'edit'] )
-->name('usuarios.edit');
+->name('usuarios.edit')->middleware('can:is_admin');
 
 //att
 Route::put('/usuarios/{id}', [UserController::class, 'update'] )
-->name('usuarios.update');
+->name('usuarios.update')->middleware('can:is_admin');
 
 //Destroy
 Route::delete('/usuarios/{id}', [UserController::class, 'destroy'] )
-->name('usuarios.destroy');
+->name('usuarios.destroy')->middleware('can:is_admin');
 
 
 
