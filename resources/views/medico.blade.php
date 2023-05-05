@@ -68,19 +68,19 @@
           <img src="{{asset('/imagens/icon ficha medica.png')}}">
           <p>Ficha Médica</p>
           <div class="texto-expandido">
-            <h1>alou</h1>
+            <h1>Resumo</h1>
             <div class="detalhe">
-                <div class="info"><img src="{{asset('/imagens/boneco.png')}}"><p>Atura e peso</p></div><div class="data">fev de 2023</div></div>
+                <div class="info"><img src="{{asset('/imagens/boneco.png')}}"><p>Atura e peso</p></div><div class="centro-info"><p class="numero">109</p><p class="cm">Cm</p></a></div><div class="data">fev de 2023</div></div>
             <div class="detalhe">
-                <div class="info"><img src="../imagens/boneco.png"></div> <div class="data">fev de 2023</div></div>
+                <div class="info"><img src="{{asset('/imagens/amendoim.png')}}"><p>Alergias</p></div> <div class="data">fev de 2023</div></div>
             <div class="detalhe">
-                <div class="info"><img src="../imagens/boneco.png"></div> <div class="data">fev de 2023</div></div>
+                <div class="info"><img src="{{asset('/imagens/pilula.png')}}"><p>Medicamentos</p></div> <div class="data">fev de 2023</div></div>
             <div class="detalhe">
-                <div class="info"><img src="../imagens/boneco.png"></div> <div class="data">fev de 2023</div></div>
+                <div class="info"><img src="{{asset('/imagens/sangue.png')}}"><p>Tipo Sanguíneo</p></div> <div class="data">fev de 2023</div></div>
             <div class="detalhe">
-                <div class="info"><img src="../imagens/boneco.png"></div> <div class="data">fev de 2023</div></div>
+                <div class="info"><img src="{{asset('/imagens/vacinacao.png')}}"><p>Vacinas</p></div> <div class="data">fev de 2023</div></div>
             <div class="detalhe">
-                <div class="info"><img src="../imagens/boneco.png"></div> <div class="data">fev de 2023</div></div>
+                <div class="info"><img src="{{asset('/imagens/marcador.png')}}"><p>Observações</p></div> <div class="data">fev de 2023</div></div>
           </div>
         </div>
 
@@ -88,7 +88,15 @@
       <img src="{{asset('/imagens/icon atestados.png')}}">
       <p>Atestado</p>
       <div class="texto-expandido">
-        <p>Aqui está o texto expandido para a atestado.</p>
+        <div class="atestado">
+         <div class="box"><p><strong>Atestado de Aptidão Física</strong></p></div> 
+          <div class="meu-arquivo">
+            <p><strong>atestado_cardio.pdf</strong></p>
+          <a href="{{ url('/imagens/luis.png')}}" target="_target">
+            <img src="{{asset('/imagens/nuvem.png')}}">
+          </a>
+        </div>
+      </div>
       </div>
     </div>
 
@@ -129,6 +137,16 @@ cards.forEach(card => {
     textoExpandido.classList.toggle('mostrar');
     card.classList.toggle('card-normal'); // Adicione essa linha para alternar entre as classes
   });
+});
+
+const card = document.querySelector('.cards');
+let count = 0;
+
+card.addEventListener('click', () => {
+  count++;
+  if (count === 9) {
+    card.classList.add('animate');
+  }
 });
 
 
