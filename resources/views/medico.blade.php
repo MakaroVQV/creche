@@ -70,7 +70,7 @@
           <div class="texto-expandido">
             <h1>Resumo</h1>
             <div class="detalhe">
-                <div class="info"><img src="{{asset('/imagens/boneco.png')}}"><p>Atura e peso</p></div><div class="centro-info"><p class="numero">109</p><p class="cm">Cm</p></a></div><div class="data">fev de 2023</div></div>
+                <div class="info"><img src="{{asset('/imagens/boneco.png')}}"><p>Atura e peso</p></div><div class="centro-info"><p class="numero">109</p><p class="cm">cm</p><p class="numero">19</p><div class="kg"><p>kg</p></div></div><div class="data">fev de 2023</div></div>
             <div class="detalhe">
                 <div class="info"><img src="{{asset('/imagens/amendoim.png')}}"><p>Alergias</p></div> <div class="data">fev de 2023</div></div>
             <div class="detalhe">
