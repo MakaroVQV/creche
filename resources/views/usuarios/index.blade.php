@@ -11,6 +11,7 @@
             <tr>
                 <th>Nome</th>
                 <th>Ação</th>
+                <a class="col-sm btn btn-success" href="{{ url('usuarios/create')}}">Criar</a>
             </tr>
         </thead>
         <tbody>
@@ -18,7 +19,7 @@
             <tr>
                 <td class="col-sm">{{ $user->name }}</td>
                 <td class="">
-                    <a class="col-sm btn btn-success" href="{{ url('usuarios/create')}}">Criar</a>
+                    
                     <a class="col-sm btn btn-primary" href="{{ url('usuarios/'. $user->id) }}">Vizualizar</a>
                     <a class="col-sm btn btn-warning" href="{{ url('usuarios/'. $user->id . '/edit') }}">Editar</a>
                     {!! Form::open(['method' => 'DELETE','route' =>['usuarios.destroy', $user->id],'style'=>'display:inline']) !!}
