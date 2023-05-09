@@ -37,8 +37,8 @@ Route::get('/perfil', [PerfilController::class, 'index'])
 ->name('perfil');
 
 //------------------------------ Calendario ------------------------------//
-Route::get('/calendario', [CalendarioController::class, 'index'])
-->name('calendario');
+Route::get('/usuarios/calendario', [CalendarioController::class, 'index'])
+->name('usuario.calendario');
 
 
 
