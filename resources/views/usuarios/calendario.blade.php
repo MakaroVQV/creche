@@ -143,6 +143,9 @@
 <script src="{{asset('/assets/fullcalendar/dist/plugins/fullcalendar/main.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
 
+<!-- tradução do calendario-->
+<script src="{{asset('/assets/fullcalendar/packages/core/locale-all.js')}}"></script>
+
 <!-- Page specific script -->
 
 </body>
