@@ -13,6 +13,9 @@
   <link rel="stylesheet" href="{{asset('/assets/fullcalendar/dist/plugins/fullcalendar/main.css')}}">
   <!-- Theme style -->
   <link rel="stylesheet"href="{{asset('/assets/fullcalendar/dist/css/adminlte.min.css')}}">
+  <!-- tradução do calendario-->
+  <script src="{{asset('/assets/fullcalendar/packages/core/locale-all.js')}}"></script>
+
 </head>
 <body class="hold-transition sidebar-mini">
 
