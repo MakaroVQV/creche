@@ -14,7 +14,7 @@
   <!-- Theme style -->
   <link rel="stylesheet"href="{{asset('/assets/fullcalendar/dist/css/adminlte.min.css')}}">
   <!-- tradução do calendario-->
-  <script src="{{asset('/assets/fullcalendar/packages/core/locale-all.js')}}"></script>
+
 
 </head>
 <body class="hold-transition sidebar-mini">
@@ -143,6 +143,7 @@
 <!-- fullCalendar 2.2.5 -->
 <script src="{{asset('/assets/fullcalendar/dist/plugins/moment/moment.min.js')}}"></script>
 <script src="{{asset('/assets/fullcalendar/dist/plugins/fullcalendar/main.js')}}"></script>
+<script src="{{asset('/assets/fullcalendar/packages/core/locale-all.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
 
 <!-- Page specific script -->
