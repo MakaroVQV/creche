@@ -337,22 +337,18 @@ input[type="checkbox"] {
 .detalhe .info img{
   width: 20px;
   height: 20px;
-  margin: 6px;
-  margin-right:-4px;
-  float: left;
+  margin: 10px;
 }
 
 .centro-info{
   width: 240px;
-  padding: 2px;
-  display: flex;
-  align-self: flex-end;
-  justify-content: center;
-  margin-left: -190px;
+  align-self: flex-end; /* Coloca o item flex no fim */
+  text-align: start;
+  background-color: #30E3CA;
 }
 
 .centro-info p{
-margin: 1px;
+margin: 0px;
 }
 
 .numero{
@@ -361,12 +357,17 @@ margin: 1px;
 }
 
 .cm{
-  display: flex;
-  align-self:last baseline;
+  align-self:baseline;
+  justify-content: start;
+  font-size: 12px;
+  color:#555555;
+}
+
+.kg{
+  align-self:baseline;
   justify-content: center;
   font-size: 12px;
   color:#555555;
-
 }
 
 .detalhe p{
@@ -374,8 +375,19 @@ margin: 1px;
 }
 
 .detalhe .info {
+  width: 230px;
   font-size: 12px;
   font-weight: bold;
+  display: flex;
+  float: left;
+}
+
+.info p{
+  float: left;
+}
+
+.info img{
+  float: left;
 }
 
 .detalhe .data {
@@ -383,8 +395,10 @@ margin: 1px;
   font-size: 12px;
   font-family: 'Inter';
   font-style: normal;
-  margin:5px;
+  margin:3px;
 }
+
+/*Outro card*/
 
 .atestado{
   margin: 10px;
