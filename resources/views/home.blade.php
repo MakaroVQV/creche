@@ -33,7 +33,7 @@
                 <div><img src="{{asset('/imagens/creche.png')}}" class="logo-sidebar"></div>
             </div>
             <div class="iten-menu">
-                <a href="{{ url('/calendar')}}"><img src="{{asset('/imagens/icon calendario cinza.png')}}">
+                <a href="{{ url('/calendario')}}"><img src="{{asset('/imagens/icon calendario cinza.png')}}">
                     <p>Calendario</p>
                 </a>
                 <a href="{{ url('/Financa')}}"><img src="{{asset('/imagens/icon financeiro cinza.png')}}">
