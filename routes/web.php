@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\FinancaController;
 use App\Http\Controllers\NotificadoController;
 use App\Http\Controllers\MedicoController;
+use App\Http\Controllers\PerfilController;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -28,9 +29,11 @@ Route::get('/notificado', [NotificadoController::class, 'index'])
 //------------------------------ notificado ------------------------------//
 
 Route::get('/medico', [MedicoController::class, 'index'])
+
 ->name('medico');
-
-
+//------------------------------ perfil ------------------------------//
+Route::get('/perfil', [PerfilController::class, 'index'])
+->name('perfil');
 
 //------------------------------ Usuarios ------------------------------//
 
