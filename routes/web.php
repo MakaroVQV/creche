@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\FinancaController;
 use App\Http\Controllers\NotificadoController;
 use App\Http\Controllers\MedicoController;
+use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\CalendarioController;
 use Illuminate\Support\Facades\Auth;
 
@@ -26,14 +27,19 @@ Route::get('/Financa', [FinancaController::class, 'index'])
 Route::get('/notificado', [NotificadoController::class, 'index'])
 ->name('notificado');
 
-//------------------------------ notificado ------------------------------//
+//------------------------------ medico ------------------------------//
 
 Route::get('/medico', [MedicoController::class, 'index'])
+
 ->name('medico');
+//------------------------------ perfil ------------------------------//
+Route::get('/perfil', [PerfilController::class, 'index'])
+->name('perfil');
 
 //------------------------------ Calendario ------------------------------//
 Route::get('/calendario', [CalendarioController::class, 'index'])
 ->name('calendario');
+
 
 
 
