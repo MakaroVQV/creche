@@ -5,11 +5,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\FinancaController;
 use App\Http\Controllers\NotificadoController;
 use App\Http\Controllers\MedicoController;
-<<<<<<< HEAD
 use App\Http\Controllers\PerfilController;
-=======
 use App\Http\Controllers\CalendarioController;
->>>>>>> f509a22091cf1302e6b3fb762e6728841d253d68
 use Illuminate\Support\Facades\Auth;
 
 
@@ -30,16 +27,14 @@ Route::get('/Financa', [FinancaController::class, 'index'])
 Route::get('/notificado', [NotificadoController::class, 'index'])
 ->name('notificado');
 
-//------------------------------ notificado ------------------------------//
+//------------------------------ medico ------------------------------//
 
 Route::get('/medico', [MedicoController::class, 'index'])
 
 ->name('medico');
-<<<<<<< HEAD
 //------------------------------ perfil ------------------------------//
 Route::get('/perfil', [PerfilController::class, 'index'])
 ->name('perfil');
-=======
 
 //------------------------------ Calendario ------------------------------//
 Route::get('/calendario', [CalendarioController::class, 'index'])
@@ -47,7 +42,7 @@ Route::get('/calendario', [CalendarioController::class, 'index'])
 
 
 
->>>>>>> f509a22091cf1302e6b3fb762e6728841d253d68
+
 
 //------------------------------ Usuarios ------------------------------//
 
