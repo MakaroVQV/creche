@@ -64,10 +64,16 @@ $(function () {
             right: 'dayGridMonth,timeGridWeek,timeGridDay'
         },
         locale: 'pt-br',
+        navLinks: true,
+        navLinkDayClick: function(date, jsEvent) {
+            console.log('day', date.toISOString());
+            console.log('coords', jsEvent.pageX, jsEvent.pageY);
+          },
+        editable: true,
         themeSystem: 'bootstrap',
         //Random default events
         events: [
-            {
+            /*{
                 title: 'All Day Event',
                 start: new Date(y, m, 1),
                 backgroundColor: '#f56954', //red
@@ -111,7 +117,7 @@ $(function () {
                 url: 'https://www.google.com/',
                 backgroundColor: '#3c8dbc', //Primary (light-blue)
                 borderColor: '#3c8dbc' //Primary (light-blue)
-            }
+            }*/
         ],
         editable: true,
         droppable: true, // this allows things to be dropped onto the calendar !!!
