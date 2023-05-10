@@ -145,6 +145,13 @@
 
 <!-- tradução do calendario-->
 <script src="{{asset('/assets/fullcalendar/packages/core/locale-all.js')}}"></script>
+<script src="{{asset('/assets/fullcalendar/packages/core/locales/pt-br.global.js')}}"></script>
+<script src="{{asset('/assets/fullcalendar/fullcalendar.js"></script>
+  <script>
+var calendar = new FullCalendar.Calendar(calendarEl, {
+  locale: 'pt-br'
+});
+</script>
 
 <!-- Page specific script -->
 
