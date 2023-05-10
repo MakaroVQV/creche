@@ -1,3 +1,11 @@
+.circulo{
+  border-radius: 50%;
+  background: #009CDE;
+  width: 500px;
+  height: 500px;
+}
+
+
 *{
     margin: 0;
     padding: 0;
