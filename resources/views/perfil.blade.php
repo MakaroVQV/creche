@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -63,17 +62,15 @@
 
 
         <!--tentando centralizar meus dados-->
+            <center><h1>Meus dados</h1></center>
+            <br>
+            <br>
+            <br>
+            <center><p class circulo> CS Carolina Souza</p></center>
+            
+        
       
-        <center>
-            <h1>Meus dados</h1>
-            <br>
-            <br>
-            <br>
-            <p> CS Carolina Souza</p>
-            <div class="circulo"><p>CS</p> </div>
-
-        </center>
-      
+        <p></p>
         <script>
             /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
             function openNav() {
