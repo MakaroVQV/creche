@@ -127,11 +127,14 @@ $(function () {
                 // if so, remove the element from the "Draggable Events" list
                 info.draggedEl.parentNode.removeChild(info.draggedEl);
             }
-        }
+        },
+        events:'',
     });
 
     calendar.render();
     // $('#calendar').fullCalendar()
+
+    console.log(routeEvents('teste'));
 
     /* ADDING EVENTS */
     var currColor = '#3c8dbc' //Red by default

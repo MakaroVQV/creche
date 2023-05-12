@@ -102,7 +102,10 @@
             <div class="card card-primary">
               <div class="card-body p-0">
                 <!-- THE CALENDAR -->
-                <div id="calendar"></div>
+                <div 
+                  id="calendar"
+                  data-route-load-events="{{ route('routeLoadEvents') }}"      
+                ></div>
               </div>
               <!-- /.card-body -->
             </div>

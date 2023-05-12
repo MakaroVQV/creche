@@ -40,6 +40,9 @@ Route::get('/perfil', [PerfilController::class, 'index'])
 Route::get('/usuarios/calendario', [CalendarioController::class, 'index'])
 ->name('usuario.calendario');
 
+Route::get('/load-events', [CalendarioController::class, 'index'])
+->name('routeLoadEvents');
+
 
 
 
