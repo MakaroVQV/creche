@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="{{asset('/css/perfil.css')}}">
     <title>Creche</title>
 </head>
+   
 
-<body>
+  <body>
+
+
     <!-- Menu acima-->
     <div class="main">
         <navbar class="navbar">
@@ -23,6 +26,34 @@
                 <div><img src="{{asset('/imagens/icon aluna.png')}}" class="logo-user"></div>
             </div>
         </navbar>
+          
+
+        <!--Formulario-->
+
+        <center><h1>Meus dados</h1></center>
+        <br>
+        <br>
+        <br>
+
+       <center><p class="circulo">CS Carol</p></center><br>
+
+<form>
+    <label for="name">Nome Completo:</label>
+      <input type="text" id="name" name="name" value="Carolina Souza De Araújo">
+
+    <label for="phone">Telefone:</label>
+      <input type="tel" id="phone" name="phone" value="(21) 98765-4321"><br><br>
+
+
+   <label class="direita" for="email">E-mail:</label>
+      <input type="email" id="email" name="email" value="carolinasouzaa@gmail.com"><br><br>
+
+   <label class="direita" for="gender">Gênero:</label>
+      <input type="feminino" id="Feminino" name="Feminino" value="Feminino"><br><br>
+ 
+   <input type="submit" value ="Enviar">
+</form>
+
 
         <!--Menu lateral-->
         <div id="mySidenav" class="sidenav">
@@ -60,17 +91,6 @@
             </div>
         </div>
 
-
-        <!--tentando centralizar meus dados-->
-            <center><h1>Meus dados</h1></center>
-            <br>
-            <br>
-            <br>
-            <center><p class circulo> CS Carolina Souza</p></center>
-            
-        
-      
-        <p></p>
         <script>
             /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
             function openNav() {
