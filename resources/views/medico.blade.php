@@ -60,7 +60,6 @@
                 <p><strong>2023 FROM NEWPATH</strong></p>
             </div>
         </div>
-
   <!--Ficha, Atestado e cardápio-->
 
   <div class="invisible">
