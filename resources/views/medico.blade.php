@@ -25,21 +25,6 @@
             </div>
         </navbar>
 
-         <!-- Menu acima-->
-    <div class="main">
-        <navbar class="navbar">
-            <div class="esquerda-nav">
-                <div onclick="openNav()"><img src="{{asset('/imagens/icon menu.png')}}" class="menu-azul"></div>
-                <div><img src="{{asset('/imagens/creche.png')}}" class="logo-navbar"></div>
-            </div>
-            <div class="direita-nav">
-                <div class="texto-user">
-                    <h5><strong>Aluno(a)</strong></h5>
-                </div>
-                <div><img src="{{asset('/imagens/icon aluna.png')}}" class="logo-user"></div>
-            </div>
-        </navbar>
-
         <!--Menu lateral-->
         <div id="mySidenav" class="sidenav">
     <div class="side">
@@ -100,7 +85,6 @@
       <p><strong>2023 FROM NEWPATH</strong></p>
     </div>
   </div>
-
   <!--Ficha, Atestado e cardápio-->
 
   <div class="invisible">
