@@ -272,10 +272,9 @@ input[type="checkbox"] {
   background: #f5f5f5;
   height: 800px;
   position: relative;
+  justify-content:center;
   display: flex;
   flex-direction:column;
-  justify-content: center; /* centraliza horizontalmente */
-  align-items: center; /* centraliza verticalmente */
   cursor: pointer;
 }
 
@@ -288,7 +287,7 @@ input[type="checkbox"] {
 }
 
 .cards img{
-  
+
 }
 
 .cards p {
@@ -301,7 +300,6 @@ input[type="checkbox"] {
 
 .cards.card-normal h1{
  font-size: 25px;
- margin: 0 0 0 15px;
 }
 
 .texto-expandido {
@@ -432,8 +430,6 @@ margin: 0px;
   font-size: 14px;
 }
 
-/*Card 2*/
-
 .atestado{
   margin: 10px;
   width: 260px;
@@ -485,33 +481,8 @@ font-weight: 100;
   color: #DF0209;
 }
 
-/*card 3*/
 
-.cardapio{
-  width: 270px;
-  margin: 10px 15px 10px 15px;
-  background: #A7DAF4;
-  border-radius: 8px;
-  display: inline-block;
-}
-
-.cardapio p{
-  font-size: 14px;
-  color:#3BA12F;
-}
-
-.descricao{
-  width: 240px;
-  display: inline-table;
-  background: #F5F5F5;
-  border-radius: 6px;
-  margin: 10px;
-}
-
-.descricao p{
-  color: #000000;
-}
-/*cards*/
+/*CARDS*/
 
 .footer {
   bottom: 0;
