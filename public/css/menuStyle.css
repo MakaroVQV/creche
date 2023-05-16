@@ -1,5 +1,3 @@
-/*Cabeçalho*/
-
 *{
     margin: 0;
     padding: 0;
@@ -210,10 +208,12 @@
     height: 30px;
   }
   
+  /* When you mouse over the navigation links, change their color */
   .sidenav a:hover {
     font-weight: bold;
   }
   
+  /* Position and style the close button (top right corner) */
   .sidenav .closebtn {
     position: absolute;
     text-decoration: none;
@@ -223,18 +223,18 @@
     margin-left: 50px;
   }
   
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
   #main {
     transition: margin-left 0.1s;
     margin: 10px 10px 10px 10px;
   }
   
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
-
   /* SIDEBAR */
-  
   #img-1 {
     padding-left: 20px;
     max-width: 100px;
