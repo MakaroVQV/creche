@@ -1,0 +1,132 @@
+body * {
+    overflow: auto;
+    white-space: nowrap;
+  }
+  
+  .img{
+      width: 5rem;
+      float: left; /* Define a imagem para flutuar à esquerda */
+      padding-bottom: 3rem
+  }
+  
+  h5{
+      margin-left: 115px;
+      font-family: arial;
+      margin-top: 10px;
+  }
+
+  span{
+    display: inline;
+  }
+  
+  a{
+    font-family: arial;
+    margin-top:20px
+  }
+  
+  .container {
+    white-space: nowrap;
+    margin-top: 5rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Para evitar que a imagem vaze para fora da caixa */
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+    .path{
+      width: 10rem;
+      position: absolute;
+      bottom: 20;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
+    .entrar_2:hover {
+      background-color: #A7DAF4;
+    }
+
+  #form_1{
+    margin-left: auto;
+    margin-right: auto;
+    width: 25rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+    background-color:#F5F5F5;
+    overflow: hidden;
+  }
+  
+  .entrar_2{
+    margin-top: -70px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px;
+    background-color: #0086CD;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    overflow: hidden;
+    width: 10rem;
+    height: 2rem;
+  }
+
+  input[type="email"]{
+    color: #000000;
+    background-color: #A7DAF4;
+    width: 20rem;
+    height: 4rem;
+    border: 1px solid #A7DAF4;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    border-radius: 12px;
+    text-align:left;
+    overflow: hidden;
+  }
+
+  input[type="email"]::placeholder, input[type="password"]::placeholder {
+    color: #F5F5F5;
+  }
+
+  .textoSenha{
+    text-align: center;
+    padding-top: 20px;
+    font-family: Arial;
+    overflow: hidden;
+  }
+  
+  .qualEmail{
+    padding-top: 20px;
+    padding-left: 30px;
+    margin: 5px;
+    text-align: left;
+    font-family: Arial;
+    overflow: hidden;
+  }
+
+  .usuario_recuperar {
+    margin-left:30px;
+    padding-bottom:90px;
+    overflow: hidden;
+  }
+  
+  .usuario_recuperar input[type="email"] {
+    margin-right: 5px;
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .entrar{
+    color: #3BA12F;
+    font-family: arial;
+    text-decoration: none;
+  }
