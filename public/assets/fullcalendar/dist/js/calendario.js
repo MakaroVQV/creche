@@ -72,7 +72,7 @@ $(function () {
         editable: true,
         themeSystem: 'bootstrap',
         //Random default events
-        //events: [
+        events: [
             /*{
                 title: 'All Day Event',
                 start: new Date(y, m, 1),
@@ -118,7 +118,7 @@ $(function () {
                 backgroundColor: '#3c8dbc', //Primary (light-blue)
                 borderColor: '#3c8dbc' //Primary (light-blue)
             }*/
-        //],
+        ],
         droppable: true, // this allows things to be dropped onto the calendar !!!
         drop: function (info) {
             // is the "remove after drop" checkbox checked?
@@ -127,13 +127,13 @@ $(function () {
                 info.draggedEl.parentNode.removeChild(info.draggedEl);
             }
         },
-        eventDrop: function(event){
+        eventDrop: function(events){
             alert('event Drop');
         },
-        eventClick: function(event){
+        eventClick: function(events){
             alert('event Click');
         },
-        eventResize: function(event){
+        eventResize: function(events){
             alert('event resize');
         },
         select: function(){
