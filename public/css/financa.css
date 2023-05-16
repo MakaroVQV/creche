@@ -215,7 +215,8 @@
     font-size: 16px;
     font-weight: bold;
   }
-
+  
+  
   .financa{
     margin: auto;
     margin-top: 40px;
@@ -225,15 +226,123 @@
     display:flex;
     align-items: center;
     border-bottom: 1px solid #B0ADAD;
-    border-radius: 12px;
+    border-radius: 8px;
   }
-
-  .financa a{
+  
+  .financa a {
     color: #000000;
     text-decoration: none;
-    margin-bottom: 10px;
+    margin-bottom: -1px; /* Adiciona um espaçamento entre os links */
+    height: 100%;
   }
-
+  
   .financa a:hover{
     font-weight: bold;
+  }
+  
+  .selecionado {
+    border-bottom: 2px solid #F8AE00;
+    height: 40%;
+    font-weight: bold;
+  }
+  
+  .conteudo {
+    display: none;
+  }
+  
+  .titulo{
+    width: 70%;
+    margin: 25px auto 10px auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .titulo p{
+    color: #939090;
+  }
+  
+  .detalhe{
+    background: #A7DAF4;
+    margin: 25px auto 25px auto;
+    width: 70%;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items:flex-start;
+    position: relative;
+    border-radius: 8px;
+    transition: all ease-in-out 0.3s;
+  }
+  
+  .conteudo-adicional {
+    background: #E5F3FF;
+    width: 300px;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    position: absolute;
+    bottom: 20px;
+  }
+  
+  .detalhe.expandido .conteudo-adicional {
+    height: 100px;
+  }
+  
+  .anexo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .anexo-texto {
+    margin-right: 10px;
+  }
+  
+  .detalhe p{
+    margin: 15px 0 0 0;
+  }
+  
+  .pago2{
+    padding: 0 15px 0 0;
+  }
+  
+  .pagoP{
+    margin: 0 10px 0 0;
+    color: #3BA12F;
+  }
+  
+  .data{
+    margin: 0 0 0 10px;
+  }
+  
+  #pendente {
+    color: #F8AE00;
+    padding: 0 0 0 60px;
+    margin: 15px -10px 0 0;
+  }
+  
+  .imagem-clicavel {
+  right: 230px;
+  position: fixed;
+  margin: 10px 0 0 0;
+  }
+  
+  .imagem-clicavel img {
+    width: 30px;
+    height: 30px;
+    transform: rotate(-90deg);
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+  }
+  
+  .conteudo-adicional {
+    border-radius: 8px;
+    background: #F5F5F5;
+    width: 100%;
+    height: 70px;
+    display: none;
+  }
+  
+  .conteudo-adicional.expandido {
+    display: block;
   }

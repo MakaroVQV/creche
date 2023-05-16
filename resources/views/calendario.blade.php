@@ -148,6 +148,45 @@
 <script src="{{asset('/assets/fullcalendar/dist/plugins/fullcalendar/main.js')}}"></script>
 <script src="{{asset('/assets/fullcalendar/packages/core/locale-all.js')}}"></script>
 <script src="{{asset('/assets/fullcalendar/dist/js/calendario.js')}}"></script>
+
+<script>
+/* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+        function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.0)";
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+  document.body.style.backgroundColor = "white";
+}
+
+function toggleSubMenu(subMenuId) {
+  var subMenu = document.getElementById(subMenuId);
+  var isOpen = subMenu.classList.contains('open');
+
+  // Fecha todos os submenus
+  var subMenus = document.getElementsByClassName("sub-menu");
+  for (var i = 0; i < subMenus.length; i++) {
+    subMenus[i].classList.remove('open');
+    subMenus[i].style.display = "none";
+  }
+
+  // Abre ou fecha o submenu atual
+  if (!isOpen) {
+    subMenu.classList.add('open');
+    subMenu.style.display = "block";
+  }
+}
+
+        // // document.getElementById('img-1').addEventListener('click', function() {
+        // // document.getElementById('menu-lateral').style.left = '0'; 
+        // });
+        </script>
+        
 <!-- AdminLTE for demo purposes -->
 
 
