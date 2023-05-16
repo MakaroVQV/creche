@@ -26,8 +26,23 @@
     </navbar>
 
     <!--Menu lateral-->
-     <!--Menu lateral-->
-     <div id="mySidenav" class="sidenav">
+ <!-- Menu acima-->
+ <div class="main">
+        <navbar class="navbar">
+            <div class="esquerda-nav">
+                <div onclick="openNav()"><img src="{{asset('/imagens/icon menu.png')}}" class="menu-azul"></div>
+                <div><img src="{{asset('/imagens/creche.png')}}" class="logo-navbar"></div>
+            </div>
+            <div class="direita-nav">
+                <div class="texto-user">
+                    <h5><strong>Aluno(a)</strong></h5>
+                </div>
+                <div><img src="{{asset('/imagens/icon aluna.png')}}" class="logo-user"></div>
+            </div>
+        </navbar>
+
+        <!--Menu lateral-->
+        <div id="mySidenav" class="sidenav">
     <div class="side">
       <a href="javascript:void(0)" onclick="closeNav()"><img src="{{asset('/imagens/icon menu.png')}}" class="menu-cinza"></a>
       <div><img src="{{asset('/imagens/creche.png')}}" class="logo-sidebar"></div>
