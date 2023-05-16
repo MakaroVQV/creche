@@ -119,7 +119,6 @@ $(function () {
                 borderColor: '#3c8dbc' //Primary (light-blue)
             }*/
         ],
-        editable: true,
         droppable: true, // this allows things to be dropped onto the calendar !!!
         drop: function (info) {
             // is the "remove after drop" checkbox checked?
@@ -127,6 +126,18 @@ $(function () {
                 // if so, remove the element from the "Draggable Events" list
                 info.draggedEl.parentNode.removeChild(info.draggedEl);
             }
+        },
+        eventDrop: function(events){
+            alert('event Drop');
+        },
+        eventClick: function(events){
+            alert('event Click');
+        },
+        eventResize: function(events){
+            alert('event resize');
+        },
+        select: function(){
+            alert('event Select');
         },
         events:'',
     });

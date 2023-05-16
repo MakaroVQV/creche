@@ -53,7 +53,6 @@ Route::get('/load-events', [CalendarioController::class, 'index'])
 Route::get('/usuarios/create', [UserController::class, 'create'] )
 ->name('usuarios.create')->middleware('can:is_admin');
 
-
 //Salvar
 Route::post('/usuarios/create', [UserController::class, 'store'] )
 ->name('usuarios.store')->middleware('can:is_admin');
