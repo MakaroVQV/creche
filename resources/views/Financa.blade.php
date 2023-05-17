@@ -90,8 +90,48 @@
     
     </div>
 
+    <!-- Estou començando VENCIMENTO, VALOR, VALOR PAGO, STATUS ATT josy -->
+    <div class="pg">
 
+    <table>
+  <tr class="letras">
+    <th>Vencimento</th>
+    <th>Valor</th>
+    <th>Valor Pago</th>
+    <th>Status</th>
+  </tr>
+  <tr>
+    <td>15/06/2023</td>
+    <td>R$700,00</td>
+    <td>R$700,00</td>
+     <td>Pago</td>
+  </tr> 
+ 
+  <tr>
+    <td>15/05/2023</td>
+    <td>R$ 700,00</td>
+    <td>R$ 700,00</td>
+     <td>Pago</td>
+  </tr>
+  
+  <tr>
+    <td>15/04/2023</td>
+    <td>R$ 700,00</td>
+    <td>R$ 700,00</td>
+    <td>Pago</td>
+  </tr>
+  
+  <tr>
+    <td>15/03/2023</td>
+    <td>R$ 700,00</td>
+    <td>R$ 700,00</td>
+    <td>Pago</td>
+  </tr>
 
+</table>
+</div>
+
+s
     <script>
       /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
       function openNav() {

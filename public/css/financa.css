@@ -237,3 +237,13 @@
   .financa a:hover{
     font-weight: bold;
   }
+ /*criando a minha tabela de pagamentos, att josyani*/
+
+ .pg table{
+  margin:50px auto 0 auto;
+}
+ .letras{
+  background-color: #ffffff;
+  color: #818181;
+
+ }
