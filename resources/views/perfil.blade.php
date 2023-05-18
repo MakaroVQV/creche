@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="{{asset('/css/perfil.css')}}">
     <title>Creche</title>
 </head>
+   
 
-
-<body>
+  <body>
 
 
     <!-- Menu acima-->
