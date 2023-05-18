@@ -22,6 +22,9 @@ Route::get('/usuarios', [UserController::class, 'index'] )
 Route::get('/financa', [FinancaController::class, 'index'])
 ->name('financa');
 
+Route::get('/financa#pendentes', [FinancaController::class, 'index'])
+->name('financa');
+
 //------------------------------ notificado ------------------------------//
 
 Route::get('/notificado', [NotificadoController::class, 'index'])

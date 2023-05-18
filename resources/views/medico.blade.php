@@ -10,56 +10,79 @@
 </head>
 
 <body>
-   <!-- Menu acima-->
-   <div class="main">
-        <navbar class="navbar">
-            <div class="esquerda-nav">
-                <div onclick="openNav()"><img src="{{asset('/imagens/icon menu.png')}}" class="menu-azul"></div>
-                <div><img src="{{asset('/imagens/creche.png')}}" class="logo-navbar"></div>
-            </div>
-            <div class="direita-nav">
-                <div class="texto-user">
-                    <h5><strong>Aluno(a)</strong></h5>
-                </div>
-                <div><img src="{{asset('/imagens/icon aluna.png')}}" class="logo-user"></div>
-            </div>
-        </navbar>
+    <!-- Menu acima-->
+<div class="main">
+  <navbar class="navbar">
+    <div class="esquerda-nav">
+      <div onclick="openNav()"><img src="{{ asset('imagens/icon menu.png') }}" class="menu-azul"></div>
+      <div><img src="{{ asset('imagens/creche.png') }}" class="logo-navbar"></div>
+    </div>
+    <div class="direita-nav">
+      <div class="texto-user"><h5><strong>Aluno(a)</strong></h5></div>
+      <div><img src="{{ asset('imagens/icon aluna.png') }}" class="logo-user"></div>
+    </div>
+  </navbar>
 
-        <!--Menu lateral-->
-        <div id="mySidenav" class="sidenav">
-            <div class="side">
-                <a href="javascript:void(0)" onclick="closeNav()"><img src="{{asset('/imagens/icon menu.png')}}" class="menu-cinza"></a>
-                <div><img src="{{asset('/imagens/creche.png')}}" class="logo-sidebar"></div>
-            </div>
-            <div class="iten-menu">
-            <a href="{{ url('/calendario')}}"><img src="{{asset('/imagens/icon calendario cinza.png')}}">
-                    <p>Calendario</p>
-                </a>
-                <a href="{{ url('/financa')}}"><img src="{{asset('/imagens/icon financeiro cinza.png')}}">
-                    <p>Financeiro</p>
-                </a>
-                <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home azul.png')}}">
-                    <p>Home</p>
-                </a>
-                <a href="{{ url('/medico')}}"><img src="{{asset('/imagens/icon saude cinza.png')}}">
-                    <p>Saude</p>
-                </a>
-                <a href="{{ url('/perfil')}}"><img src="{{asset('/imagens/icon user cinza.png')}}">
-                    <p>Perfil</p>
-                </a>
-            </div>
-            <!--Footer do menu lateral-->
-            <div class="footer-menu">
-                <a href="{{ url('/logout') }}"><img src="{{asset('/imagens/sair.png')}}" class="sair">
-                    <p>Sair</p>
-                </a>
-            </div>
+  <!-- Menu lateral -->
+  <div id="mySidenav" class="sidenav">
+    <div class="side">
+      <a href="javascript:void(0)" onclick="closeNav()"><img src="{{ asset('imagens/icon menu.png') }}" class="menu-cinza"></a>
+      <div><img src="{{ asset('imagens/creche.png') }}" class="logo-sidebar"></div>
+    </div>
+    <div class="iten-menu">
+      <a href="#"><img src="{{ asset('imagens/icon calendario cinza.png') }}">
+        <p>Calendario</p></a>
 
-            <div class="copyriht">
-                <img src="{{asset('/imagens/icon_copyright.png')}}" class="copyright">
-                <p><strong>2023 FROM NEWPATH</strong></p>
-            </div>
+      <a href="#" onclick="toggleSubMenu('subMenuFinanca')">
+        <img src="{{ asset('imagens/icon financeiro cinza.png') }}">
+        <div class="esquerda"><img src="{{ asset('imagens/icon seta cinza.png') }}" id="seta1"></div>
+        <p>Financeiro</p>
+        <div id="subMenuFinanca" class="sub-menu">
+          <div class="div-container">
+            <a href="financa.html#pendetes">Pendentes</a>
+            <a href="financa.html#pagas">Pagas</a>
+            <a href="financa.html#dados">Dados</a>
+          </div>
         </div>
+      </a>
+      <a href="{{ url('/home')}}"><img src="{{ asset('imagens/icon home azul.png') }}"><p>Home</p></a>
+
+      <a href="#" onclick="toggleSubMenu('subMenuMedico')">
+        <img src="{{ asset('imagens/icon saude cinza.png') }}">
+        <div class="esquerda"><img src="{{ asset('imagens/icon seta cinza.png') }}" id="seta2"></div>
+        <p>Saude</p>
+        <div id="subMenuMedico" class="sub-menu">
+          <div class="div-container">
+          <a href="{{ url('/medico#ficha-medica')}}">Ficha Médica</a>
+            <a href="{{ url('/medico#atestados')}}">Atestados</a>
+            <a href="{{ url('/medico#cardapio')}}">Cardápio</a>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" onclick="toggleSubMenu('subMenuPerfil')">
+        <img src="{{ asset('imagens/icon user cinza.png') }}">
+        <div class="esquerda"><img src="{{ asset('imagens/icon seta cinza.png') }}" id="seta3"></div>
+        <p>Perfil</p>
+        <div id="subMenuPerfil" class="sub-menu">
+          <div class="div-container">
+            <a href="#">Meus Dados</a>
+            <a href="#">Configurações</a>
+            <a href="#">Ajuda</a>
+          </div>
+        </div>
+      </a>
+    </div>
+    <!-- Footer do menu lateral -->
+    <div class="footer-menu">
+      <a href="index.html"><img src="{{ asset('imagens/sair.png') }}" class="sair"><p>Sair</p></a>
+    </div>
+
+    <div class="copyriht"> 
+      <img src="{{ asset('imagens/icon copyright preto.png') }}" class="copyright">
+      <p><strong>2023 FROM NEWPATH</strong></p>
+    </div>
+  </div>
 
   <!--Ficha, Atestado e cardápio-->
 
@@ -189,6 +212,24 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   document.getElementById("main").style.marginLeft = "0";
   document.body.style.backgroundColor = "white";
+}
+
+function toggleSubMenu(subMenuId) {
+  var subMenu = document.getElementById(subMenuId);
+  var isOpen = subMenu.classList.contains('open');
+
+  // Fecha todos os submenus
+  var subMenus = document.getElementsByClassName("sub-menu");
+  for (var i = 0; i < subMenus.length; i++) {
+    subMenus[i].classList.remove('open');
+    subMenus[i].style.display = "none";
+  }
+
+  // Abre ou fecha o submenu atual
+  if (!isOpen) {
+    subMenu.classList.add('open');
+    subMenu.style.display = "block";
+  }
 }
 
 // constante para os cards cards se abrirem

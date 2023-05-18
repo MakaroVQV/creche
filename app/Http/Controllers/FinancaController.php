@@ -16,3 +16,4 @@ class FinancaController extends Controller
         return view('financa');
     }
 }
+
