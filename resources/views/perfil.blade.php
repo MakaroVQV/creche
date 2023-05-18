@@ -31,31 +31,32 @@
 
         <!--Formulario-->
 
-        <center>
-            <h1>Meus dados</h1>
-        </center>
+        <center><h1>Meus dados</h1></center>
         <br>
         <br>
         <br>
 
-       <center><p class="circulo">CS Carol</p></center><br>
-
+    <center><p class="circulo">CS Carol</p></center><br>
+<div class="container">
 <form>
+    <div class="direita">
     <label for="name">Nome Completo:</label>
-      <input type="text" id="name" name="name" value="Carolina Souza De Araújo">
-
+        <input type="text" id="name" name="name" value="Carolina Souza De Araújo">
+    <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" value="carolinasouzaa@gmail.com"><br><br>
+    <label for="gender">Gênero:</label>
+        <input type="feminino" id="Feminino" name="Feminino" value="Feminino"><br><br>
+    </div>
+    <div class="esquerda">
     <label for="phone">Telefone:</label>
-      <input type="tel" id="phone" name="phone" value="(21) 98765-4321"><br><br>
-
-
-   <label class="direita" for="email">E-mail:</label>
-      <input type="email" id="email" name="email" value="carolinasouzaa@gmail.com"><br><br>
-
-   <label class="direita" for="gender">Gênero:</label>
-      <input type="feminino" id="Feminino" name="Feminino" value="Feminino"><br><br>
- 
-   <input type="submit" value ="Enviar">
+        <input type="tel" id="phone" name="phone" value="(21) 98765-4321"><br><br>
+    </div>
+    <div id="botao">
+        <input id="enviar" type="submit" value ="Enviar">
+    </div>
+    
 </form>
+</div>
 
 
         <!--Menu lateral-->
