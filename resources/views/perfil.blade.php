@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,9 @@
     <link rel="stylesheet" href="{{asset('/css/perfil.css')}}">
     <title>Creche</title>
 </head>
-   
 
-  <body>
+
+<body>
 
 
     <!-- Menu acima-->
@@ -26,33 +27,37 @@
                 <div><img src="{{asset('/imagens/icon aluna.png')}}" class="logo-user"></div>
             </div>
         </navbar>
-          
+
 
         <!--Formulario-->
 
-        <center><h1>Meus dados</h1></center>
+        <center>
+            <h1>Meus dados</h1>
+        </center>
         <br>
         <br>
         <br>
 
-       <center><p class="circulo">CS Carol</p></center><br>
+        <center>
+            <p class="circulo">CS Carol</p>
+        </center><br>
 
-<form>
-    <label for="name">Nome Completo:</label>
-      <input type="text" id="name" name="name" value="Carolina Souza De Araújo">
+        <form>
+            <label for="name">Nome Completo:</label>
+            <input type="text" id="name" name="name" value="Carolina Souza De Araújo">
 
-    <label for="phone">Telefone:</label>
-      <input type="tel" id="phone" name="phone" value="(21) 98765-4321"><br><br>
+            <label for="phone">Telefone:</label>
+            <input type="tel" id="phone" name="phone" value="(21) 98765-4321"><br><br>
 
 
-   <label class="direita" for="email">E-mail:</label>
-      <input type="email" id="email" name="email" value="carolinasouzaa@gmail.com"><br><br>
+            <label class="direita" for="email">E-mail:</label>
+            <input type="email" id="email" name="email" value="carolinasouzaa@gmail.com"><br><br>
 
-   <label class="direita" for="gender">Gênero:</label>
-      <input type="feminino" id="Feminino" name="Feminino" value="Feminino"><br><br>
- 
-   <input type="submit" value ="Enviar">
-</form>
+            <label class="direita" for="gender">Gênero:</label>
+            <input type="feminino" id="Feminino" name="Feminino" value="Feminino"><br><br>
+
+            <input type="submit" value="Enviar">
+        </form>
 
 
         <!--Menu lateral-->

@@ -139,7 +139,6 @@
 <script src="{{asset('/assets/fullcalendar/dist/js/adminlte.min.js')}}"></script>
 <!-- fullCalendar 2.2.5 -->
 <script src="{{asset('/assets/fullcalendar/dist/js/calendario.js')}}"></script>
-<script src="{{asset('/assets/fullcalendar/dist/plugins/moment/moment.min.js')}}"></script>
 <script src="{{asset('/assets/fullcalendar/dist/plugins/fullcalendar/main.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
 
