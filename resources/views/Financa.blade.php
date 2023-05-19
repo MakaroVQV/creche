@@ -86,6 +86,16 @@
       </div>
     </div>
   
+    <div class="footer-menu">
+        <a href="index.html"><img src="{{asset('/imagens/sair.png')}}" class="sair"><p>Sair</p></a>
+      </div>
+    
+      <div class="copyriht"> 
+        <img src="{{asset('/imagens/icon copyright preto.png')}}" class="copyright">
+        <p><strong>2023 FROM NEWPATH</strong></p>
+      </div>
+    </div>
+  
      <!--Financeiro: Pendentes, Pagas e Dados-->
 
      <div class="financa">
@@ -103,7 +113,7 @@
     </div>
 
      <!-- Conteúdo invisível -->
-
+      <!-- Pendentes -->
      <div id="conteudoPendente" class="conteudo">
       <div class="titulo">
         <p>Vencimento</p>
@@ -118,11 +128,23 @@
         <p class="pago2"></p>
         <p class="pendente">Pendente</p>
         <a href="#" class="imagem-clicavel" onclick="expandirDetalhe(this);">
-          <img src="{{ asset('imagens/seta-azul.png') }}"/>
+          <img id="seta-img" src="{{asset('/imagens/seta-azul.png')}}"/>
         </a>
+        <div id="conteudo-oculto" class="oculto">
+          <!-- Conteúdo oculto -->
+         <form action="">
+          <div>
+            <label for="arquivo">Anexar arquivo <img src="{{asset('/imagens/anexo-cinza.png')}}"></label>
+            <input type="file" name="arquivo" id="arquivo">
+          </div>
+         </form>
+        </div>
       </div>
+
     </div>
     
+     <!-- Pagas -->
+
     <div id="conteudoPagas" class="conteudo">
     <div class="titulo">
       <p>Vencimento</p>
@@ -159,11 +181,34 @@
 
     </div>
 
-    <div id="conteudoDados" class="conteudo">
-      <p>Conteúdo dos Dados</p>
-    </div>
+    <!-- Dados -->
 
-</div>
+    <div id="conteudoDados" class="conteudo">
+      <div class="dados">
+        <div class="chave">
+          <div class="imagem-pix">
+          <img src="{{asset('/imagens/pix.png')}}">
+        </div>
+        <div class="chave-aleatoria">
+          <p>Chave Aleatória:</p>
+          <p>1234567891011121314151617181920</p>
+        </div>
+        </div>
+        <div class="agencia">
+          <div class="imagem-agencia">
+            <img src="{{asset('/imagens/transferencia.png')}}">
+            <div class="conta">
+              <p>Agência: </p>
+              <p>Conta:</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+</body>
+</html>
 </body>
 <script>
     /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
@@ -218,6 +263,11 @@ function toggleConteudo(id, link) {
       conteudos[i].classList.remove('expandido');
     }
   }
+}
+
+function expandirDetalhe() {
+  var detalhe = document.querySelector('.detalhe');
+  detalhe.classList.toggle('expandido');
 }
 
    

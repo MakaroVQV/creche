@@ -1,3 +1,7 @@
+html{
+overflow-x:hidden;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -16,7 +20,7 @@
     justify-content: space-between;
   }
   .menu-azul{
-    margin: 10px 10px 8px 10px;
+    margin: 10px 10px 3px 2px;
     cursor: pointer;
   }
   .logo-navbar{
@@ -88,6 +92,7 @@
   }
   
   .logo-sidebar{
+    margin: 0 20px 0 0;
     max-width: 80px;
     max-height: 80px;
   }
@@ -152,11 +157,9 @@
     position: fixed; /* Stay in place */
     z-index: 4; /* Stay on top */
     top: 0;
-    left: 0;
+    left: -9px;
     background-color: #ffffff;
-    border-top: 1px solid #009CDE;
     border-right: 1px solid #009CDE;
-    border-bottom: 1px solid #009CDE;
     border-radius: 12px;
     overflow-x: hidden; /* Disable horizontal scroll */
     transition: all 0.3s ease;
