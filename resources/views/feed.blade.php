@@ -9,15 +9,15 @@
 <body>
     <form name="CadastroAlunos" type="text" method="post" enctype="multipart/form-data" action="upload.php">
         <div>
-        <label for="email">* Título</label>
-        <input type="text" name="Titulo" placeholder="Título">
+        <label for="titulo">* Título</label>
+        <input type="text" name="titulo" placeholder="Título">
         </div>
         <div>
-        <label for="email">* Legenda</label>
-        <input type="text" name="texto" placeholder="Legenda">
+        <label for="legenda">* Legenda</label>
+        <input type="text" name="legenda" placeholder="Legenda">
         </div>
         <div>
-        <label for="email">Imagem</label>
+        <label for="imagem">Imagem</label>
         <input type="file" name="image" placeholder="Imagem">
             <input type="submit" value="Enviar"/>
         </div>
