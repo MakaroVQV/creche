@@ -32,7 +32,7 @@
       <div><img src="{{asset('/imagens/creche.png')}}" class="logo-sidebar"></div>
     </div>
     <div class="iten-menu">
-      <a href="{{ url('/calendario')}}"><img src="../imagens/icon calendario cinza.png">
+      <a href="{{ url('/calendario')}}"><img src="{{asset('/imagens/icon calendario cinza.png')}}">
         <p>Calendario</p></a>
 
       <a href="#" onclick="toggleSubMenu('subMenuFinanca')">
@@ -62,19 +62,12 @@
         </div>
       </a>
 
-      <a href="#" onclick="toggleSubMenu('subMenuPerfil')">
-        <img src="{{asset('/imagens/icon user cinza.png')}}">
-        <div class="esquerda"><img src="{{asset('/imagens/icon seta cinza.png')}}" id="seta3"></div>
+      <div class="iten-menu">
+      <a href="{{ url('/perfil')}}"><img src="{{asset('/imagens/icon user cinza.png')}}">
         <p>Perfil</p>
-        <div id="subMenuPerfil" class="sub-menu">
-          <div class="div-container">
-            <a href="#">Meus Dados</a>
-            <a href="#">Configurações</a>
-            <a href="#">Ajuda</a>
-          </div>
-        </div>
       </a>
     </div>
+  </div>
     <!-- Footer do menu lateral -->
     <div class="footer-menu">
       <a href="{{ url('logout')}}"><img src="{{asset('/imagens/sair.png')}}" class="sair"><p>Sair</p></a>
