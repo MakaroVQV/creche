@@ -205,11 +205,6 @@ overflow-x:hidden;
     width: 30px;
     height: 30px;
   }
-  #seta3{
-    transform: scaleX(-1);
-    width: 30px;
-    height: 30px;
-  }
   
   /* When you mouse over the navigation links, change their color */
   .sidenav a:hover {
