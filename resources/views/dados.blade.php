@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,11 +7,10 @@
     <link rel="stylesheet" href="{{asset('/css/menuStyle.css')}}">
     <title>Atualizar dados</title>
 </head>
-
 <body>
     <section class="content">
         <div class="atualizar">
-            <h3>Atualizar dados</h3>
+            <h3>Atualizar meus dados</h3>
                 <form>
                     <input class="field" name="email" placeholder="E-mail">
                     <input class="field" name="telefone" placeholder="Telefone">
