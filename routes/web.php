@@ -41,10 +41,10 @@ Route::get('/perfil', [PerfilController::class, 'index'])
 
 //------------------------------ Calendario ------------------------------//
 Route::get('/usuarios/calendario', [CalendarioController::class, 'index'])
-->name('usuario.calendario');
+->name('usuario.calendario')->middleware('can:is_admin');
 
 Route::get('/load-events', [CalendarioController::class, 'index'])
-->name('routeLoadEvents');
+->name('routeLoadEvents')->middleware('can:is_admin');
 
 
 
