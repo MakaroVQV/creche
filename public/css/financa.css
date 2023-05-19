@@ -1,4 +1,9 @@
-*{
+
+html{
+  overflow-x: hidden ;
+ }
+ 
+ *{
   margin: 0;
   padding: 0;
   }
@@ -92,9 +97,8 @@ p{
  
 .iten-menu p{
   padding-right: 80px;
-  margin-top: 40px;
-  margin-left: 10px;
   float: left;
+  margin: 30px 0 0 10px;
 }
 
 .iten-menu img{
@@ -171,8 +175,8 @@ justify-content: center;
 }
 
 .iten-menu img {
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
   margin: 30px 10px 0 40px;
 }
 
@@ -192,18 +196,18 @@ justify-content: center;
 
 #seta1{
   transform: scaleX(-1);
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
 }
 #seta2{
   transform: scaleX(-1);
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
 }
 #seta3{
   transform: scaleX(-1);
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -256,6 +260,8 @@ input[type="checkbox"] {
       top: 40px;
     
 }
+
+/*Acaba o menu lateral e começa o conteúdo */
 
 .texto{
   text-align: center;
@@ -337,23 +343,49 @@ input[type="checkbox"] {
   position: relative;
   border-radius: 8px;
   transition: all ease-in-out 0.3s;
+  overflow: hidden;
 }
 
 .detalhe p{
   margin: 15px 0 0 0;
 }
 
+.detalhe.expandido {
+  width: 70%;
+  height: 200px;
+}
+
+.oculto {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+}
+
+.detalhe.expandido .oculto {
+  display: block;
+}
+
+.detalhe.expandido img{
+transform: rotate(90deg);
+}
+
 .pago2{
   padding: 0 15px 0 0;
+  overflow: hidden;
 }
 
 .pagoP{
   margin: 0 10px 0 0;
   color: #3BA12F;
+  overflow: hidden;
 }
 
 .data{
   margin: 0 0 0 10px;
+  overflow: hidden;
 }
 
 .pendente {
@@ -361,7 +393,35 @@ input[type="checkbox"] {
   padding: 0 0 0 60px;
   margin: 15px -10px 0 0;
   font-weight: 200;
+  overflow: hidden;
 }
+
+input[type="file"]{
+  display: none;
+  width:70%;
+
+}
+
+label {
+  background-color: #F5F5F5;
+  color: #939090;
+  width: 90%;
+  height: 50px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0 auto;
+}
+
+label img {
+  margin: 0 0 0 20px;
+  max-width: 100%;
+  max-height: 100%;
+  width: 20px;
+  height: 20px;
+}
+
 
 .anexo-container {
   display: flex;
@@ -373,15 +433,40 @@ input[type="checkbox"] {
 }
 
 .imagem-clicavel {
-  right: 230px;
-  position: fixed;
   margin: 10px 0 0 0;
-  }
-  
-  .imagem-clicavel img {
-    width: 30px;
-    height: 30px;
-    transform: rotate(-90deg);
-    cursor: pointer;
-    transition: all ease-in-out 0.3s;
-  }
+}
+
+.imagem-clicavel img {
+  width: 30px;
+  height: 30px;
+  transform: rotate(-90deg);
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+
+.seta-girada {
+  transform: rotate(-180deg);
+}
+
+.dados {
+  display: flex;
+  justify-content: center;
+}
+
+.chave, .agencia {
+  width: 350px;
+  height: 150px;
+  margin: 0 30px 0 30px;
+  display: inline-block;
+  background: #F5F5F5;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.chave img{
+  max-width: 100px;
+  max-height: 150px;
+}
