@@ -14,6 +14,7 @@
                 <form>
                     <input class="field" name="email" placeholder="E-mail">
                     <input class="field" name="telefone" placeholder="Telefone">
+                    <input class="field" name="pais" placeholder="Selecionar país">
                     <input type="submit" value="Atualizar">
                 </form>
         </div>
