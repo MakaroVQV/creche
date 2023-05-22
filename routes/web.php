@@ -7,6 +7,7 @@ use App\Http\Controllers\NotificadoController;
 use App\Http\Controllers\MedicoController;
 use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\CalendarioController;
+use App\Http\Controllers\UploadController;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -77,6 +78,16 @@ Route::delete('/usuarios/{id}', [UserController::class, 'destroy'] )
 
 
 
+/*Route::get('/',function (){
+    return view('Welcome');
+});*/
+
+//Upload DOCS
+Route::get('/upload/docs', [UploadController::class,'form_docs'])->name('form_docs');
+Route::post('/upload/docs', [UploadController::class,'upload_docs'])->name('upload_docs');
+
+
+//AdminLTE
 
 Auth::routes();
 
