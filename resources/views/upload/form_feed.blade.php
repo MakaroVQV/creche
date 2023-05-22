@@ -10,12 +10,12 @@
 <body>
     <form name="CadastroAlunos" type="text" method="post" enctype="multipart/form-data" action="upload.php">
         <div>
-        <label for="titulo">* Título</label>
-        <input type="text" name="titulo" placeholder="Título">
+        <label for="titulo">Título</label>
+        <input type="text" name="titulo" placeholder="Título" required>
         </div>
         <div>
-        <label for="legenda">* Legenda</label>
-        <input type="text" name="legenda" placeholder="Legenda">
+        <label for="legenda">Legenda</label>
+        <input type="text" name="legenda" placeholder="Legenda" required>
         </div>
         <div>
         <label for="imagem">Imagem</label>
