@@ -39,9 +39,9 @@
         <p>Financeiro</p>
         <div id="subMenuFinanca" class="sub-menu">
           <div class="div-container">
-            <a href="financa.html#pendetes">Pendentes</a>
-            <a href="financa.html#pagas">Pagas</a>
-            <a href="financa.html#dados">Dados</a>
+              <a href="{{ url('/financa#pendentes') }}">Pendentes</a>
+              <a href="{{ url('/financa#pagas') }}">Pagos</a>
+              <a href="{{ url('/financa#dados') }}">Dados</a>
           </div>
         </div>
       </a>

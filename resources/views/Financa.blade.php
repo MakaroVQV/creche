@@ -39,9 +39,9 @@
           <div id="subMenuFinanca" class="sub-menu">
             <div class="div-container">
 
-              <a href="{{ route('financa') }}">Pendentes</a>
-              <a href="{{ route('financa') }}">Pagos</a>
-              <a href="{{ route('financa') }}">Dados</a>
+              <a href="{{ url('/financa#pendentes') }}">Pendentes</a>
+              <a href="{{ url('/financa#pagas') }}">Pagos</a>
+              <a href="{{ url('/financa#dados') }}">Dados</a>
 
               
             </div>
@@ -86,15 +86,7 @@
       </div>
     </div>
   
-    <div class="footer-menu">
-        <a href="index.html"><img src="{{asset('/imagens/sair.png')}}" class="sair"><p>Sair</p></a>
-      </div>
     
-      <div class="copyriht"> 
-        <img src="{{asset('/imagens/icon copyright preto.png')}}" class="copyright">
-        <p><strong>2023 FROM NEWPATH</strong></p>
-      </div>
-    </div>
   
      <!--Financeiro: Pendentes, Pagas e Dados-->
 
