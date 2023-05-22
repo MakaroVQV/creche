@@ -14,11 +14,11 @@
                 <form>
                     <div>
                         <label for="user">Nome de Usuário</label>
-                        <input class="field" name="email" placeholder="E-mail" required>
+                        <input class="field" name="user" placeholder="user" required>
                     </div>
                     <div>
                         <label for="name">Nome completo do Responsável</label>
-                        <input class="field" name="email" placeholder="E-mail" required>
+                        <input class="field" name="name" placeholder="name" required>
                     </div>
                     <div>
                         <label for="email">E-mail</label>
