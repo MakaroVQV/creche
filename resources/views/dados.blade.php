@@ -9,7 +9,7 @@
 </head>
 <body>
     <section class="content">
-        <div class="atualizar">
+        <div class="dados">
             <h3>Atualizar meus dados</h3>
                 <form>
                     <input class="field" name="email" placeholder="E-mail">
