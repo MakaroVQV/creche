@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app\models\Document;
+use App\Models\Document;
 
 class UploadController extends Controller
 {
@@ -13,12 +13,23 @@ class UploadController extends Controller
     }
 
     public function upload_docs(Request $request){
+
+        $validated  = $request->validate([
+            'document' => 'mimes:jpg,bmp,png,pdf'    
+            ]);
+
+
+
         //verifica se o arquivo foi enviado
         if($request->hasfile('document')){
         //
         $docsFileName =$request->file('document')->getClientOriginalName();
         //armazenar o documento da pasta
         $path=$request->file('document')->store('public/docs');
+
+        
+
+
 
         //inserir infos no banco
         $document = new Document;
