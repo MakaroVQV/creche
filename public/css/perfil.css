@@ -149,6 +149,7 @@ html{
       margin-left:5px;
     }
   
+<<<<<<< HEAD
     .retangulo a{
       margin: 0 0 0 20px;
       border-radius: 12px;
@@ -383,7 +384,6 @@ html{
       width: 350px;
       height: 200px;
       flex-direction: column;
-      background-color: lawngreen;
       display: flex;
     }
 
@@ -393,12 +393,8 @@ html{
       font-family: arial;
     }
 
-    .numero{
-
-    }
-
     .numero img{
-      margin: 0 20px 0 10px;
+      margin: 0 10px 0 10px;
       float: left;
     }
     
@@ -434,3 +430,5 @@ html{
         border-radius: 50%;
       } */
     /* OUTRA */
+
+   

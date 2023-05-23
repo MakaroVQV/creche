@@ -110,7 +110,7 @@
 
             <div class="right">
             <div class="telefone"><p>Telefone</p></div>
-            <div class="numero"><img src="{{asset('/imagens/')}}">
+            <div class="numero"><img src="{{asset('/imagens/celular.png')}}">
             <p>(21) 98765-4321</p></div>
             </div>
         </div>
