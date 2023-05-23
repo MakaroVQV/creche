@@ -14,5 +14,6 @@ class MedicoController extends Controller
     public function index()
     {
         return view('medico');
+        
     }
 }
