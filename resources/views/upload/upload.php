@@ -8,7 +8,7 @@ $legenda = $_POST['legenda'];
 $foto = $_FILES['image']['tmp_name'];
 
 $tamanho_permitido = 1024000; //1 MB
-$pasta = 'uploads';
+$pasta = 'upload';
 
 if (!empty($foto)){
     $file = getimagesize($foto);
@@ -35,7 +35,7 @@ if (!empty($foto)){
 } 
 
 
-$sql = "INSERT INTO contatos (nome, idade, foto) values ('$nome', '$idade', $novoDestino";
+$sql = "INSERT INTO feed (titulo, legenda, foto) values ('$titulo', '$legenda', $foto";
 
 echo $sql;
 ?>

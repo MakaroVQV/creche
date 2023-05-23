@@ -39,9 +39,9 @@
         <p>Financeiro</p>
         <div id="subMenuFinanca" class="sub-menu">
           <div class="div-container">
-            <a href="financa.html#pendetes">Pendentes</a>
-            <a href="financa.html#pagas">Pagas</a>
-            <a href="financa.html#dados">Dados</a>
+              <a href="{{ url('/financa#pendentes') }}">Pendentes</a>
+              <a href="{{ url('/financa#pagas') }}">Pagos</a>
+              <a href="{{ url('/financa#dados') }}">Dados</a>
           </div>
         </div>
       </a>
@@ -75,7 +75,7 @@
     </div>
     <!-- Footer do menu lateral -->
     <div class="footer-menu">
-      <a href="index.html"><img src="{{ asset('imagens/sair.png') }}" class="sair"><p>Sair</p></a>
+      <a href="{{ url('logout')}}"><img src="{{ asset('imagens/sair.png') }}" class="sair"><p>Sair</p></a>
     </div>
 
     <div class="copyriht"> 
@@ -167,7 +167,7 @@
       <p>Cardápio</p>
       <div class="texto-expandido">
         <div class="cardapio">
-          <p><strong>Colocação</strong></p>
+          <p><strong>Colação</strong></p>
           <div class="descricao">
             <p>Mini pão francês com manteiga;<br>  Café com leite</p>
           </div>
