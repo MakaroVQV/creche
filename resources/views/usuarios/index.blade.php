@@ -17,13 +17,13 @@
         <tbody>
             @foreach($users as $user)
             <tr>
-                <td class="col-sm">{{ $user->name }}</td>
+                <td class="">{{ $user->name }}</td>
                 <td class="">
                     
-                    <a class="col-sm btn btn-primary" href="{{ url('usuarios/'. $user->id) }}">Vizualizar</a>
-                    <a class="col-sm btn btn-warning" href="{{ url('usuarios/'. $user->id . '/edit') }}">Editar</a>
+                    <a class=" btn btn-primary" href="{{ url('usuarios/'. $user->id) }}">Vizualizar</a>
+                    <a class=" btn btn-warning" href="{{ url('usuarios/'. $user->id . '/edit') }}">Editar</a>
                     {!! Form::open(['method' => 'DELETE','route' =>['usuarios.destroy', $user->id],'style'=>'display:inline']) !!}
-                    {{Form::submit('Excluir', ['class' => 'col-sm btn btn-danger'])}}
+                    {{Form::submit('Excluir', ['class' => ' btn btn-danger'])}}
                     {!! Form::close() !!}
                 </td>
             </tr>

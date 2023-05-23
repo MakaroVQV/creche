@@ -36,21 +36,19 @@
           <p>Calendario</p>
         </a>
 
-        <a href="#" onclick="toggleSubMenu('subMenuFinanca')">
-          <img src="{{ asset('imagens/icon financeiro cinza.png') }}">
-          <div class="esquerda"><img src="{{ asset('imagens/icon seta cinza.png') }}" id="seta1"></div>
-          <p>Financeiro</p>
-          <div id="subMenuFinanca" class="sub-menu">
-            <div class="div-container">
-              <a href="financa.html#pendetes">Pendentes</a>
-              <a href="financa.html#pagas">Pagas</a>
-              <a href="financa.html#dados">Dados</a>
-            </div>
+      <a href="#" onclick="toggleSubMenu('subMenuFinanca')">
+        <img src="{{ asset('imagens/icon financeiro cinza.png') }}">
+        <div class="esquerda"><img src="{{ asset('imagens/icon seta cinza.png') }}" id="seta1"></div>
+        <p>Financeiro</p>
+        <div id="subMenuFinanca" class="sub-menu">
+          <div class="div-container">
+            <a href="financa.html#pendetes">Pendentes</a>
+            <a href="financa.html#pagas">Pagas</a>
+            <a href="financa.html#dados">Dados</a>
           </div>
-        </a>
-        <a href="{{ url('/home')}}"><img src="{{ asset('imagens/icon home azul.png') }}">
-          <p>Home</p>
-        </a>
+        </div>
+      </a>
+      <a href="{{ url('/home')}}"><img src="{{ asset('imagens/icon home azul.png') }}"><p>Home</p></a>
 
         <a href="#" onclick="toggleSubMenu('subMenuMedico')">
           <img src="{{ asset('imagens/icon saude cinza.png') }}">
@@ -65,25 +63,23 @@
           </div>
         </a>
 
-        <a href="#" onclick="toggleSubMenu('subMenuPerfil')">
-          <img src="{{ asset('imagens/icon user cinza.png') }}">
-          <div class="esquerda"><img src="{{ asset('imagens/icon seta cinza.png') }}" id="seta3"></div>
-          <p>Perfil</p>
-          <div id="subMenuPerfil" class="sub-menu">
-            <div class="div-container">
-              <a href="#">Meus Dados</a>
-              <a href="#">Configurações</a>
-              <a href="#">Ajuda</a>
-            </div>
+      <a href="#" onclick="toggleSubMenu('subMenuPerfil')">
+        <img src="{{ asset('imagens/icon user cinza.png') }}">
+        <div class="esquerda"><img src="{{ asset('imagens/icon seta cinza.png') }}" id="seta3"></div>
+        <p>Perfil</p>
+        <div id="subMenuPerfil" class="sub-menu">
+          <div class="div-container">
+            <a href="#">Meus Dados</a>
+            <a href="#">Configurações</a>
+            <a href="#">Ajuda</a>
           </div>
-        </a>
-      </div>
-      <!-- Footer do menu lateral -->
-      <div class="footer-menu">
-        <a href="index.html"><img src="{{ asset('imagens/sair.png') }}" class="sair">
-          <p>Sair</p>
-        </a>
-      </div>
+        </div>
+      </a>
+    </div>
+    <!-- Footer do menu lateral -->
+    <div class="footer-menu">
+      <a href="index.html"><img src="{{ asset('imagens/sair.png') }}" class="sair"><p>Sair</p></a>
+    </div>
 
       <div class="copyriht">
         <img src="{{ asset('imagens/icon copyright preto.png') }}" class="copyright">
@@ -200,15 +196,14 @@
         </div>
       </div>
 
-      <div class="cards">
-        <img src="{{asset('/imagens/icon cardapio.png')}}">
-        <p>Cardápio</p>
-        <div class="texto-expandido">
-          <div class="cardapio">
-            <p><strong>Colocação</strong></p>
-            <div class="descricao">
-              <p>Mini pão francês com manteiga;<br> Café com leite</p>
-            </div>
+    <div class="cards">
+      <img src="{{asset('/imagens/icon cardapio.png')}}">
+      <p>Cardápio</p>
+      <div class="texto-expandido">
+        <div class="cardapio">
+          <p><strong>Colocação</strong></p>
+          <div class="descricao">
+            <p>Mini pão francês com manteiga;<br>  Café com leite</p>
           </div>
           <div class="cardapio">
             <p><strong>Lanche da manhã</strong></p>
