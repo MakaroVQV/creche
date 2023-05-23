@@ -17,8 +17,8 @@
         <label for="legenda">Legenda</label>
         <input type="text" name="legenda" placeholder="Legenda" required>
         </div>
-        <div class="">
-        <label for="imagem">Imagem</label>
+        <div class="iamge">
+        <label for="image">Imagem</label>
         <input type="file" name="image" placeholder="Imagem">
             <input type="submit" value="Enviar"/>
         </div>
