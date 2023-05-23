@@ -1,9 +1,5 @@
 
-html{
-  overflow-x: hidden ;
- }
- 
- *{
+*{
   margin: 0;
   padding: 0;
   }
@@ -21,7 +17,7 @@ p{
   justify-content: space-between;
 }
 .menu-azul{
-  margin: 10px 10px 8px 10px;
+  margin: 10px 10px 3px 2px;
   cursor: pointer;
 }
 .logo-navbar{
@@ -59,16 +55,18 @@ p{
 .sub-menu {
   display: none;
   padding-left: 20px; /* Adicione o espaçamento desejado nas opções do submenu */
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
 
 .sub-menu a {
   display: block;
   padding-left: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
 .sub-menu.show {
   display: block;
+  transition: all 0.3s ease-in-out;
 }
 .iten-menu {
   transition: all 0.3s ease;
@@ -91,14 +89,16 @@ p{
 }
 
 .logo-sidebar{
+  margin: 0 20px 0 0;
   max-width: 80px;
   max-height: 80px;
 }
  
 .iten-menu p{
   padding-right: 80px;
+  margin-top: 40px;
+  margin-left: 10px;
   float: left;
-  margin: 30px 0 0 10px;
 }
 
 .iten-menu img{
@@ -154,11 +154,9 @@ justify-content: center;
   position: fixed; /* Stay in place */
   z-index: 4; /* Stay on top */
   top: 0;
-  left: 0;
+  left: -9px;
   background-color: #ffffff;
-  border-top: 1px solid #009CDE;
   border-right: 1px solid #009CDE;
-  border-bottom: 1px solid #009CDE;
   border-radius: 12px;
   overflow-x: hidden; /* Disable horizontal scroll */
   transition: all 0.3s ease;
@@ -175,8 +173,8 @@ justify-content: center;
 }
 
 .iten-menu img {
-  width: 25px;
-  height: 25px;
+  width: 35px;
+  height: 35px;
   margin: 30px 10px 0 40px;
 }
 
@@ -196,18 +194,13 @@ justify-content: center;
 
 #seta1{
   transform: scaleX(-1);
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
 }
 #seta2{
   transform: scaleX(-1);
-  width: 20px;
-  height: 20px;
-}
-#seta3{
-  transform: scaleX(-1);
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
 }
 
 /* When you mouse over the navigation links, change their color */
