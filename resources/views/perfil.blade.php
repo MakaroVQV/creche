@@ -8,11 +8,8 @@
     <link rel="stylesheet" href="{{asset('/css/perfil.css')}}">
     <title>Creche</title>
 </head>
-   
 
-  <body>
-
-
+<body>
     <!-- Menu acima-->
     <div class="main">
         <navbar class="navbar">
@@ -27,119 +24,137 @@
                 <div><img src="{{asset('/imagens/icon aluna.png')}}" class="logo-user"></div>
             </div>
         </navbar>
-          
-
-        <!--Formulario-->
-
-        <center><h1>Meus dados</h1></center>
-        <br>
-        <br>
-        <br>
-<div class="container">
-<form>
-    <div class="direita">
-        <div id="circulo"></div>
-        <div id="usuario">Carolina Souza</div>
-    </div>
-    <div class="esquerda">
-    <label for="name">Nome Completo</label>
-        <input type="text" id="name" name="name" value="Carolina Souza De Araújo">
-    <label for="email">E-mail</label>
-        <input type="email" id="email" name="email" value="carolinasouzaa@gmail.com"><br><br>
-    <label for="gender">Gênero</label>
-        <input type="feminino" id="Feminino" name="Feminino" value="Feminino"><br><br>
-    <label for="phone">Telefone</label>
-        <input type="tel" id="phone" name="phone" value="(21) 98765-4321"><br><br>
-    </div>
-    
-    
-    <div id="botao">
-        <input id="enviar" type="submit" value ="Enviar">
-    </div>
-    
-</form>
-</div>
-
 
         <!--Menu lateral-->
         <div id="mySidenav" class="sidenav">
-            <div class="side">
-                <a href="javascript:void(0)" onclick="closeNav()"><img src="{{asset('/imagens/icon menu.png')}}" class="menu-cinza"></a>
-                <div><img src="{{asset('/imagens/creche.png')}}" class="logo-sidebar"></div>
-            </div>
-            <div class="iten-menu">
-                <a href="{{ url('/calendar')}}"><img src="{{asset('/imagens/icon calendario cinza.png')}}">
-                    <p>Calendario</p>
-                </a>
-                <a href="{{ url('/financa')}}"><img src="{{asset('/imagens/icon financeiro cinza.png')}}">
-                    <p>Financeiro</p>
-                </a>
-                <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home azul.png')}}">
-                    <p>Home</p>
-                </a>
-                <a href="{{ url('/medico')}}"><img src="{{asset('/imagens/icon saude cinza.png')}}">
-                    <p>Saude</p>
-                </a>
-                <a href="{{ url('/perfil')}}"><img src="{{asset('/imagens/icon user cinza.png')}}">
-                    <p>Perfil</p>
-                </a>
-            </div>
-            <!--Footer do menu lateral-->
-            <div class="footer-menu">
-                <a href="index.html"><img src="{{asset('/imagens/sair.png')}}" class="sair">
-                    <p>Sair</p>
-                </a>
-            </div>
+    <div class="side">
+      <a href="javascript:void(0)" onclick="closeNav()"><img src="{{asset('/imagens/icon menu.png')}}" class="menu-cinza"></a>
+      <div><img src="{{asset('/imagens/creche.png')}}" class="logo-sidebar"></div>
+    </div>
+    <div class="iten-menu">
+      <div class="retangulo">
+      <a href="{{ url('/calendario')}}"><img src="{{asset('/imagens/icon calendario cinza.png')}}">
+        <p>Calendario</p></a>
+        </div>
+        
+        <div class="retangulo">
+      <a href="#" onclick="toggleSubMenu('subMenuFinanca')">
+        <img src="{{asset('/imagens/icon financeiro cinza.png')}}">
+        <div class="esquerda"><img src="{{asset('/imagens/icon seta cinza.png')}}" id="seta1"></div>
+        <p>Financeiro</p>
+        </div>
+        <div id="subMenuFinanca" class="sub-menu">
+          <div class="div-container">
+            <a href="{{ url('/financa#pendentes')}}">Pendentes</a>
+            <a href="{{ url('/financa#pagas')}}">Pagas</a>
+            <a href="{{ url('/financa#dados')}}">Dados</a>
+          </div>
+        </div>
+      </a>
 
-            <div class="copSyriht">
-                <img src="{{asset('/imagens/icon_copyright.png')}}" class="copyright">
-                <p><strong>2023 FROM NEWPATH</strong></p>
-            </div>
+      <div class="retangulo">
+      <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home azul.png')}}"><p>Home</p></a>
+      </div>
+
+      <div class="retangulo">
+      <a href="#" onclick="toggleSubMenu('subMenuMedico')">
+        <img src="{{asset('/imagens/icon saude cinza.png')}}">
+        <div class="esquerda"><img src="{{asset('imagens/icon seta cinza.png')}}" id="seta2"></div>
+        <p>Saude</p>
         </div>
 
-        <script>
-            /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
-            function openNav() {
-                document.getElementById("mySidenav").style.width = "250px";
-                document.getElementById("main").style.marginLeft = "250px";
-                document.body.style.backgroundColor = "rgba(0,0,0,0.0)";
-            }
-
-            /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
-            function closeNav() {
-                document.getElementById("mySidenav").style.width = "0";
-                document.getElementById("main").style.marginLeft = "0";
-                document.body.style.backgroundColor = "white";
-            }
-
-            // constante para os cards cards se abrirem
-
-            const cards = document.querySelectorAll('.cards');
-
-            cards.forEach(card => {
-                card.addEventListener('click', () => {
-                    const textoExpandido = card.querySelector('.texto-expandido');
-                    card.classList.toggle('expandido');
-                    textoExpandido.classList.toggle('mostrar');
-                    card.classList.toggle('card-normal'); // Adicione essa linha para alternar entre as classes
-                });
-            });
-
-            const card = document.querySelector('.cards');
-            let count = 0;
-
-            card.addEventListener('click', () => {
-                count++;
-                if (count === 9) {
-                    card.classList.add('animate');
-                }
-            });
+        <div id="subMenuMedico" class="sub-menu">
+          <div class="div-container">
+            <a href="{{ url('/medico#ficha-medica')}}">Ficha Médica</a>
+            <a href="{{ url('/medico#atestados')}}">Atestados</a>
+            <a href="{{ url('/medico#cardapio')}}">Cardápio</a>
+          </div>
+        </div>
 
 
-            // // document.getElementById('img-1').addEventListener('click', function() {
-            // // document.getElementById('menu-lateral').style.left = '0'; 
-            // });
-        </script>
+      <div class="retangulo">
+      <a href="{{ url('/perfil')}}"><img src="{{asset('/imagens/icon user cinza.png')}}">
+        <p>Perfil</p>
+      </a>
+      </div>
+    </div>
+
+    <!-- Footer do menu lateral -->
+    <div class="footer-menu">
+      <a href="{{ url('logout')}}"><img src="{{asset('/imagens/sair.png')}}" class="sair"><p>Sair</p></a>
+    </div>
+  
+    <div class="copyriht"> 
+      <img src="{{asset('/imagens/icon copyright preto.png')}}" class="copyright">
+      <p><strong>2023 FROM NEWPATH</strong></p>
+    </div>
+  </div>
+
+
+        <!-- Conteúdo -->
+
+        <div class="invisivel">
+        <div class="cima">
+        <div class="circulo"><h2>CS</h2></div>
+        <div class="nome"><h3>Carolina Souza</h3>
+        </div>
+        </div>
+
+        <div class="baixo">
+            <div class="left">
+            <div class="titulo-1"><p>Nome completo do Responsável</p></div>
+            <div class="texto-1"><p>Carolina Souza de Araújo</p></div>
+            <div class="titulo-2"><p>Email</p></div>
+            <div class="texto-2"><p>carolinasouzaa@gmail.com</p></div>
+            </div>
+
+            <div class="right">
+            <div class="telefone"><p>Telefone</p></div>
+            <div class="numero"><img src="{{asset('/imagens/')}}">
+            <p>(21) 98765-4321</p></div>
+            </div>
+        </div>
+        
+       
+
+    
+    <script>
+        /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+        function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.0)";
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+  document.body.style.backgroundColor = "white";
+}
+
+function toggleSubMenu(subMenuId) {
+  var subMenu = document.getElementById(subMenuId);
+  var isOpen = subMenu.classList.contains('open');
+
+  // Fecha todos os submenus
+  var subMenus = document.getElementsByClassName("sub-menu");
+  for (var i = 0; i < subMenus.length; i++) {
+    subMenus[i].classList.remove('open');
+    subMenus[i].style.display = "none";
+  }
+
+  // Abre ou fecha o submenu atual
+  if (!isOpen) {
+    subMenu.classList.add('open');
+    subMenu.style.display = "block";
+  }
+}
+
+        // // document.getElementById('img-1').addEventListener('click', function() {
+        // // document.getElementById('menu-lateral').style.left = '0'; 
+        // });
+    </script>
 
 
 </body>
