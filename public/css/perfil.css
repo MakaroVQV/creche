@@ -268,3 +268,25 @@ form label {
     text-align: center;
   }
   
+  .centralizar {
+    text-align: center;
+   
+  }
+  /*centralizando CS DA PAGINA*/
+   .circulo{
+    background: #009CDE;
+    border-radius: 100px;    
+    width: 150px;
+    height: 150px;
+
+   
+
+ }
+
+ h1{
+  color: #FFD46D;
+  text-align: center;
+  top: 120px;
+  position: absolute;
+
+}
