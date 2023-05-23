@@ -30,33 +30,31 @@
           
 
         <!--Formulario-->
+       <div class="centralizar">
+        <div class="circulo">
+           <h1>CS</h1>
+       </div>   
+           <p><strong>Carolina Souza</strong></p>    
+        
+        </div><br>
 
-        <center><h1>Meus dados</h1></center>
-        <br>
-        <br>
-        <br>
 <div class="container">
 <form>
-    <div class="direita">
-        <div id="circulo"></div>
-        <div id="usuario">Carolina Souza</div>
-    </div>
+
     <div class="esquerda">
-    <label for="name">Nome Completo</label>
-        <input type="text" id="name" name="name" value="Carolina Souza De Araújo">
-    <label for="email">E-mail</label>
-        <input type="email" id="email" name="email" value="carolinasouzaa@gmail.com"><br><br>
-    <label for="gender">Gênero</label>
-        <input type="feminino" id="Feminino" name="Feminino" value="Feminino"><br><br>
-    <label for="phone">Telefone</label>
-        <input type="tel" id="phone" name="phone" value="(21) 98765-4321"><br><br>
+        <label for="name">Nome Completo</label><br>
+           <input type="text" id="name" name="name" value="Carolina Souza De Araújo"><br>
+
+         <label for="email">E-mail</label>
+           <input type="email" id="email" name="email" value="carolinasouzaa@gmail.com"><br><br>
+    </div>
+
+    <div>
+         <label for="phone">Telefone</label>
+           <input type="tel" id="phone" name="phone" value="(21) 98765-4321"><br><br>
     </div>
     
-    
-    <div id="botao">
-        <input id="enviar" type="submit" value ="Enviar">
-    </div>
-    
+  
 </form>
 </div>
 
