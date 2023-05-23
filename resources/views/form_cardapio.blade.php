@@ -11,19 +11,23 @@
         <div class="atualizar">
             <h3>Atualizar Cardápio</h3>
                 <form>
+                    <img src="{{asset('/imagens/icon cardapio form.png')}}" class="img-responsive">
                     <div>
-                        <label for="email">E-mail</label>
-                        <input class="field" name="email" placeholder="E-mail">
+                        <label for="colacao">Colação</label>
+                        <input class="field" name="colacao" placeholder="Inserir cardápio">
                     </div>
-                        <div>
-                        <div class="form-group col-xs-2">
-                            <label for="ddd">DDD</label>
-                            <input type="text" class="form-control" id="ddd" placeholder="00">
-                        </div>
-                        <div class="form-group col-xs-10">
-                            <label for="tel">* Telefone</label>
-                            <input type="text" class="form-control" id="tel" placeholder="00000-0000">
-                        </div>
+                    <div>
+                        <label for="lanche_manha">Lanche da Manhã</label>
+                        <input class="field" name="lanche_manha" placeholder="Inserir cardápio">
+                    </div>
+                    <div>
+                        <label for="almoco">Almoço</label>
+                        <input class="field" name="almoco" placeholder="Inserir cardápio">
+                    </div>
+                    <div>
+                        <label for="lanche_tarde">Lanche da Tarde</label>
+                        <input class="field" name="lanche_tarde" placeholder="Inserir cardápio">
+                    </div>
                             <input type="submit" value="Atualizar">
                 </form>
         </div>
