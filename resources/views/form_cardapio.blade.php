@@ -11,7 +11,6 @@
         <div class="atualizar">
             <h3>Atualizar Cardápio</h3>
                 <form>
-                    <img src="{{asset('/imagens/icon cardapio form.png')}}" class="img-responsive">
                     <div>
                         <label for="colacao">Colação</label>
                         <input class="field" name="colacao" placeholder="Inserir cardápio">
