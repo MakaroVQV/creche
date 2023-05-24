@@ -47,6 +47,10 @@ Route::get('/usuarios/calendario', [CalendarioController::class, 'index'])
 Route::get('/load-events', [CalendarioController::class, 'index'])
 ->name('routeLoadEvents')->middleware('can:is_admin');
 
+//----------------------------Formulario---------------------------------//
+Route::get('/Formulario', [FormularioController::class, 'index'])
+->name('formulario');
+
 
 
 
