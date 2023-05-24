@@ -43,10 +43,13 @@ Route::get('/perfil', [PerfilController::class, 'index'])
 ->name('perfil');
 
 //------------------------------ Calendario ------------------------------//
-Route::controller(FullCalenderController::class)->group(function(){
-    Route::get('fullcalender', 'index');
-    Route::post('fullcalenderAjax', 'ajax');
-});
+Route::get('/usuarios/calendario', [CalendarioController::class, 'index'])
+->name('usuario.calendario')->middleware('can:is_admin');
+
+Route::get('/load-events', [CalendarioController::class, 'index'])
+->name('routeLoadEvents')->middleware('can:is_admin');
+
+
 
 
 
