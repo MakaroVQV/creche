@@ -136,7 +136,7 @@
 
           <div class="detalhe">
             <div class="info"><img src="{{asset('/imagens/sangue.png')}}">
-              <p>Tipo Sanguíneo</p>
+              <p>Grupo Sanguíneo</p>
             </div>
             <div class="centro-info">
               <div class="sangue">
