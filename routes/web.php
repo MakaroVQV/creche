@@ -1,13 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
+
 use App\Http\Controllers\FinancaController;
-use App\Http\Controllers\NotificadoController;
+use App\Http\Controllers\FullCalenderController;
 use App\Http\Controllers\MedicoController;
+use App\Http\Controllers\NotificadoController;
 use App\Http\Controllers\PerfilController;
-use App\Http\Controllers\CalendarioController;
 use App\Http\Controllers\UploadController;
+use App\Http\Controllers\UserController;
+
 use Illuminate\Support\Facades\Auth;
 
 
@@ -41,13 +43,10 @@ Route::get('/perfil', [PerfilController::class, 'index'])
 ->name('perfil');
 
 //------------------------------ Calendario ------------------------------//
-Route::get('/usuarios/calendario', [CalendarioController::class, 'index'])
-->name('usuario.calendario')->middleware('can:is_admin');
-
-Route::get('/load-events', [CalendarioController::class, 'index'])
-->name('routeLoadEvents')->middleware('can:is_admin');
-
-
+Route::controller(FullCalenderController::class)->group(function(){
+    Route::get('fullcalender', 'index');
+    Route::post('fullcalenderAjax', 'ajax');
+});
 
 
 
