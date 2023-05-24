@@ -57,8 +57,8 @@
                     <input class="field" name="Vacinas" required>
                 </div>
                 <div>
-                    <label for="Observações"> Observações :</label>
-                    <input class="field" name="Observações">
+                    <label for="observações"> Observações :</label>
+                    <textarea id="observações" name="observações" rows="4" cols="50"></textarea>
                 </div>
                 <input type="submit" value="Enviar">
             </form>
