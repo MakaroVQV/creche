@@ -85,7 +85,7 @@
     </div>
   
     <div class="copyriht"> 
-      <img src="{{asset('/imagens/icon copyright preto.png')}}" class="copyright">
+      <img src="{{asset('/imagens/icon_copyright.png')}}" class="copyright">
       <p><strong>2023 FROM NEWPATH</strong></p>
     </div>
   </div>

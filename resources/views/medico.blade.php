@@ -81,10 +81,10 @@
       <a href="index.html"><img src="{{ asset('imagens/sair.png') }}" class="sair"><p>Sair</p></a>
     </div>
 
-      <div class="copyriht">
-        <img src="{{ asset('imagens/icon copyright preto.png') }}" class="copyright">
-        <p><strong>2023 FROM NEWPATH</strong></p>
-      </div>
+      <div class="copyriht"> 
+      <img src="{{asset('/imagens/icon_copyright.png')}}" class="copyright">
+      <p><strong>2023 FROM NEWPATH</strong></p>
+    </div>
     </div>
 
     <!--Ficha, Atestado e cardápio-->
@@ -196,8 +196,9 @@
         </div>
       </div>
 
-    <div class="cards">
-      <img src="{{asset('/imagens/icon cardapio.png')}}">
+    
+      <div class="cards">
+      <img src="../imagens/icon cardapio.png">
       <p>Cardápio</p>
       <div class="texto-expandido">
         <div class="cardapio">
@@ -205,32 +206,32 @@
           <div class="descricao">
             <p>Mini pão francês com manteiga;<br>  Café com leite</p>
           </div>
-          <div class="cardapio">
-            <p><strong>Lanche da manhã</strong></p>
-            <div class="descricao">
-              <p>Biscoito maionese;<br> Suco de maracujá</p>
-            </div>
+        </div>
+        <div class="cardapio">
+          <p><strong>Lanche da manhã</strong></p>
+          <div class="descricao">
+          <p>Biscoito maionese;<br> Suco de maracujá</p>
           </div>
-          <div class="cardapio">
-            <p><strong>Almoço</strong></p>
-            <div class="descricao">
-              <p>Arroz, Feijão preto, Carne moída, Macarrão a bolonhesa;<br><br>
-                Suco: Limonada;<br><br>
-                Sobremesa: Maçã
-              </p>
-            </div>
+        </div>
+        <div class="cardapio">
+          <p><strong>Almoço</strong></p>
+          <div class="descricao">
+            <p>Arroz, Feijão preto, Carne moída, Macarrão a bolonhesa;<br><br>
+            Suco: Limonada;<br><br>
+            Sobremesa: Maçã
+            </p>
           </div>
-          <div class="cardapio">
-            <p><strong>Lanche da Tarde</strong></p>
-            <div class="descricao">
-              <p>Duo de frutas (maçã e banana)</p>
-            </div>
+        </div>
+        <div class="cardapio">
+          <p><strong>Lanche da Tarde</strong></p>
+          <div class="descricao">
+            <p>Duo de frutas (maçã e banana)</p>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="footer"></div>
 
     <script>
       /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
