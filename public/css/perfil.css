@@ -160,11 +160,7 @@ html{
       vertical-align: super;
     }
   
-  
-    .retangulo :hover{
-      background-color: #D9D9D9;
-      transition: all 0.1s;
-    }
+
     
     /* SIDEBAR */
     
@@ -343,13 +339,13 @@ html{
       display: flex;
       justify-content: center;
       width: 700px;
-      height: 300px;
+      height: 250px;
       border-radius: 12px;
       box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2);
     }
     
     .left{
-      margin: auto 40px auto 40px;
+      margin: 50px 40px auto 40px;
       text-align: left;
       width: 350px;
       height: 200px;
@@ -379,7 +375,7 @@ html{
 
 
     .right{
-      margin: auto 40px auto 40px;
+      margin: 50px 40px auto 40px;
       text-align: left;
       width: 350px;
       height: 200px;
