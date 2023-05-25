@@ -542,6 +542,7 @@ font-weight: 100;
 
 /*card 3*/
 
+
 .cardapio{
   width: 270px;
   margin: 10px 15px 10px 15px;
@@ -566,11 +567,5 @@ font-weight: 100;
 .descricao p{
   color: #000000;
 }
-/*cards*/
 
-.footer {
-  bottom: 0;
-  width: 90%;
-  padding: 20px;
-  text-align: center;
-}
+/*cards*/
