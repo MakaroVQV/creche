@@ -542,9 +542,10 @@ font-weight: 100;
 
 /*card 3*/
 
+
 .cardapio{
   width: 270px;
-  margin: 10px auto 10px auto;
+  margin: 10px 15px 10px 15px;
   background: #A7DAF4;
   border-radius: 8px;
   display: inline-block;
@@ -560,7 +561,7 @@ font-weight: 100;
   display: inline-table;
   background: #F5F5F5;
   border-radius: 6px;
-  margin: 10px auto 0 auto;
+  margin: 10px;
 }
 
 .descricao p{
