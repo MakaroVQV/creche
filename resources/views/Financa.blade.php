@@ -72,18 +72,6 @@
 
 
       <div class="iten-menu">
-<<<<<<< HEAD
-      <a href="{{ url('/perfil')}}"><img src="{{asset('/imagens/icon user cinza.png')}}">
-        <p>Perfil</p>
-      </a>
-      </div>
-    </div>
-
-    <!-- Footer do menu lateral -->
-    <div class="footer-menu">
-      <a href="{{ url('logout')}}"><img src="{{asset('/imagens/sair.png')}}" class="sair"><p>Sair</p></a>
-    </div>
-=======
         <a href="#"><img src="{{ asset('imagens/icon calendario cinza.png') }}">
           <p>Calendario</p></a>
   
@@ -142,7 +130,6 @@
     </div>
   
     
->>>>>>> ff7a9e1600263d27feb11e5cb1e46b505e457cfe
   
     <div class="copyriht"> 
       <img src="{{asset('/imagens/icon_copyright.png')}}" class="copyright">
