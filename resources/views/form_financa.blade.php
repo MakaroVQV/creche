@@ -37,5 +37,6 @@
                             <input type="submit" value="Atualizar">
                         </form>
                 </div>
+        </section>
 </body>
 </html>
