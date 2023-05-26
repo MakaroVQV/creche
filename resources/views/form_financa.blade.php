@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,30 +13,30 @@
                 <div class="atualizar">
                     
                         <form>
-                            <div>
+                            <div class="user">
                                 <label for="user">Vencimento</label>
                                 <input class="field" name="user" placeholder="R$" required>
                             </div>
 
-                            <div>
+                            <div class="name">
                                 <label for="name">Valor</label>
                                 <input class="field" name="name" placeholder="R$" required>
                             </div>
 
-                            <div>
+                            <div class="email">
                                 <label for="email">Valor Pago</label>
                                 <input class="field" name="email" placeholder="R$" required>
                             </div>
                                     
-                            <div>
+                            <div class="status">
                                 <label for="Status">Status</label>
                                 <select name=""  id="">
                                 <option value="Pendente">Pendente</option>
                                 <option value="Paga">Paga</option>
-                            </div>
+                                </div>
                             <input type="submit" value="Atualizar">
-                        </form>
-                </div>
-        </section>
+                </form>
+        </div>
+    </section>
 </body>
 </html>
