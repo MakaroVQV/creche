@@ -97,8 +97,8 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
 Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout']);
+
+
+Route::get('/listar_eventos', [App\Http\Controllers\EventController::class, 'listar_eventos'])->name('listar_eventos');
+
