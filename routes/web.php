@@ -102,3 +102,5 @@ Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout
 
 Route::get('/listar_eventos', [App\Http\Controllers\EventController::class, 'listar_eventos'])->name('listar_eventos');
 
+
+Route::get('/teste', [App\Http\Controllers\UserController::class, 'teste']);

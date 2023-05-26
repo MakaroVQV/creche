@@ -105,4 +105,13 @@ class UserController extends Controller
 
         return redirect('/usuarios')->with('status', 'Usuário deletado com sucesso!');
     }
+    public function teste()
+    {
+        $user = User::find(2);
+       //dd($user);
+        foreach ($user->alunos as $key => $value) {
+            echo ($value->name . '<br>');
+        }
+    }
+
 }

@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class User extends Authenticatable
 {
@@ -53,5 +54,10 @@ class User extends Authenticatable
     public function isAdmin()
     {
         return $this->profile === 'admin';
+    }
+
+    public function alunos(): HasMany
+    {
+        return $this->hasMany(Aluno::class, 'responsavel_id','id');
     }
 }
