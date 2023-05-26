@@ -53,7 +53,7 @@
       </a>
 
       <div class="retangulo">
-      <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home azul.png')}}"><p>Home</p></a>
+      <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home cinza.png')}}"><p>Home</p></a>
       </div>
 
       <div class="retangulo">
@@ -73,7 +73,7 @@
 
 
       <div class="retangulo">
-      <a href="{{ url('/perfil')}}"><img src="{{asset('/imagens/icon user cinza.png')}}">
+      <a href="{{ url('/perfil')}}"><img src="{{asset('/imagens/icon user azul.png')}}">
         <p>Perfil</p>
       </a>
       </div>

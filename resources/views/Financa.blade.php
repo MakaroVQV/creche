@@ -27,7 +27,7 @@
         <!--Menu lateral-->
         <div id="mySidenav" class="sidenav">
     <div class="side">
-      <a href="javascript:void(0)" onclick="closeNav()"><img src="{{asset('/imagens/icon menu.png')}}" class="menu-cinza"></a>
+      <a href="javascript:void(0)" onclick="closeNav()"><img src="{{asset('/imagens/icon menu cinza.png')}}" class="menu-cinza"></a>
       <div><img src="{{asset('/imagens/creche.png')}}" class="logo-sidebar"></div>
     </div>
     <div class="iten-menu">
@@ -52,7 +52,7 @@
       </a>
 
       <div class="retangulo">
-      <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home azul.png')}}"><p>Home</p></a>
+      <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home cinza.png')}}"><p>Home</p></a>
       </div>
 
       <div class="retangulo">
