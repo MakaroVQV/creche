@@ -48,10 +48,10 @@
           </div>
         </div>
       </a>
-      <a href="{{ url('/home')}}"><img src="{{ asset('imagens/icon home azul.png') }}"><p>Home</p></a>
+      <a href="{{ url('/home')}}"><img src="{{ asset('imagens/icon home cinza.png') }}"><p>Home</p></a>
 
         <a href="#" onclick="toggleSubMenu('subMenuMedico')">
-          <img src="{{ asset('imagens/icon saude cinza.png') }}">
+          <img src="{{ asset('imagens/icon saude azul.png') }}">
           <div class="esquerda"><img src="{{ asset('imagens/icon seta cinza.png') }}" id="seta2"></div>
           <p>Saude</p>
           <div id="subMenuMedico" class="sub-menu">
@@ -62,19 +62,11 @@
             </div>
           </div>
         </a>
-
-      <a href="#" onclick="toggleSubMenu('subMenuPerfil')">
-        <img src="{{ asset('imagens/icon user cinza.png') }}">
-        <div class="esquerda"><img src="{{ asset('imagens/icon seta cinza.png') }}" id="seta3"></div>
+        <div class="retangulo">
+      <a href="{{ url('/perfil')}}"><img src="{{asset('/imagens/icon user cinza.png')}}">
         <p>Perfil</p>
-        <div id="subMenuPerfil" class="sub-menu">
-          <div class="div-container">
-            <a href="#">Meus Dados</a>
-            <a href="#">Configurações</a>
-            <a href="#">Ajuda</a>
-          </div>
-        </div>
       </a>
+      </div>
     </div>
     <!-- Footer do menu lateral -->
     <div class="footer-menu">
