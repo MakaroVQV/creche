@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{asset('/css/...')}}">
+    <title>Atualizar mensalidade</title>
+</head>
 <body>
     <h1>Atualização de Mensalidade</h1>
         <section class="content">
@@ -27,9 +34,8 @@
                                 <option value="Pendente">Pendente</option>
                                 <option value="Paga">Paga</option>
                             </div>
-</form>
-<input type="submit" value="Atualizar">
-               
-
+                            <input type="submit" value="Atualizar">
+                        </form>
+                </div>
 </body>
 </html>
