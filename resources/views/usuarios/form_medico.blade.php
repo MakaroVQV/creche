@@ -6,6 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ficha medica</title>
+    <style>
+        body {
+            position: absolute;
+            width: 413px;
+            height: 599px;
+            left: 700px;
+            top: 150px;
+
+            background: #F5F5F5;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+
+        }
+
+        h3 {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 29px;
+            text-align: center;
+        }
+
+        form {
+            
+            width: 400px;
+            height: 240px;
+            left: 391px;
+            top: 288px;
+
+            background: #F6E5CA;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 
 <body>
