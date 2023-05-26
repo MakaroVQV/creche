@@ -32,8 +32,8 @@
                                 <select name=""  id="">
                                 <option value="Pendente">Pendente</option>
                                 <option value="Paga">Paga</option>
-                                </div>
-                            <input type="submit" value="Atualizar">
+                            </div>
+                                <input type="submit" value="Atualizar">
                 </form>
         </div>
     </section>
