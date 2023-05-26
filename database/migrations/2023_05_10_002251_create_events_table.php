@@ -8,24 +8,24 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
+     *
+     * @return void
      */
     public function up(): void
     {
         Schema::create('events', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->dateTime('start');
-            $table->dateTime('end');
-            $table->string('color',7);
-            $table->longText('description')->nullable();
-
+            $table->date('start');
+            $table->date('end');
             $table->timestamps();
-            $table->softDeletes();
         });
     }
-
+  
     /**
      * Reverse the migrations.
+     *
+     * @return void
      */
     public function down(): void
     {

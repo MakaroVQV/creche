@@ -1,9 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
 use App\models\User;
 use Illuminate\Support\Facades\Hash;
+
 class UserController extends Controller
 {
     /**
@@ -12,8 +14,8 @@ class UserController extends Controller
     public function index()
     {
 
-        $users= User::orderby('name')->get();
-        return view('usuarios.index',['users'=>$users]);
+        $users = User::orderby('name')->get();
+        return view('usuarios.index', ['users' => $users]);
     }
 
     /**
@@ -22,7 +24,6 @@ class UserController extends Controller
     public function create()
     {
         return view('usuarios.create');
-
     }
 
     /**
@@ -31,10 +32,10 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $validated  = $request->validate([
-        'name'      => 'required',
-        'email'     => 'required|email',
-        'password'  => 'required',
-        'profile'   => 'required'
+            'name'      => 'required',
+            'email'     => 'required|email',
+            'password'  => 'required',
+            'profile'   => 'required'
 
         ]);
 
@@ -48,7 +49,6 @@ class UserController extends Controller
 
         $user->save();
         return redirect('/usuarios')->with('status', 'Usuário criado com sucesso!');
-    
     }
 
     /**
@@ -56,8 +56,8 @@ class UserController extends Controller
      */
     public function show(string $id)
     {
-        $usuario=User::find($id);
-        return view('usuarios.show',['usuario'=>$usuario]);
+        $usuario = User::find($id);
+        return view('usuarios.show', ['usuario' => $usuario]);
     }
 
     /**
@@ -65,8 +65,8 @@ class UserController extends Controller
      */
     public function edit(string $id)
     {
-        $usuario=User::find($id);
-        return view('usuarios.edit',['usuario' => $usuario]);
+        $usuario = User::find($id);
+        return view('usuarios.edit', ['usuario' => $usuario]);
     }
 
     /**
@@ -74,7 +74,7 @@ class UserController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        
+
 
         $validated  = $request->validate([
             'name'      => 'required',
@@ -83,17 +83,17 @@ class UserController extends Controller
             //'profile'   => 'required',
         ]);
 
-            $user = User::find($id);
-            $user->name         = $request->input('name');
-            $user->email        = $request->input('email');
-            //if (trim($request))
-            $user->password     = Hash::make($request->input('password'));
-            $user->profile      = $request->input('profile');
-            $user->save();
-            
-            return redirect('/usuarios')->with('status', 'Usuário atualizado com sucesso!');
+        $user = User::find($id);
+        $user->name         = $request->input('name');
+        $user->email        = $request->input('email');
+        //if (trim($request))
+        $user->password     = Hash::make($request->input('password'));
+        $user->profile      = $request->input('profile');
+        $user->save();
+
+        return redirect('/usuarios')->with('status', 'Usuário atualizado com sucesso!');
     }
-    
+
 
     /**
      * Remove the specified resource from storage.
@@ -104,9 +104,5 @@ class UserController extends Controller
         $user->delete();
 
         return redirect('/usuarios')->with('status', 'Usuário deletado com sucesso!');
-        
     }
-
-    }
-
-
+}

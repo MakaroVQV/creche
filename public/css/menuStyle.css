@@ -148,6 +148,8 @@ overflow-x:hidden;
   .copyriht p {
     margin-left:5px;
   }
+
+
   
   /* SIDEBAR */
   
@@ -192,7 +194,7 @@ overflow-x:hidden;
   
   .esquerda {
     position: absolute;
-    left: -35px;
+    left: -25px;
   }
   
   #seta1{
@@ -201,11 +203,6 @@ overflow-x:hidden;
     height: 30px;
   }
   #seta2{
-    transform: scaleX(-1);
-    width: 30px;
-    height: 30px;
-  }
-  #seta3{
     transform: scaleX(-1);
     width: 30px;
     height: 30px;
