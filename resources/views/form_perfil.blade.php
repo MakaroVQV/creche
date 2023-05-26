@@ -25,13 +25,13 @@
                         <input class="field" name="email" placeholder="E-mail" required>
                     </div>
                         <div>
-                        <div class="form-group col-xs-2">
+                        <div class="ddd">
                             <label for="ddd">DDD</label>
-                            <input type="text" class="form-control" id="ddd" placeholder="00" required>
+                            <input type="text" class="ddd" id="ddd" placeholder="00" required>
                         </div>
-                        <div class="form-group col-xs-10">
+                        <div class="tel">
                             <label for="tel">Telefone</label>
-                            <input type="text" class="form-control" id="tel" placeholder="00000-0000" required>
+                            <input type="text" class="tel" id="tel" placeholder="00000-0000" required>
                         </div>
                             <input type="submit" value="Atualizar">
                 </form>
