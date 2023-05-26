@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{asset('/upload/upload.php')}}">
-    <title>Document</title>
+    <link rel="" href="{{asset('/upload/upload.php')}}">
+    <link rel="stylesheet" href="{{asset('public/css/formularios.css')}}">
+    <title>Postagem Feed</title>
 </head>
 <body>
     <form name="CadastroAlunos" type="text" method="post" enctype="multipart/form-data" action="upload.php">
