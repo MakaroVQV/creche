@@ -34,8 +34,8 @@
                                 <option value="Paga">Paga</option>
                             </div>
                                 <input type="submit" value="Atualizar">
-                </form>
-        </div>
-    </section>
+                        </form>
+                </div>
+        </section>
 </body>
 </html>

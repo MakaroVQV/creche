@@ -27,7 +27,7 @@
                         <div>
                         <div class="ddd">
                             <label for="ddd">DDD</label>
-                            <input type="text" class="ddd" id="ddd" placeholder="00" required>
+                            <input type="text" class="ddd" id="ddd" placeholder="(00)" required>
                         </div>
                         <div class="tel">
                             <label for="tel">Telefone</label>
