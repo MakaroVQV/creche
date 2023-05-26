@@ -8,10 +8,9 @@
     <title>Atualizar mensalidade</title>
 </head>
 <body>
-    <h1>Atualização de Mensalidade</h1>
         <section class="content">
                 <div class="atualizar">
-                    
+                <h1>Atualização de Mensalidade</h1>
                         <form>
                             <div class="user">
                                 <label for="user">Vencimento</label>
