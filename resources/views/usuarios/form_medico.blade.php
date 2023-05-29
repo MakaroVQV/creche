@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <title>Ficha medica</title>
+  <title> Ficha medica </title>
+
 </head>
 
 <body>
@@ -43,20 +44,36 @@
       font-size: 28px;
       line-height: 34px;
       color: #07074d;
+      padding-bottom: 20px;
     }
 
-    altura-peso {
+    .altura-peso {
       display: flex;
-      gap: 20px;
-      margin-bottom: 15px;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .alergia{
+      padding-bottom: 10px;
+
+    }
+    .medicamentos{
+      padding-bottom: 10px;
+    }
+
+    .gpsanguineo{
+      padding-bottom: 10px;
+    }
+    .vacina{
+      padding-bottom: 10px;
     }
   </style>
 
   <section class="content">
     <div class="atualizar">
 
-      <h3> Resumo </h3>
       <form>
+      <h3> Resumo </h3>
 
         <div class="altura-peso">
           <label for="altura-peso"> Altura e Peso </label>
@@ -66,17 +83,17 @@
 
         </div>
 
-        <div>
+        <div class = "alergia">
           <label for="alergia"> Alergias :</label>
           <input class="field" name="alergia" placeholder="tem alguma alergia? quais ?">
         </div>
 
-        <div>
+        <div class="medicamentos">
           <label for="Medicamentos"> Medicamentos :</label>
           <input class="field" name="Medicamentos">
         </div>
 
-        <div>
+        <div class ="gpsanguineo">
           <label for="tipo sanguineo"> Grupo Sanguíneo :</label>
 
           <select name="tipo sanguineo" id="tipo sanguineo" required>
@@ -95,7 +112,7 @@
           </select>
         </div>
 
-        <div>
+        <div class ="vacina">
           <label for="Vacinas"> Vacinas :</label>
           <input class="field" name="Vacinas" required>
         </div>
