@@ -5,70 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+  <link rel="stylesheet" href="{{asset('public/css/formularios.css')}}">
   <title> Ficha medica </title>
 
 </head>
 
 <body>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    form {
-      text-align: center;
-      width: 100%;
-      padding: 40px;
-      border-radius: 5px;
-      border: 1px solid #dde3ec;
-      background: #ffffff;
-      font-weight: 500;
-      font-size: 16px;
-      color: #536387;
-      outline: none;
-      resize: none;
-    }
-
-    section {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 48px;
-    }
-
-    h3 {
-      font-weight: 600;
-      font-size: 28px;
-      line-height: 34px;
-      color: #07074d;
-      padding-bottom: 20px;
-    }
-
-    .altura-peso {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 10px;
-    }
-
-    .alergia{
-      padding-bottom: 10px;
-
-    }
-    .medicamentos{
-      padding-bottom: 10px;
-    }
-
-    .gpsanguineo{
-      padding-bottom: 10px;
-    }
-    .vacina{
-      padding-bottom: 10px;
-    }
-  </style>
-
   <section class="content">
     <div class="atualizar">
 
