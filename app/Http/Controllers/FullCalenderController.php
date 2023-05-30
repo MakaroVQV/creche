@@ -66,6 +66,8 @@ class FullCalenderController extends Controller
            default:
              # code...
              break;
+
+            
         }
     }
 }

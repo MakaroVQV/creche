@@ -43,12 +43,12 @@ Route::get('/perfil', [PerfilController::class, 'index'])
 ->name('perfil');
 
 //------------------------------ Calendario ------------------------------//
-Route::get('/usuarios/calendario', [CalendarioController::class, 'index'])
-->name('usuario.calendario')->middleware('can:is_admin');
+//Route::get('/calendario/{id}', [FullCalenderController::class, 'show'])
+//->name('calendario.show');
 
 Route::controller(FullCalenderController::class)->group(function(){
-    Route::get('fullcalender', 'index');
-    Route::post('fullcalenderAjax', 'ajax');
+    Route::get('fullcalender', 'index')->middleware('can:is_admin');
+    Route::post('fullcalenderAjax', 'ajax')->middleware('can:is_admin');
 });
 
 
@@ -100,7 +100,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout']);
 
 
-Route::get('/listar_eventos', [App\Http\Controllers\EventController::class, 'listar_eventos'])->name('listar_eventos');
+Route::get('/calendario', [App\Http\Controllers\EventController::class, 'listar_eventos'])->name('listar_eventos');
 
 
 Route::get('/teste', [App\Http\Controllers\UserController::class, 'teste']);
