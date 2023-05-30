@@ -12,6 +12,11 @@ class CardapioSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        
     }
 }
+
+$table->string('colocao');
+$table->string('lache_manha');
+$table->string('almoco');
+$table->string('lache_tarde');
