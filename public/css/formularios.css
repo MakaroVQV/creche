@@ -1,5 +1,29 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+#area
+{
+  position: relative;
+  left:37%;
+  top:29%;
+width:320px;
+height:270px;
+}
+#area #formulário
+{
+position:absolute;
+display: block;
+}
+fieldset
+{
+  width: 300px;
+  height: 250px;
+}
+legend
+{
+  font-style: bold;
+  font-family: "Segoe Ui";
+}
+#formulario label
+{
+  position: absolute;
+  left:19px;
+  margin-right: 5px;
 }
