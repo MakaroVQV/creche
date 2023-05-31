@@ -25,8 +25,27 @@ Route::get('/usuarios', [UserController::class, 'index'] )
 Route::get('/financa', [FinancaController::class, 'index'])
 ->name('financa');
 
-Route::get('/financa#pendentes', [FinancaController::class, 'index'])
-->name('financa');
+//create
+Route::get('/financa/create', [FinancaController::class, 'create'] )
+->name('financa.create')->middleware('can:is_admin');
+
+//Salvar
+Route::post('/financa/create', [FinancaController::class, 'store'] )
+->name('financa.store')->middleware('can:is_admin');
+
+Route::get('/financa/{id}', [FinancaController::class, 'show'] )
+->name('financa.show');
+//edit
+Route::get('/financa/{id}/edit', [FinancaController::class, 'edit'] )
+->name('financa.edit')->middleware('can:is_admin');
+
+//att
+Route::put('/financa/{id}', [FinancaController::class, 'update'] )
+->name('financa.update')->middleware('can:is_admin');
+
+//Destroy
+Route::delete('/financa/{id}', [FinancaController::class, 'destroy'] )
+->name('financa.destroy')->middleware('can:is_admin');
 
 //------------------------------ notificado ------------------------------//
 
