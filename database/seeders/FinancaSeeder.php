@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-class FincancaSeeder extends Seeder
+class FinancaSeeder extends Seeder
 {
     public function run(): void
     {

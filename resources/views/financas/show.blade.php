@@ -3,10 +3,10 @@
 @section('content')
 
 <head>
-    <title></title>
+    <title>...</title>
 </head>
 <body>
-    <h1></h1>
+    <h1>...</h1>
 
 </body>
 @endsection
