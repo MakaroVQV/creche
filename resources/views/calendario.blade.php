@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{{asset('/css/menuStyle.css')}}">
+  <link rel="stylesheet" href="{{asset('/css/calendario.css')}}">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <title>Creche</title>
 </head>
@@ -100,10 +100,10 @@
     <div class="container">
 
 
-      <table class="table table-dark table-striped">
+      <table class="table table-white table-striped">
         <thead>
           <tr>
-            <th scope="col">Título</th>
+            <th scope="col">Evento</th>
             <th scope="col">Começo</th>
             <th scope="col">Término</th>
           </tr>
@@ -120,6 +120,10 @@
       </table>
 
     </div>
+
+    <div class="circulo"></div>
+    <div class="circulo-2"></div>
+
     <!--Footer-->
     <div class="footer"></div>
 
