@@ -99,11 +99,13 @@ p{
 
 .iten-menu img{
 float: left;
+width: 25px;
+height: 25px;
 }
 
 .sair{
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
 }
 
 .footer-menu{
@@ -187,7 +189,7 @@ justify-content: center;
 
 .esquerda {
   position: absolute;
-  left: -35px;
+  left: -255px;
 }
 
 #seta1{
@@ -196,11 +198,6 @@ justify-content: center;
   height: 30px;
 }
 #seta2{
-  transform: scaleX(-1);
-  width: 30px;
-  height: 30px;
-}
-#seta3{
   transform: scaleX(-1);
   width: 30px;
   height: 30px;
