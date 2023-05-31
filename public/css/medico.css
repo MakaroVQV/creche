@@ -92,7 +92,7 @@ p{
  
 .iten-menu p{
   padding-right: 80px;
-  margin-top: 40px;
+  margin-top: 35px;
   margin-left: 10px;
   float: left;
 }
@@ -103,19 +103,19 @@ width: 25px;
 height: 25px;
 }
 
-.sair{
-  width: 25px;
-  height: 25px;
+.sair {
+  width: 30px;
+  height: 30px;
 }
 
 .footer-menu{
   position: absolute;
-  bottom: 60px;
+  bottom: 90px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: start;
-  margin-left:30px;
+  margin-left:40px;
   font-size:15px
 }
 
@@ -132,7 +132,8 @@ justify-content: center;
 }
 
 .copyriht {
-  margin: 20px;  
+  top: 90%; 
+  left: 20%;
   bottom: 0;
   display:flex;
   align-items:center;
@@ -142,6 +143,7 @@ justify-content: center;
 
 .copyriht p {
   margin-left:5px;
+  font-size: 10px ;
 }
 
 /* SIDEBAR */
