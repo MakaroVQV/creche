@@ -15,29 +15,33 @@ html{
       display: flex;
       justify-content: space-between;
     }
+
     .esquerda-nav{
       display: flex;
       justify-content: space-between;
     }
+
     .menu-azul{
       margin: 10px 10px 3px 2px;
       cursor: pointer;
     }
+
     .logo-navbar{
       margin-top:10px;
       max-width: 80px;
       max-height: 80px;
     }
-    
-    
+
     .direita-nav{
       display: flex;
       justify-content: space-between;
     }
+
     .logo-user{
       padding: 5px 5px 0;
       margin: 5px 5px 5px 5px;
     }
+
     .texto-user{
       padding: 5px 5px 0;
       margin: 20px 0px 0px 5px;
