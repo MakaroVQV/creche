@@ -10,7 +10,7 @@ html{
     p{
       font-family: arial;
     }
-    
+
     .navbar{
       display: flex;
       justify-content: space-between;
@@ -153,7 +153,7 @@ html{
       margin-left:5px;
     }
   
-<<<<<<< HEAD
+      /* HEAD */
     .retangulo a{
       margin: 0 0 0 20px;
       border-radius: 12px;
