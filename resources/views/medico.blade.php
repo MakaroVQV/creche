@@ -271,17 +271,6 @@
         });
       });
 
-      const card = document.querySelector('.cards');
-      let count = 0;
-
-      card.addEventListener('click', () => {
-        count++;
-        if (count === 9) {
-          card.classList.add('animate');
-        }
-      });
-
-
       // // document.getElementById('img-1').addEventListener('click', function() {
       // // document.getElementById('menu-lateral').style.left = '0'; 
       // });
