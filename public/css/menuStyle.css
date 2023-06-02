@@ -275,7 +275,7 @@ overflow-x:hidden;
   }
   
   .posters{
-    margin: auto;
+    margin: 100px auto 100px auto;
     width: 520px;
     margin-top: 40px;
     border-top: 1px solid #009CDE;

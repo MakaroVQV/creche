@@ -177,14 +177,12 @@
             </div>
             <div class="meu-arquivo">
               <p><strong>atestado_cardio.pdf</strong></p>
-              {!! Form::open(['url' => 'upload/docs']) !!}
-              {!!Form::submit('Enviar', ['class' => 'btn btn-primary'])!!}
-              {!! Form::close() !!}
-              <img src="{{asset('/imagens/nuvem.png')}}">
-
               </a>
             </div>
           </div>
+          {!! Form::open(['url' => 'upload/docs']) !!}
+              {!!Form::submit('', ['class' => 'btn btn-primary'])!!}
+              {!! Form::close() !!}
         </div>
       </div>
 

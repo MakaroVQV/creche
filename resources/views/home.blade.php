@@ -135,9 +135,11 @@
             <div class="imagem-centro">
                 <img src="{{asset('/imagens/luis.jpeg')}}">
             </div>
+            <center>
             <div class="descricao">
                 <p>🧩 2 de abril dia mundial do autismo 🧩<br>
                     Um dia especial para pessoas incríveis 💙</p>
+                    <center>
                 <div class="curtir">
                     <img src="{{asset('/imagens/coracao.png')}}" class="coracao">
                     <p>Curtir</p>
