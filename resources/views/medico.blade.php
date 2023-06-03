@@ -177,14 +177,12 @@
             </div>
             <div class="meu-arquivo">
               <p><strong>atestado_cardio.pdf</strong></p>
-              {!! Form::open(['url' => 'upload/docs']) !!}
-              {!!Form::submit('Enviar', ['class' => 'btn btn-primary'])!!}
-              {!! Form::close() !!}
-              <img src="{{asset('/imagens/nuvem.png')}}">
-
               </a>
             </div>
           </div>
+          {!! Form::open(['url' => 'upload/docs']) !!}
+              {!!Form::submit('', ['class' => 'btn btn-primary'])!!}
+              {!! Form::close() !!}
         </div>
       </div>
 
@@ -270,17 +268,6 @@
           card.classList.toggle('card-normal'); // Adicione essa linha para alternar entre as classes
         });
       });
-
-      const card = document.querySelector('.cards');
-      let count = 0;
-
-      card.addEventListener('click', () => {
-        count++;
-        if (count === 9) {
-          card.classList.add('animate');
-        }
-      });
-
 
       // // document.getElementById('img-1').addEventListener('click', function() {
       // // document.getElementById('menu-lateral').style.left = '0'; 
