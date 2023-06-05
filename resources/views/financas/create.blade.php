@@ -2,29 +2,27 @@
 
 @section('content')
 
-    <title>...</title>
+    <title>Financeiro</title>
 </head>
 <body>
-    <h1>...</h1>
+    <h1>Financeiro</h1>
+    {!! Form::open(['url' => 'financas/create']) !!}<br>
+    {{ Form::label('vencimento', 'Vencimento:')}}<br>
+    {{ Form::text('vencimento')}}<br>
     
-    {{-- {!! Form::open(['url' => 'usuarios/create']) !!}<br>
-    {{ Form::label('name', 'Nome:')}}<br>
-    {{ Form::text('name')}}<br>
+    {!! Form::label('valor', 'Valor:') !!}<br>
+    {!! Form::text('valor') !!}<br>
     
-    {!! Form::label('email', 'Email') !!}<br>
-    {!! Form::email('email') !!}<br>
-    
-    {{ Form::label('password', 'Senha:')}}<br>
-    {{ Form::password('password')}}<br>
+    {{ Form::label('valor_pagos', 'Valor Pago:')}}<br>
+    {{ Form::text('valor_pagos')}}<br>
 
-    {!! Form::label('profile', 'Perfil') !!}<br>
-    {!! Form::select('profile', ['admin' => 'Admin', 'usuario' => 'usuario' , 'responsavel' => 'responsavel' ]) !!}<br>
+    {!! Form::label('status', 'Status:') !!}<br>
+    {!! Form::select('status', ['Pendente' => 'Pendente', 'Pago' => 'Pago']) !!}<br>
         
     
     {{ Form::submit('Enviar')}}
 
-    {!! Form::close() !!} --}}
-
+    {!! Form::close() !!}
 </body>
 
 @endsection

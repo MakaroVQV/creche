@@ -22,30 +22,30 @@ Route::get('/usuarios', [UserController::class, 'index'] )
 
 //------------------------------ Financa ------------------------------//
 
-Route::get('/financa', [FinancaController::class, 'index'])
-->name('financa');
+Route::get('/financas', [FinancaController::class, 'index'])
+->name('financas');
 
 //create
-Route::get('/financa/create', [FinancaController::class, 'create'] )
-->name('financa.create')->middleware('can:is_admin');
+Route::get('/financas/create', [FinancaController::class, 'create'] )
+->name('financas.create')->middleware('can:is_admin');
 
 //Salvar
-Route::post('/financa/create', [FinancaController::class, 'store'] )
-->name('financa.store')->middleware('can:is_admin');
+Route::post('/financas/create', [FinancaController::class, 'store'] )
+->name('financas.store')->middleware('can:is_admin');
 
-Route::get('/financa/{id}', [FinancaController::class, 'show'] )
-->name('financa.show');
+Route::get('/financas/{id}', [FinancaController::class, 'show'] )
+->name('financas.show');
 //edit
-Route::get('/financa/{id}/edit', [FinancaController::class, 'edit'] )
-->name('financa.edit')->middleware('can:is_admin');
+Route::get('/financas/{id}/edit', [FinancaController::class, 'edit'] )
+->name('financas.edit')->middleware('can:is_admin');
 
 //att
-Route::put('/financa/{id}', [FinancaController::class, 'update'] )
-->name('financa.update')->middleware('can:is_admin');
+Route::put('/financas/{id}', [FinancaController::class, 'update'] )
+->name('financas.update')->middleware('can:is_admin');
 
 //Destroy
-Route::delete('/financa/{id}', [FinancaController::class, 'destroy'] )
-->name('financa.destroy')->middleware('can:is_admin');
+Route::delete('/financas/{id}', [FinancaController::class, 'destroy'] )
+->name('financas.destroy')->middleware('can:is_admin');
 
 //------------------------------ notificado ------------------------------//
 
