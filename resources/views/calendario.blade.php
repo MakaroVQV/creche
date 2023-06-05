@@ -27,63 +27,58 @@
       </div>
     </navbar>
 
-    <!--Menu lateral-->
-    <div id="mySidenav" class="sidenav">
-      <div class="side">
-        <a href="javascript:void(0)" onclick="closeNav()"><img src="{{asset('/imagens/icon menu.png')}}" class="menu-cinza"></a>
-        <div><img src="{{asset('/imagens/creche.png')}}" class="logo-sidebar"></div>
-      </div>
-      <div class="iten-menu">
-        <div class="retangulo">
-          <a href="{{ url('/calendario')}}"><img src="{{asset('/imagens/icon calendario cinza.png')}}">
-            <p>Calendario</p>
-          </a>
-        </div>
-
-        <div class="retangulo">
-          <a href="#" onclick="toggleSubMenu('subMenuFinanca')">
-            <img src="{{asset('/imagens/icon financeiro cinza.png')}}">
-            <div class="esquerda"><img src="{{asset('/imagens/icon seta cinza.png')}}" id="seta1"></div>
-            <p>Financeiro</p>
-        </div>
-        <div id="subMenuFinanca" class="sub-menu">
-          <div class="div-container">
-            <a href="{{ url('/financa#pendentes')}}">Pendentes</a>
-            <a href="{{ url('/financa#pagas')}}">Pagas</a>
-            <a href="{{ url('/financa#dados')}}">Dados</a>
+        <!--Menu lateral-->
+        <div id="mySidenav" class="sidenav">
+          <div class="side">
+            <a href="javascript:void(0)" onclick="closeNav()"><img src="{{asset('/imagens/icon menu.png')}}" class="menu-cinza"></a>
+            <div><img src="{{asset('/imagens/creche.png')}}" class="logo-sidebar"></div>
           </div>
-        </div>
-        </a>
-
-        <div class="retangulo">
-          <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home azul.png')}}">
-            <p>Home</p>
-          </a>
-        </div>
-
-        <div class="retangulo">
-          <a href="#" onclick="toggleSubMenu('subMenuMedico')">
-            <img src="{{asset('/imagens/icon saude cinza.png')}}">
-            <div class="esquerda"><img src="{{asset('imagens/icon seta cinza.png')}}" id="seta2"></div>
-            <p>Saude</p>
-        </div>
-
-        <div id="subMenuMedico" class="sub-menu">
-          <div class="div-container">
-            <a href="{{ url('/medico#ficha-medica')}}">Ficha Médica</a>
-            <a href="{{ url('/medico#atestados')}}">Atestados</a>
-            <a href="{{ url('/medico#cardapio')}}">Cardápio</a>
+          <div class="iten-menu">
+            <div class="retangulo">
+            <a href="{{ url('/calendario')}}"><img src="{{asset('/imagens/icon calendario cinza.png')}}">
+              <p>Calendario</p></a>
+              </div>
+              
+              <div class="retangulo">
+            <a href="#" onclick="toggleSubMenu('subMenuFinanca')">
+              <img src="{{asset('/imagens/icon financeiro cinza.png')}}">
+              <p>Financeiro</p>
+              </div>
+              <div id="subMenuFinanca" class="sub-menu">
+                <div class="div-container">
+                  <a href="{{ url('/financa#pendentes')}}">Pendentes</a>
+                  <a href="{{ url('/financa#pagas')}}">Pagas</a>
+                  <a href="{{ url('/financa#dados')}}">Dados</a>
+                </div>
+              </div>
+            </a>
+      
+            <div class="retangulo">
+            <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home azul.png')}}"><p>Home</p></a>
+            </div>
+      
+            <div class="retangulo">
+            <a href="#" onclick="toggleSubMenu('subMenuMedico')">
+              <img src="{{asset('/imagens/icon saude cinza.png')}}">
+              <p>Saude</p>
+              </div>
+      
+              <div id="subMenuMedico" class="sub-menu">
+                <div class="div-container">
+                  <a href="{{ url('/medico#ficha-medica')}}">Ficha Médica</a>
+                  <a href="{{ url('/medico#atestados')}}">Atestados</a>
+                  <a href="{{ url('/medico#cardapio')}}">Cardápio</a>
+                </div>
+              </div>
+      
+      
+            <div class="retangulo">
+            <a href="{{ url('/perfil')}}"><img src="{{asset('/imagens/icon user cinza.png')}}">
+              <p>Perfil</p>
+            </a>
+            </div>
           </div>
-        </div>
-
-
-        <div class="retangulo">
-          <a href="{{ url('/perfil')}}"><img src="{{asset('/imagens/icon user cinza.png')}}">
-            <p>Perfil</p>
-          </a>
-        </div>
-      </div>
-
+      
       <!-- Footer do menu lateral -->
       <div class="footer-menu">
         <a href="{{ url('logout')}}"><img src="{{asset('/imagens/sair.png')}}" class="sair">
