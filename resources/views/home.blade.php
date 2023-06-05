@@ -40,7 +40,6 @@
         <div class="retangulo">
       <a href="#" onclick="toggleSubMenu('subMenuFinanca')">
         <img src="{{asset('/imagens/icon financeiro cinza.png')}}">
-        <div class="esquerda"><img src="{{asset('/imagens/icon seta cinza.png')}}" id="seta1"></div>
         <p>Financeiro</p>
         </div>
         <div id="subMenuFinanca" class="sub-menu">
@@ -59,7 +58,6 @@
       <div class="retangulo">
       <a href="#" onclick="toggleSubMenu('subMenuMedico')">
         <img src="{{asset('/imagens/icon saude cinza.png')}}">
-        <div class="esquerda"><img src="{{asset('imagens/icon seta cinza.png')}}" id="seta2"></div>
         <p>Saude</p>
         </div>
 
@@ -135,9 +133,11 @@
             <div class="imagem-centro">
                 <img src="{{asset('/imagens/luis.jpeg')}}">
             </div>
+            <center>
             <div class="descricao">
                 <p>🧩 2 de abril dia mundial do autismo 🧩<br>
                     Um dia especial para pessoas incríveis 💙</p>
+                    <center>
                 <div class="curtir">
                     <img src="{{asset('/imagens/coracao.png')}}" class="coracao">
                     <p>Curtir</p>
