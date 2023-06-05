@@ -24,7 +24,7 @@ overflow-x:hidden;
     cursor: pointer;
   }
   .logo-navbar{
-    margin-top:10px;
+    margin-top: 10px;
     max-width: 80px;
     max-height: 80px;
   }
@@ -137,7 +137,8 @@ overflow-x:hidden;
   }
   
   .copyriht {
-    margin: 20px;  
+    top: 90%; 
+    left: 20%;
     bottom: 0;
     display:flex;
     align-items:center;
@@ -147,8 +148,9 @@ overflow-x:hidden;
   
   .copyriht p {
     margin-left:5px;
+    font-size: 10px ;
   }
-
+  
 
   
   /* SIDEBAR */
