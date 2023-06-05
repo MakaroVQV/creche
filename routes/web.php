@@ -104,3 +104,11 @@ Route::get('/calendario', [App\Http\Controllers\EventController::class, 'listar_
 
 
 Route::get('/teste', [App\Http\Controllers\UserController::class, 'teste']);
+
+
+
+
+//------------------------------ Usuarios ------------------------------//
+
+Route::get('/medico',[MedicoController::class,'index'])
+->name('medico.index');
