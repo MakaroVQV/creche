@@ -186,7 +186,7 @@
 
     
       <div class="cards">
-      <img src="../imagens/icon cardapio.png">
+      <img src="{{asset('/imagens/icon cardapio form.png')}}" class="cardimg">
       <p>Cardápio</p>
       <div class="texto-expandido">
         <div class="cardapio">
