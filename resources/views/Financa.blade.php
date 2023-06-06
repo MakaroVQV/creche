@@ -38,7 +38,7 @@
               
               <div class="retangulo">
             <a href="#" onclick="toggleSubMenu('subMenuFinanca')">
-              <img src="{{asset('/imagens/icon financeiro cinza.png')}}">
+              <img src="{{asset('/imagens/icon financeiro azul.png')}}">
               <p>Financeiro</p>
               </div>
               <div id="subMenuFinanca" class="sub-menu">
@@ -51,7 +51,7 @@
             </a>
       
             <div class="retangulo">
-            <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home azul.png')}}"><p>Home</p></a>
+            <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home cinza.png')}}"><p>Home</p></a>
             </div>
       
             <div class="retangulo">
