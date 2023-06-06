@@ -19,6 +19,7 @@ p{
   margin: 10px 10px 8px 10px;
   cursor: pointer;
 }
+
 .logo-navbar{
   margin-top:10px;
   max-width: 80px;
@@ -199,6 +200,7 @@ justify-content: center;
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
   font-weight: bold;
+  color: #004085;
 }
 
 /* Position and style the close button (top right corner) */

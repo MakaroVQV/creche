@@ -25,8 +25,8 @@
       </div>
     </navbar>
 
-        <!--Menu lateral-->
-        <div id="mySidenav" class="sidenav">
+            <!--Menu lateral-->
+            <div id="mySidenav" class="sidenav">
     <div class="side">
       <a href="javascript:void(0)" onclick="closeNav()"><img src="{{asset('/imagens/icon menu.png')}}" class="menu-cinza"></a>
       <div><img src="{{asset('/imagens/creche.png')}}" class="logo-sidebar"></div>
@@ -38,35 +38,18 @@
         </div>
         
         <div class="retangulo">
-      <a href="#" onclick="toggleSubMenu('subMenuFinanca')">
-        <img src="{{asset('/imagens/icon financeiro cinza.png')}}">
-        <p>Financeiro</p>
-        </div>
-        <div id="subMenuFinanca" class="sub-menu">
-          <div class="div-container">
-            <a href="{{ url('/financa#pendentes')}}">Pendentes</a>
-            <a href="{{ url('/financa#pagas')}}">Pagas</a>
-            <a href="{{ url('/financa#dados')}}">Dados</a>
-          </div>
+      <a href="{{ url('/financa')}}"><img src="{{asset('/imagens/icon financeiro cinza.png')}}">
+        <p>Financeiro</p></a>
         </div>
       </a>
 
       <div class="retangulo">
-      <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home azul.png')}}"><p>Home</p></a>
+      <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home cinza.png')}}"><p>Home</p></a>
       </div>
 
       <div class="retangulo">
-      <a href="#" onclick="toggleSubMenu('subMenuMedico')">
-        <img src="{{asset('/imagens/icon saude cinza.png')}}">
-        <p>Saude</p>
-        </div>
-
-        <div id="subMenuMedico" class="sub-menu">
-          <div class="div-container">
-            <a href="{{ url('/medico#ficha-medica')}}">Ficha Médica</a>
-            <a href="{{ url('/medico#atestados')}}">Atestados</a>
-            <a href="{{ url('/medico#cardapio')}}">Cardápio</a>
-          </div>
+      <a href="{{ url('/medico')}}"><img src="{{asset('/imagens/icon saude azul.png')}}">
+        <p>Saúde</p></a>
         </div>
 
 
@@ -77,17 +60,16 @@
       </div>
     </div>
 
-
     <!-- Footer do menu lateral -->
     <div class="footer-menu">
-      <a href="index.html"><img src="{{ asset('imagens/sair.png') }}" class="sair"><p>Sair</p></a>
+      <a href="{{ url('logout')}}"><img src="{{asset('/imagens/sair.png')}}" class="sair"><p>Sair</p></a>
     </div>
-
-      <div class="copyriht"> 
+  
+    <div class="copyriht"> 
       <img src="{{asset('/imagens/icon_copyright.png')}}" class="copyright">
       <p><strong>2023 FROM NEWPATH</strong></p>
     </div>
-    </div>
+  </div>
 
     <!--Ficha, Atestado e cardápio-->
 
@@ -198,7 +180,7 @@
 
     
       <div class="cards">
-      <img src="../imagens/icon cardapio.png">
+      <img src="{{asset('/imagens/icon cardapio.png')}}">
       <p>Cardápio</p>
       <div class="texto-expandido">
         <div class="cardapio">

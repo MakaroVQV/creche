@@ -199,6 +199,7 @@ justify-content: center;
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
   font-weight: bold;
+  color: #004085;
 }
 
 /* Position and style the close button (top right corner) */
