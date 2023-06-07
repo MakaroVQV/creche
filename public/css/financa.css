@@ -1,4 +1,3 @@
-
 *{
   margin: 0;
   padding: 0;
@@ -17,9 +16,10 @@ p{
   justify-content: space-between;
 }
 .menu-azul{
-  margin: 10px 10px 3px 2px;
+  margin: 10px 10px 8px 10px;
   cursor: pointer;
 }
+
 .logo-navbar{
   margin-top:10px;
   max-width: 80px;
@@ -52,22 +52,19 @@ p{
   cursor: pointer;
 }
 
-
 .sub-menu {
   display: none;
   padding-left: 20px; /* Adicione o espaçamento desejado nas opções do submenu */
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
 }
 
 .sub-menu a {
   display: block;
   padding-left: 20px;
-  transition: all 0.3s ease-in-out;
 }
 
 .sub-menu.show {
   display: block;
-  transition: all 0.3s ease-in-out;
 }
 .iten-menu {
   transition: all 0.3s ease;
@@ -90,35 +87,37 @@ p{
 }
 
 .logo-sidebar{
-  margin: 0 20px 0 0;
+  margin-top:10px;
   max-width: 80px;
   max-height: 80px;
 }
  
 .iten-menu p{
   padding-right: 80px;
-  margin-top: 40px;
+  margin-top: 35px;
   margin-left: 10px;
   float: left;
 }
 
 .iten-menu img{
 float: left;
+width: 25px;
+height: 25px;
 }
 
-.sair{
-  width: 35px;
-  height: 35px;
+.sair {
+  width: 30px;
+  height: 30px;
 }
 
 .footer-menu{
   position: absolute;
-  bottom: 60px;
+  bottom: 90px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: start;
-  margin-left:30px;
+  margin-left:40px;
   font-size:15px
 }
 
@@ -135,7 +134,8 @@ justify-content: center;
 }
 
 .copyriht {
-  margin: 20px;  
+  top: 90%; 
+  left: 20%;
   bottom: 0;
   display:flex;
   align-items:center;
@@ -145,6 +145,7 @@ justify-content: center;
 
 .copyriht p {
   margin-left:5px;
+  font-size: 10px ;
 }
 
 /* SIDEBAR */
@@ -155,9 +156,11 @@ justify-content: center;
   position: fixed; /* Stay in place */
   z-index: 4; /* Stay on top */
   top: 0;
-  left: -9px;
+  left: 0;
   background-color: #ffffff;
+  border-top: 1px solid #009CDE;
   border-right: 1px solid #009CDE;
+  border-bottom: 1px solid #009CDE;
   border-radius: 12px;
   overflow-x: hidden; /* Disable horizontal scroll */
   transition: all 0.3s ease;
@@ -190,23 +193,14 @@ justify-content: center;
 
 .esquerda {
   position: absolute;
-  left: -35px;
+  left: -255px;
 }
 
-#seta1{
-  transform: scaleX(-1);
-  width: 30px;
-  height: 30px;
-}
-#seta2{
-  transform: scaleX(-1);
-  width: 30px;
-  height: 30px;
-}
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
   font-weight: bold;
+  color: #004085;
 }
 
 /* Position and style the close button (top right corner) */
@@ -230,7 +224,7 @@ justify-content: center;
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-/* SIDEBAR */
+
 #img-1 {
   padding-left: 20px;
   max-width: 100px;
@@ -251,11 +245,10 @@ input[type="checkbox"] {
   margin-left: auto; /* Alinhe a terceira imagem à extrema direita */
   width: 48px;
   height: 48px;
-      top: 40px;
+  top: 40px;
     
 }
-
-/*Acaba o menu lateral e começa o conteúdo */
+/* SIDEBAR */
 
 .texto{
   text-align: center;
