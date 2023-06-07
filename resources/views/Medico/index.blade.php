@@ -8,21 +8,26 @@
 <div class="container">
     <table class="table table-dark">
         <thead>
+                        @if (session('status'))
+                    <div class="alert alert-success">
+                        {{ session('status') }}
+                    </div>
+                @endif
             <tr>
                 <th>Nome</th>
                 <th>Ação</th>
-                <a class="col-sm btn btn-success" href="{{ url('usuarios/create')}}">Criar</a>
+                <a class="col-sm btn btn-success" href="{{ url('medico/create')}}">Criar</a>
             </tr>
         </thead>
         <tbody>
-            @foreach($users as $user)
+            @foreach($fichas as $value)
             <tr>
-                <td class="">{{ $user->name }}</td>
+                <td class="">{{ $value->id }}</td>
                 <td class="">
                     
-                    <a class=" btn btn-primary" href="{{ url('usuarios/'. $user->id) }}">Vizualizar</a>
-                    <a class=" btn btn-warning" href="{{ url('usuarios/'. $user->id . '/edit') }}">Editar</a>
-                    {!! Form::open(['method' => 'DELETE','route' =>['usuarios.destroy', $user->id],'style'=>'display:inline']) !!}
+                    <a class=" btn btn-primary" href="{{ url('medico/'. $value->id) }}">Vizualizar</a>
+                    <a class=" btn btn-warning" href="{{ url('medico/'. $value->id . '/edit') }}">Editar</a>
+                    {!! Form::open(['method' => 'DELETE','route' =>['medico.destroy', $value->id],'style'=>'display:inline']) !!}
                     {{Form::submit('Excluir', ['class' => ' btn btn-danger'])}}
                     {!! Form::close() !!}
                 </td>

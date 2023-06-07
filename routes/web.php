@@ -35,9 +35,8 @@ Route::get('/notificado', [NotificadoController::class, 'index'])
 
 //------------------------------ medico ------------------------------//
 
-Route::get('/medico', [MedicoController::class, 'index'])
-
-->name('medico');
+Route::get('medico', [MedicoController::class, 'index'])
+->name('medico.index');
 //------------------------------ perfil ------------------------------//
 Route::get('/perfil', [PerfilController::class, 'index'])
 ->name('perfil');
@@ -108,7 +107,31 @@ Route::get('/teste', [App\Http\Controllers\UserController::class, 'teste']);
 
 
 
-//------------------------------ Usuarios ------------------------------//
+
+//------------------------------ Medico ------------------------------//
 
 Route::get('/medico',[MedicoController::class,'index'])
-->name('medico.index');
+->name('medico');
+
+//create
+Route::get('/medico/create', [MedicoController::class, 'create'] )
+->name('medico.create')->middleware('can:is_admin');
+
+//Salvar
+Route::post('/medico/create', [MedicoController::class, 'store'] )
+->name('medico.store')->middleware('can:is_admin');
+
+Route::get('/medico/{id}', [MedicoController::class, 'show'] )
+->name('medico.show')->middleware('can:is_admin');
+
+//edit
+Route::get('/medico/{id}/edit', [MedicoController::class, 'edit'] )
+->name('medico.edit')->middleware('can:is_admin');
+
+//att
+Route::put('/medico/{id}', [MedicoController::class, 'update'] )
+->name('medico.update')->middleware('can:is_admin');
+
+//Destroy
+Route::delete('/medico/{id}', [MedicoController::class, 'destroy'] )
+->name('medico.destroy')->middleware('can:is_admin');

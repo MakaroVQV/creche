@@ -6,11 +6,15 @@
     <title>Visualizar Usuários</title>
 </head>
 <body>
-    <h1>Visualizar Usuários</h1>
-<b>ID:</b>       {{$usuario->id }}   <br>
-<b>Nome:</b>     {{$usuario->name }} <br>
-<b>Email:</b>    {{$usuario->email }} <br>
-<b>Perfil:</b>   {{$usuario->profile}} <br>
+    <h1>Visualizar Fichas</h1>
+<b>ID:              </b>{{$fichas->id}}<br>
+<b>Altura:          </b>{{$fichas->altura}}<br>
+<b>Peso:            </b>{{$fichas->peso}}<br>
+<b>Alergias:        </b>{{$fichas->alergias}}<br>
+<b>Medicamentos:    </b>{{$fichas->medicamentos}}<br>
+<b>Tipo Sanguineo:  </b>{{$fichas->tipo_sanguineo}}<br>
+<b>Observações:     </b>{{$fichas->observacoes}}<br>
+
 
 </body>
 @endsection

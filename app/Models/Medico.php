@@ -10,4 +10,17 @@ class Medico extends Model
     use HasFactory;
 
     protected $table='fichas_medica';
+    protected $fillable = [
+        'altura',
+        'peso',
+        'alergias',
+        'medicamentos:'
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(Aluno::class);
+        
+    }
 }
+

@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasOne;
-
+use Illuminate\Database\Eloquent\Relations\HasMany;
 class Aluno extends Model
 {
     use HasFactory;
     protected $table = 'alunos';   
 
-    public function ficha_medica(): HasOne
+    public function ficha_medica(): Hasmany
     {
-        return $this->hasOne(FichaMedica::class, 'aluno_id', 'id');
+        return $this->hasMany(FichaMedica::class, 'aluno_id', 'id');
     }
 }

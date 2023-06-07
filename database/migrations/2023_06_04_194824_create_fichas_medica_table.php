@@ -18,7 +18,7 @@ return new class extends Migration
             $table->longText('alergias');
             $table->longText('medicamentos');
             $table->string('tipo_sanguineo');
-            $table->longText('observacoes');
+            $table->longText('observacoes')->nullable();
             $table->timestamps();
         });
     }
