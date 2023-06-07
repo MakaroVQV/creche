@@ -13,10 +13,11 @@ return new class extends Migration
     {
         Schema::create('fichas_medica', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('aluno_id'); 
             $table->string('altura');
             $table->string('peso');
             $table->longText('alergias');
-            $table->longText('medicamentos');
+            $table->longText('medicamentos')->nullable();
             $table->string('tipo_sanguineo');
             $table->longText('observacoes')->nullable();
             $table->timestamps();

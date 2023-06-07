@@ -16,6 +16,7 @@ class MedicoSeeder extends Seeder
     public function run(): void
     {
         DB::table('fichas_medica')->insert([
+            'aluno_id'          => '1',
             'altura'            => '115',
             'peso'              => '55',
             'alergias'          => 'Dipirona, poeira,camarão ',
@@ -25,6 +26,7 @@ class MedicoSeeder extends Seeder
         ]);
 
         DB::table('fichas_medica')->insert([
+            'aluno_id'          => '2',
             'altura'            => '110',
             'peso'              => '50',
             'alergias'          => '',
@@ -34,6 +36,7 @@ class MedicoSeeder extends Seeder
         ]);
 
         DB::table('fichas_medica')->insert([
+            'aluno_id'          => '3',
             'altura'            => '100',
             'peso'              => '45',
             'alergias'          => '',

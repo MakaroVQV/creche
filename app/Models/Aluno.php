@@ -10,9 +10,25 @@ class Aluno extends Model
 {
     use HasFactory;
     protected $table = 'alunos';   
+    protected $fillable = [
+        'aluno_id',
 
-    public function ficha_medica(): Hasmany
+    ];
+
+
+   /* public function medico(): hasOne
     {
-        return $this->hasMany(FichaMedica::class, 'aluno_id', 'id');
+        return $this->hasOne(Medico::class,'id','aluno_id');
+    }*/
+
+    public function alunos()
+    {
+        return $this->belongsTo(User::class, 'responsavel_id');
+        
+    }
+
+    public function ficha(): HasOne
+    {
+        return $this->hasOne(Medico::class,'id','aluno_id');
     }
 }

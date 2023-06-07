@@ -14,12 +14,13 @@ class Medico extends Model
         'altura',
         'peso',
         'alergias',
-        'medicamentos:'
+        'medicamentos:',
+        'aluno_id'
     ];
 
-    public function user()
+    public function ficha()
     {
-        return $this->belongsTo(Aluno::class);
+        return $this->belongsTo(Aluno::class, 'aluno_id');
         
     }
 }

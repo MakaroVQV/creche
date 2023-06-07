@@ -7,6 +7,7 @@
 </head>
 <body>
     <h1>Visualizar Fichas</h1>
+<b>Nome:              </b>{{$fichas->ficha->name}}<br>
 <b>ID:              </b>{{$fichas->id}}<br>
 <b>Altura:          </b>{{$fichas->altura}}<br>
 <b>Peso:            </b>{{$fichas->peso}}<br>

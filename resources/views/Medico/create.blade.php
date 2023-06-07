@@ -6,8 +6,21 @@
 </head>
 <body>
     <h1>Criar Fichas Medicas</h1>
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
     
     {!! Form::open(['url' => 'medico/create']) !!}<br>
+
+    {!! Form::label('aluno', 'Aluno:') !!}<br>
+    {!! Form::select('aluno_id', $alunos ) !!}<br>
+
     {{ Form::label('altura', 'Altura:')}}<br>
     {{ Form::text('altura')}}<br>
     

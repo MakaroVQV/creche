@@ -15,6 +15,7 @@
                 @endif
             <tr>
                 <th>Nome</th>
+                <th>ID</th>
                 <th>Ação</th>
                 <a class="col-sm btn btn-success" href="{{ url('medico/create')}}">Criar</a>
             </tr>
@@ -22,6 +23,7 @@
         <tbody>
             @foreach($fichas as $value)
             <tr>
+                <td class="">{{$value->ficha->name ?? 'None'}}</td>
                 <td class="">{{ $value->id }}</td>
                 <td class="">
                     

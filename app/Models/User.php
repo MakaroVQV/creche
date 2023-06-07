@@ -58,6 +58,6 @@ class User extends Authenticatable
 
     public function alunos(): HasMany
     {
-        return $this->hasMany(Aluno::class, 'responsavel_id','id');
+        return $this->hasMany(Aluno::class,'id','responsavel_id');
     }
 }
