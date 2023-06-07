@@ -1,0 +1,19 @@
+* {
+    margin: auto;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+ justify-content: center;
+ text-align: center;
+ margin: auto;
+}
+
+p {
+    margin: auto;
+}
