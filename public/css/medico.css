@@ -559,12 +559,16 @@ font-weight: 100;
   color:#3BA12F;
 }
 
+.cardapio strong{
+  margin: 0 0 0 20px;
+}
+
 .descricao{
   width: 240px;
-  display: inline-table;
+  display: flex;
   background: #F5F5F5;
   border-radius: 6px;
-  margin: 10px;
+  margin:10px auto 10px auto
 }
 
 .descricao p{
