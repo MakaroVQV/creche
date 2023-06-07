@@ -180,6 +180,7 @@
 
     
       <div class="cards">
+
       <img src="{{asset('/imagens/icon cardapio.png')}}">
       <p>Cardápio</p>
       <div class="texto-expandido">
