@@ -205,6 +205,7 @@ overflow-x:hidden;
   /* When you mouse over the navigation links, change their color */
   .sidenav a:hover {
     font-weight: bold;
+    color: #004085;
   }
   
   /* Position and style the close button (top right corner) */
@@ -228,7 +229,7 @@ overflow-x:hidden;
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
-  /* SIDEBAR */
+
   #img-1 {
     padding-left: 20px;
     max-width: 100px;
@@ -267,6 +268,8 @@ overflow-x:hidden;
     font-size: 16px;
     font-weight: bold;
   }
+
+   /* SIDEBAR */
   
   .posters{
     margin: 100px auto 100px auto;

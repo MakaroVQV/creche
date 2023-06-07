@@ -38,16 +38,8 @@
         </div>
         
         <div class="retangulo">
-      <a href="#" onclick="toggleSubMenu('subMenuFinanca')">
-        <img src="{{asset('/imagens/icon financeiro cinza.png')}}">
-        <p>Financeiro</p>
-        </div>
-        <div id="subMenuFinanca" class="sub-menu">
-          <div class="div-container">
-            <a href="{{ url('/financa#pendentes')}}">Pendentes</a>
-            <a href="{{ url('/financa#pagas')}}">Pagas</a>
-            <a href="{{ url('/financa#dados')}}">Dados</a>
-          </div>
+      <a href="{{ url('/financa')}}"><img src="{{asset('/imagens/icon financeiro cinza.png')}}">
+        <p>Financeiro</p></a>
         </div>
       </a>
 
@@ -56,17 +48,8 @@
       </div>
 
       <div class="retangulo">
-      <a href="#" onclick="toggleSubMenu('subMenuMedico')">
-        <img src="{{asset('/imagens/icon saude cinza.png')}}">
-        <p>Saude</p>
-        </div>
-
-        <div id="subMenuMedico" class="sub-menu">
-          <div class="div-container">
-            <a href="{{ url('/medico#ficha-medica')}}">Ficha Médica</a>
-            <a href="{{ url('/medico#atestados')}}">Atestados</a>
-            <a href="{{ url('/medico#cardapio')}}">Cardápio</a>
-          </div>
+      <a href="{{ url('/medico')}}"><img src="{{asset('/imagens/icon saude cinza.png')}}">
+        <p>Saúde</p></a>
         </div>
 
 
