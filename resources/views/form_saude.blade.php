@@ -21,7 +21,7 @@
           <label for="altura-peso"> Altura e Peso </label>
           <input class="field" name="altura-peso" placeholder="Entre com a altura" required>
           <input class="field" name="altura-peso" placeholder="Entre com a peso" required>
-          <input type="date" id="birthday" name="birthday">
+          <input type="date" name="dob" id="dob" class="data"/>
 
         </div>
 
@@ -54,15 +54,11 @@
           </select>
         </div>
 
-        <div class ="vacina">
-          <label for="Vacinas"> Vacinas :</label>
-          <input class="field" name="Vacinas" required>
-        </div>
         <div>
-          <label for="observações"> Observações :</label>
+          <label for="observacoes"> Observações :</label>
           <textarea id="observações" name="observações" rows="4" cols="50"></textarea>
         </div>
-        <button class="formbold-btn"> Enviar </button>
+        <button class="button">Enviar</button>
       </form>
     </div>
   </section>
