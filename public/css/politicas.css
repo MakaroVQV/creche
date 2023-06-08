@@ -17,3 +17,7 @@ h1 {
 p {
     margin: auto;
 }
+
+strong {
+    background: #0f03b3;
+}
