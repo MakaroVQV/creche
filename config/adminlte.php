@@ -313,7 +313,7 @@ return [
         ],
         [
             'text'        => 'Home',
-            'url'         => 'admin/pages',
+            'url'         => '/',
             'icon'        => 'far fa-fw fa-file',
             'label'       => 4,
             'label_color' => 'success',
@@ -325,9 +325,23 @@ return [
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
+            'text' => 'Fichas Medicas',
+            'url'  => 'medico/',
             'icon' => 'fas fa-fw fa-lock',
+        ],
+        [
+            'text' => 'Finanças',
+            'url'  => 'finaca/',
+            'icon' => 'fas fa-fw fa-lock',
+        ],
+        [
+            'text' => 'Postagens',
+            'url'  => 'finaca/',
+            'icon' => 'fas fa-fw fa-lock',
+        ],[
+            'text' => 'Calendário',
+            'url'  => '/usuarios/fullcalender',
+            'icon' => 'nav-icon fas fa-calendar-alt',
         ],
       /*[
             'text'    => 'multilevel',

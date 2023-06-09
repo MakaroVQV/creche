@@ -72,30 +72,31 @@
   </div>
 
         <!-- Conteúdo -->
+       
 
         <div class="invisivel">
         <div class="cima">
         <div class="circulo"><h2>CS</h2></div>
-        <div class="nome"><h3>Carolina Souza</h3>
+        <div class="nome"><h3>{{ $usuario->alunos->name ?? 'None'}}</h3>
         </div>
         </div>
 
         <div class="baixo">
             <div class="left">
             <div class="titulo-1"><p>Nome completo do Responsável</p></div>
-            <div class="texto-1"><p>Carolina Souza de Araújo</p></div>
+            <div class="texto-1"><p>{{ $usuario->name }}</p></div>
             <div class="titulo-2"><p>Email</p></div>
-            <div class="texto-2"><p>carolinasouzaa@gmail.com</p></div>
+            <div class="texto-2"><p>{{ $usuario->email}}</p></div>
             </div>
 
             <div class="right">
             <div class="telefone"><p>Telefone</p></div>
             <div class="numero"><img src="{{asset('/imagens/celular.png')}}">
-            <p>(21) 98765-4321</p></div>
+            <p>{{$usuario->telefoneFormatado}}</p></div>
             </div>
         </div>
         
-       
+
 
     
     <script>

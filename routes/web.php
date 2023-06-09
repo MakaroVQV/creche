@@ -17,8 +17,6 @@ Route::get('/', function () {
     return redirect('/login');
 });
 
-Route::get('/usuarios', [UserController::class, 'index'] )
-->name('usuarios.index')->middleware('can:is_admin');
 
 //------------------------------ Financa ------------------------------//
 
@@ -39,14 +37,10 @@ Route::get('medico', [MedicoController::class, 'index'])
 ->name('medico.index');
 //------------------------------ perfil ------------------------------//
 Route::get('/perfil', [PerfilController::class, 'index'])
-->name('perfil');
-
-//------------------------------ Calendario ------------------------------//
-//Route::get('/calendario/{id}', [FullCalenderController::class, 'show'])
-//->name('calendario.show');
+->name('perfil')->middleware('auth');
 
 Route::controller(FullCalenderController::class)->group(function(){
-    Route::get('fullcalender', 'index')->middleware('can:is_admin');
+    Route::get('/usuarios/fullcalender', 'index')->middleware('can:is_admin');
     Route::post('fullcalenderAjax', 'ajax')->middleware('can:is_admin');
 });
 
@@ -55,6 +49,9 @@ Route::controller(FullCalenderController::class)->group(function(){
 
 
 //------------------------------ Usuarios ------------------------------//
+
+Route::get('/usuarios', [UserController::class, 'index'] )
+->name('usuarios.index')->middleware('can:is_admin');
 
 //create
 Route::get('/usuarios/create', [UserController::class, 'create'] )

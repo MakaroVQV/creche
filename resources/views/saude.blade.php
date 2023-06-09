@@ -58,6 +58,11 @@
         <p>Perfil</p>
       </a>
       </div>
+      <div class="retangulo">
+      <a href="{{ url('/usuarios/')}}"><img src="{{asset('/imagens/cadeado.png')}}">
+      <p>Adminstração</p>
+      </a>
+      </div>
     </div>
 
     <!-- Footer do menu lateral -->

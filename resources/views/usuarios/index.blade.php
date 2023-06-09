@@ -10,6 +10,7 @@
         <thead>
             <tr>
                 <th>Nome</th>
+                <th>Perfil</th>
                 <th>Ação</th>
                 <a class="col-sm btn btn-success" href="{{ url('usuarios/create')}}">Criar</a>
             </tr>
@@ -18,8 +19,8 @@
             @foreach($users as $user)
             <tr>
                 <td class="">{{ $user->name }}</td>
-                <td class="">
-                    
+                <td class="">{{ $user->profile }}</td>
+                <td>  
                     <a class=" btn btn-primary" href="{{ url('usuarios/'. $user->id) }}">Vizualizar</a>
                     <a class=" btn btn-warning" href="{{ url('usuarios/'. $user->id . '/edit') }}">Editar</a>
                     {!! Form::open(['method' => 'DELETE','route' =>['usuarios.destroy', $user->id],'style'=>'display:inline']) !!}
