@@ -110,6 +110,15 @@ Route::get('/teste', [App\Http\Controllers\UserController::class, 'teste']);
 
 //------------------------------ Medico ------------------------------//
 
+/*Route::get('/',function (){
+    return view('Welcome');
+});*/
+Route::get('/saude',[MedicoController::class,'index2'])
+->name('saude.index');
+
+Route::get('/medico/index',[MedicoController::class,'index'])
+->name('medico.index');
+
 Route::get('/medico',[MedicoController::class,'index'])
 ->name('medico');
 
