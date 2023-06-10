@@ -23,6 +23,7 @@
         <tbody>
             @foreach($financa as $value)
             <tr>
+                <td class="">{{ $value->financas->name }}</td>
                 <td class="">{{ $value->id }}</td>
                 <td class="">
                     

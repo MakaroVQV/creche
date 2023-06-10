@@ -21,9 +21,9 @@ class Aluno extends Model
         return $this->hasOne(Medico::class,'id','aluno_id');
     }*/
 
-    public function responsavel()
+    public function teste()
     {
-        return $this->belongsTo(User::class,'id', 'responsavel_id');
+        return $this->belongsTo(User::class,'responsavel_id');
         
     }
 

@@ -19,6 +19,10 @@ Route::get('/', function () {
 
 
 //------------------------------ Financa ------------------------------//
+Route::get('/financas/Financa', [FinancaController::class, 'exibir'])
+->name('financas.exibir');
+
+
 
 Route::get('/financas', [FinancaController::class, 'index'])
 ->name('financas.index');
