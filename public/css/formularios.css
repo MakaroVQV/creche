@@ -1,5 +1,46 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+form {
+  width: 100%;
+  max-width: 30rem;
+}
+
+label, input, textarea,button {
+  display: block;
+}
+
+input, textarea, button {
+width: 100%;
+font-weight: 700;
+padding: 1.25rem;
+}
+
+input, textarea {
+  margin-bottom: 1rem;
+  color: blue;
+  background: #b4b4b4;
+  border: 0.125rem solid transparent;
+  border-radius: 1.125rem;
+  transition: border-color 0.3s;
+  box-shadow: 0.3s;
+}
+
+button {
+  border: none;
+  border-radius: 99px;
+  color: white;
+  background: #1d90f5;
+  cursor: pointer;
+  transition: 0.3s;
 }

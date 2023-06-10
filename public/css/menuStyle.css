@@ -24,7 +24,7 @@ overflow-x:hidden;
     cursor: pointer;
   }
   .logo-navbar{
-    margin-top:10px;
+    margin-top: 10px;
     max-width: 80px;
     max-height: 80px;
   }
@@ -99,28 +99,30 @@ overflow-x:hidden;
    
   .iten-menu p{
     padding-right: 80px;
-    margin-top: 40px;
+    margin-top: 35px;
     margin-left: 10px;
     float: left;
   }
   
   .iten-menu img{
   float: left;
-  }
+  width: 25px;
+  height: 25px;
+}
   
   .sair{
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
   }
   
   .footer-menu{
     position: absolute;
-    bottom: 60px;
+    bottom: 90px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: start;
-    margin-left:30px;
+    margin-left:40px;
     font-size:15px
   }
   
@@ -137,7 +139,8 @@ overflow-x:hidden;
   }
   
   .copyriht {
-    margin: 20px;  
+    top: 90%; 
+    left: 20%;
     bottom: 0;
     display:flex;
     align-items:center;
@@ -147,8 +150,9 @@ overflow-x:hidden;
   
   .copyriht p {
     margin-left:5px;
+    font-size: 10px ;
   }
-
+  
 
   
   /* SIDEBAR */
@@ -197,20 +201,11 @@ overflow-x:hidden;
     left: -25px;
   }
   
-  #seta1{
-    transform: scaleX(-1);
-    width: 30px;
-    height: 30px;
-  }
-  #seta2{
-    transform: scaleX(-1);
-    width: 30px;
-    height: 30px;
-  }
   
   /* When you mouse over the navigation links, change their color */
   .sidenav a:hover {
     font-weight: bold;
+    color: #004085;
   }
   
   /* Position and style the close button (top right corner) */
@@ -234,7 +229,7 @@ overflow-x:hidden;
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
-  /* SIDEBAR */
+
   #img-1 {
     padding-left: 20px;
     max-width: 100px;
@@ -273,9 +268,11 @@ overflow-x:hidden;
     font-size: 16px;
     font-weight: bold;
   }
+
+   /* SIDEBAR */
   
   .posters{
-    margin: auto;
+    margin: 100px auto 100px auto;
     width: 520px;
     margin-top: 40px;
     border-top: 1px solid #009CDE;

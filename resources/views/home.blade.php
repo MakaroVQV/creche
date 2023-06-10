@@ -38,17 +38,8 @@
         </div>
         
         <div class="retangulo">
-      <a href="#" onclick="toggleSubMenu('subMenuFinanca')">
-        <img src="{{asset('/imagens/icon financeiro cinza.png')}}">
-        <div class="esquerda"><img src="{{asset('/imagens/icon seta cinza.png')}}" id="seta1"></div>
-        <p>Financeiro</p>
-        </div>
-        <div id="subMenuFinanca" class="sub-menu">
-          <div class="div-container">
-            <a href="{{ url('/financa#pendentes')}}">Pendentes</a>
-            <a href="{{ url('/financa#pagas')}}">Pagas</a>
-            <a href="{{ url('/financa#dados')}}">Dados</a>
-          </div>
+      <a href="{{ url('/financa')}}"><img src="{{asset('/imagens/icon financeiro cinza.png')}}">
+        <p>Financeiro</p></a>
         </div>
       </a>
 
@@ -57,18 +48,8 @@
       </div>
 
       <div class="retangulo">
-      <a href="#" onclick="toggleSubMenu('subMenuMedico')">
-        <img src="{{asset('/imagens/icon saude cinza.png')}}">
-        <div class="esquerda"><img src="{{asset('imagens/icon seta cinza.png')}}" id="seta2"></div>
-        <p>Saude</p>
-        </div>
-
-        <div id="subMenuMedico" class="sub-menu">
-          <div class="div-container">
-            <a href="{{ url('/medico#ficha-medica')}}">Ficha Médica</a>
-            <a href="{{ url('/medico#atestados')}}">Atestados</a>
-            <a href="{{ url('/medico#cardapio')}}">Cardápio</a>
-          </div>
+      <a href="{{ url('/medico')}}"><img src="{{asset('/imagens/icon saude cinza.png')}}">
+        <p>Saúde</p></a>
         </div>
 
 
@@ -135,9 +116,11 @@
             <div class="imagem-centro">
                 <img src="{{asset('/imagens/luis.jpeg')}}">
             </div>
+            <center>
             <div class="descricao">
                 <p>🧩 2 de abril dia mundial do autismo 🧩<br>
                     Um dia especial para pessoas incríveis 💙</p>
+                    <center>
                 <div class="curtir">
                     <img src="{{asset('/imagens/coracao.png')}}" class="coracao">
                     <p>Curtir</p>

@@ -50,7 +50,6 @@
         <div class="retangulo">
       <a href="#" onclick="toggleSubMenu('subMenuFinanca')">
         <img src="{{asset('/imagens/icon financeiro cinza.png')}}">
-        <div class="esquerda"><img src="{{asset('/imagens/icon seta cinza.png')}}" id="seta1"></div>
         <p>Financeiro</p>
         </div>
         <div id="subMenuFinanca" class="sub-menu">
@@ -69,7 +68,6 @@
       <div class="retangulo">
       <a href="#" onclick="toggleSubMenu('subMenuMedico')">
         <img src="{{asset('/imagens/icon saude cinza.png')}}">
-        <div class="esquerda"><img src="{{asset('imagens/icon seta cinza.png')}}" id="seta2"></div>
         <p>Saude</p>
         </div>
 
