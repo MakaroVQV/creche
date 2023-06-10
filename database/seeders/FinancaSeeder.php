@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-class FincancaSeeder extends Seeder
+class FinancaSeeder extends Seeder
 {
     public function run(): void
     {
@@ -20,14 +20,14 @@ class FincancaSeeder extends Seeder
             'vencimento'          => '2023-04-01',
             'valor'               => 700.00,
             'valor_pagos'         => 700.00,
-            'status'              => 'vencido'
+            'status'              => 'pendente'
         ]);
     
         DB::table('financas')->insert([
             'vencimento'          => '2023-06-01',
             'valor'               => 700.00,
             'valor_pagos'         => 700.00,
-            'status'              => 'aberto'
+            'status'              => 'pendente'
         ]);
     }
 }

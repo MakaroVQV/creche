@@ -115,10 +115,12 @@
         </p>
       </div>
       <div class="detalhe">
-        <p class="data">15/06/2023</p>
-        <p class="pago1">R$ 700,00</p>
+        @foreach ($pendentes as $value)
+        <p class="data">{{$value->vencimento }}</p>
+        <p class="pago1">{{$value->valor}}</p>
         <p class="pago2"></p>
-        <p class="pendente">Pendente</p>
+        <p class="pendente">{{$value->status}}</p>
+        @endforeach
         <a href="#" class="imagem-clicavel" onclick="expandirDetalhe(this);">
           <img id="seta-img" src="{{asset('/imagens/seta-azul.png')}}"/>
         </a>
