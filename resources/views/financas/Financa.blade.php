@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/financa.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/financa.css') }}">
     <script src="{{ asset('js.js') }}"></script>
     <title>Creche</title>
 </head>
@@ -26,56 +26,57 @@
 
         <!--Menu lateral-->
         <div id="mySidenav" class="sidenav">
-          <div class="side">
-            <a href="javascript:void(0)" onclick="closeNav()"><img src="{{asset('/imagens/icon menu.png')}}" class="menu-cinza"></a>
-            <div><img src="{{asset('/imagens/creche.png')}}" class="logo-sidebar"></div>
+    <div class="side">
+      <a href="javascript:void(0)" onclick="closeNav()"><img src="{{asset('/imagens/icon menu cinza.png')}}" class="menu-cinza"></a>
+      <div><img src="{{asset('/imagens/creche.png')}}" class="logo-sidebar"></div>
+    </div>
+    <div class="iten-menu">
+      <div class="retangulo">
+      <a href="{{ url('/calendario')}}"><img src="{{asset('/imagens/icon calendario cinza.png')}}">
+        <p>Calendario</p></a>
+        </div>
+        
+        <div class="retangulo">
+      <a href="#" onclick="toggleSubMenu('subMenuFinanca')">
+        <img src="{{asset('/imagens/icon financeiro azul.png')}}">
+        <div class="esquerda"><img src="{{asset('/imagens/icon seta cinza.png')}}" id="seta1"></div>
+        <p>Financeiro</p>
+        </div>
+        <div id="subMenuFinanca" class="sub-menu">
+          <div class="div-container">
+            <a href="{{ url('/financa#pendentes')}}">Pendentes</a>
+            <a href="{{ url('/financa#pagas')}}">Pagas</a>
+            <a href="{{ url('/financa#dados')}}">Dados</a>
           </div>
-          <div class="iten-menu">
-            <div class="retangulo">
-            <a href="{{ url('/calendario')}}"><img src="{{asset('/imagens/icon calendario cinza.png')}}">
-              <p>Calendario</p></a>
-              </div>
-              
-              <div class="retangulo">
-            <a href="#" onclick="toggleSubMenu('subMenuFinanca')">
-              <img src="{{asset('/imagens/icon financeiro azul.png')}}">
-              <p>Financeiro</p>
-              </div>
-              <div id="subMenuFinanca" class="sub-menu">
-                <div class="div-container">
-                  <a href="{{ url('/financa#pendentes')}}">Pendentes</a>
-                  <a href="{{ url('/financa#pagas')}}">Pagas</a>
-                  <a href="{{ url('/financa#dados')}}">Dados</a>
-                </div>
-              </div>
-            </a>
-      
-            <div class="retangulo">
-            <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home cinza.png')}}"><p>Home</p></a>
-            </div>
-      
-            <div class="retangulo">
-            <a href="#" onclick="toggleSubMenu('subMenuMedico')">
-              <img src="{{asset('/imagens/icon saude cinza.png')}}">
-              <p>Saude</p>
-              </div>
-      
-              <div id="subMenuMedico" class="sub-menu">
-                <div class="div-container">
-                  <a href="{{ url('/medico#ficha-medica')}}">Ficha Médica</a>
-                  <a href="{{ url('/medico#atestados')}}">Atestados</a>
-                  <a href="{{ url('/medico#cardapio')}}">Cardápio</a>
-                </div>
-              </div>
-      
-      
-            <div class="retangulo">
-            <a href="{{ url('/perfil')}}"><img src="{{asset('/imagens/icon user cinza.png')}}">
-              <p>Perfil</p>
-            </a>
-            </div>
+        </div>
+      </a>
+
+      <div class="retangulo">
+      <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home cinza.png')}}"><p>Home</p></a>
+      </div>
+
+      <div class="retangulo">
+      <a href="#" onclick="toggleSubMenu('subMenuMedico')">
+        <img src="{{asset('/imagens/icon saude cinza.png')}}">
+        <div class="esquerda"><img src="{{asset('imagens/icon seta cinza.png')}}" id="seta2"></div>
+        <p>Saude</p>
+        </div>
+
+        <div id="subMenuMedico" class="sub-menu">
+          <div class="div-container">
+            <a href="{{ url('/medico#ficha-medica')}}">Ficha Médica</a>
+            <a href="{{ url('/medico#atestados')}}">Atestados</a>
+            <a href="{{ url('/medico#cardapio')}}">Cardápio</a>
           </div>
-      
+        </div>
+
+
+      <div class="retangulo">
+      <a href="{{ url('/perfil')}}"><img src="{{asset('/imagens/icon user cinza.png')}}">
+        <p>Perfil</p>
+      </a>
+      </div>
+    </div>
 
     <!-- Footer do menu lateral -->
     <div class="footer-menu">
@@ -116,11 +117,12 @@
       </div>
       <div class="detalhe">
         @foreach ($pendentes as $value)
+        @endforeach
         <p class="data">{{$value->vencimento }}</p>
         <p class="pago1">{{$value->valor}}</p>
         <p class="pago2"></p>
         <p class="pendente">{{$value->status}}</p>
-        @endforeach
+        
         <a href="#" class="imagem-clicavel" onclick="expandirDetalhe(this);">
           <img id="seta-img" src="{{asset('/imagens/seta-azul.png')}}"/>
         </a>
@@ -149,28 +151,20 @@
     </div>
 
     <div class="detalhe">
-      <p class="data">15/06/2023</p>
-      <p class="pago1">R$ 700,00</p>
-      <p class="pago2">R$ 700,00</p>
-      <p class="pagoP">Pago</p>
+      @foreach ($pagos as $value)
+      @endforeach
+      <p class="data">{{$value->vencimento }}</p>
+      <p class="pago1">{{$value->valor}}</p>
+      <p class="pago2">{{$value->valor}}</p>
+      <p class="pagoP">{{$value->status}}</p>
     </div>
     <div class="detalhe">
-      <p class="data">15/05/2023</p>
-      <p class="pago1">R$ 700,00</p>
-      <p class="pago2">R$ 700,00</p>
-      <p class="pagoP">Pago</p>
-    </div>
-    <div class="detalhe">
-      <p class="data">15/04/2023</p>
-      <p class="pago1">R$ 700,00</p>
-      <p class="pago2">R$ 700,00</p>
-      <p class="pagoP">Pago</p>
-    </div>
-    <div class="detalhe">
-      <p class="data">15/03/2023</p>
-      <p class="pago1">R$ 700,00</p>
-      <p class="pago2">R$ 700,00</p>
-      <p class="pagoP">Pago</p>
+      @foreach ($pagos as $value)
+      @endforeach
+      <p class="data">{{$value->vencimento }}</p>
+      <p class="pago1">{{$value->valor}}</p>
+      <p class="pago2">{{$value->valor}}</p>
+      <p class="pagoP">{{$value->status}}</p>
     </div>
 
     </div>

@@ -22,7 +22,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'profile'
+        'profile',
+        'telefone'
     ];
 
     /**
@@ -56,8 +57,30 @@ class User extends Authenticatable
         return $this->profile === 'admin';
     }
 
-    public function alunos(): HasMany
+
+    public function getTelefoneFormatadoAttribute()
     {
-        return $this->hasMany(Aluno::class, 'responsavel_id','id');
+        $telefone = $this->telefone;
+
+        // Formate o telefone conforme necessário
+        $parte1 = substr($telefone, 0, 2);
+        $parte2 = substr($telefone, 2, 5);
+        $parte3 = substr($telefone, 7, 4);
+
+        $telefoneFormatado = "($parte1) $parte2-$parte3";
+
+        return $telefoneFormatado;
+    }
+
+
+
+    public function responsavel(): HasMany
+    {
+        return $this->hasMany(Aluno::class,'id','responsavel_id');
+    }
+
+    public function financas(): HasMany
+    {
+        return $this->hasMany(Financa::class,'id','responsavel_id');
     }
 }
