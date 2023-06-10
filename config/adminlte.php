@@ -331,7 +331,7 @@ return [
         ],
         [
             'text' => 'Finanças',
-            'url'  => 'finaca/',
+            'url'  => 'financas/',
             'icon' => 'fas fa-fw fa-lock',
         ],
         [

@@ -35,6 +35,7 @@ class FinancaController extends Controller
     public function store(Request $request)
     {
         $validated  = $request->validate([
+            'responsavel_id' => 'required',
             'vencimento'     => 'required',
             'valor'          => 'required',
             'valor_pagos'    => 'required',
