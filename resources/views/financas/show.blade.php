@@ -1,6 +1,9 @@
 @extends('adminlte::page')
 
 @section('content')
+@extends('adminlte::page')
+
+@section('content')
 
 <head>
     <title>Financeiro</title>

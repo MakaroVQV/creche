@@ -9,6 +9,7 @@ use App\models\User;
 class FinancaController extends Controller
 {
 
+
     public function index()
     {
 
