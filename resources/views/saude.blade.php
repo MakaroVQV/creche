@@ -58,6 +58,11 @@
         <p>Perfil</p>
       </a>
       </div>
+      <div class="retangulo">
+      <a href="{{ url('/usuarios/')}}"><img src="{{asset('/imagens/cadeado.png')}}">
+      <p>Adminstração</p>
+      </a>
+      </div>
     </div>
 
     <!-- Footer do menu lateral -->
@@ -72,10 +77,11 @@
   </div>
 
     <!--Ficha, Atestado e cardápio-->
-
     <div class="invisible">
       <div class="cards" id="ficha-medica">
         <img src="{{asset('/imagens/icon ficha medica.png')}}">
+        @foreach($fichas as $value)
+        @endforeach
         <p>Ficha Médica</p>
         <div class="texto-expandido">
           <h1>Resumo</h1>
@@ -83,15 +89,17 @@
             <div class="info"><img src="{{asset('/imagens/boneco.png')}}">
               <p class="altura-peso">Altura e peso</p>
             </div>
+            
             <div class="centro-info">
-              <p class="numero"><strong>109</strong></p>
+              <p class="numero"><strong>{{$value->altura}}</strong></p>
               <p class="cm">cm</p>
-              <p class="numero"><strong>19</strong></p>
+              <p class="numero"><strong>{{$value->peso}}</strong></p>
               <div class="kg">
                 <p>kg</p>
               </div>
             </div>
             <div class="data">fev de 2023</div>
+            
           </div>
 
           <div class="detalhe">
@@ -100,7 +108,7 @@
             </div>
             <div class="centro-info">
               <div class="alergias">
-                <p>Não espeficicado</p>
+                <p>{{$value->alergias}}</p>
               </div>
             </div>
             <div class="data">fev de 2023</div>
@@ -112,7 +120,7 @@
             </div>
             <div class="centro-info">
               <div class="medicamentos">
-                <p>Não espeficicado</p>
+                <p>{{$value->medicamentos}}</p>
               </div>
             </div>
             <div class="data">fev de 2023</div>
@@ -120,7 +128,7 @@
 
           <div class="detalhe">
             <div class="info"><img src="{{asset('/imagens/sangue.png')}}">
-              <p>Grupo Sanguíneo</p>
+              <p>{{$value->tipo_snaguineo}}</p>
             </div>
             <div class="centro-info">
               <div class="sangue">
@@ -151,7 +159,7 @@
             </div>
             <div class="centro-info">
               <div class="observacao">
-                <p>Não espeficicado</p>
+                <p>{{$value->observacoes}}</p>
               </div>
             </div>
             <div class="data">fev de 2023</div>
@@ -177,7 +185,6 @@
               {!! Form::close() !!}
         </div>
       </div>
-
     
       <div class="cards">
 

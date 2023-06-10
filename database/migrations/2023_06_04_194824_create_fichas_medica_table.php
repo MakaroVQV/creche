@@ -11,16 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ficha_medica', function (Blueprint $table) {
+        Schema::create('fichas_medica', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('aluno_id'); 
             $table->string('altura');
             $table->string('peso');
-            $table->string('alergias');
-            $table->string('medicamentos');
-            $table->string('tipo sanguineo');
-            $table->string('vacinas');
-            $table->string('observacoes');
-            $table->string('aluno_id');
+            $table->longText('alergias');
+            $table->longText('medicamentos')->nullable();
+            $table->string('tipo_sanguineo');
+            $table->longText('observacoes')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('ficha_medica');
+        Schema::dropIfExists('fichas_medica');
     }
 };

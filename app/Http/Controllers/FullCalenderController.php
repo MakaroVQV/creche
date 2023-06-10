@@ -25,7 +25,7 @@ class FullCalenderController extends Controller
              return response()->json($data);
         }
   
-        return view('fullcalender');
+        return view('/usuarios/fullcalender');
     }
  
     /**
