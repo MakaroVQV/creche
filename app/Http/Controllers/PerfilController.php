@@ -16,7 +16,4 @@ class PerfilController extends Controller
         return view('/perfil', compact('usuario'));
     }
 
- 
-
-    
 }
