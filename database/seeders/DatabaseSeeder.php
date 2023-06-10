@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
             EventTableSeeder::class,
             AlunoSeeder::class,
             MedicoSeeder::class,
+            FinancaSeeder::class,
         ]);
     }
 }

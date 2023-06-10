@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('financas', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('responsavel_id')->nullable(); 
             $table->date('vencimento');
             $table->string('valor');
             $table->string('valor_pagos');

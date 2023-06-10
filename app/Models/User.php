@@ -22,7 +22,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'profile'
+        'profile',
+        'telefone'
     ];
 
     /**
@@ -76,5 +77,10 @@ class User extends Authenticatable
     public function responsavel(): HasMany
     {
         return $this->hasMany(Aluno::class,'id','responsavel_id');
+    }
+
+    public function financas(): HasMany
+    {
+        return $this->hasMany(Financa::class,'id','responsavel_id');
     }
 }

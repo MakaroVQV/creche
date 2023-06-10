@@ -7,16 +7,16 @@ use Illuminate\Support\Facades\Auth;
 class PerfilController extends Controller
 {
     
-
     public function index()
     {
-        $usuario = Auth::user();
-        return view('/perfil', compact('usuario'));
+        $user = Auth::user();
+        return view('/perfil', compact('user'));
     }
+
 
     public function mostrarResponsavel($id)
     {
         $profile = user::find($id);
-        return view('/perfil', compact('profile'));
+        return view('/perfil', compact('responsavel'));
     }
 }

@@ -17,7 +17,7 @@
     {{ Form::password('password')}}<br>
 
     {{ Form::label('telefone', 'Telefone:')}}<br>
-    {{ Form::text('telefone')}}<br>
+    {{ Form::text('telefone', $usuario->telefone)}}<br>
 
     {!! Form::label('profile', 'Perfil') !!}<br>
     {!! Form::select('profile', ['admin' => 'Admin', 'usuario' => 'usuario' , 'responsavel' => 'responsavel' ]) !!}<br>

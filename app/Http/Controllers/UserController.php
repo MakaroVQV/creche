@@ -85,6 +85,7 @@ class UserController extends Controller
             'email'     => 'required|email',
             //'password'  => 'required',
             //'profile'   => 'required',
+            'telefone'     => 'required'
         ]);
 
         $user = User::find($id);
