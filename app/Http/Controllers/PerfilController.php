@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\models\User;
-use App\models\Aluno;
+use App\Models\User;
+use App\Models\Aluno;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 class PerfilController extends Controller

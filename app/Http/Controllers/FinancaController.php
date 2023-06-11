@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\models\Financa;
-use App\models\User;
+use App\Models\Financa;
+use App\Models\User;
 
 class FinancaController extends Controller
 {

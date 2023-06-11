@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\models\Medico;
-use App\models\Aluno;
-use App\models\User;
+use App\Models\Medico;
+use App\Models\Aluno;
+use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
 class MedicoController extends Controller
