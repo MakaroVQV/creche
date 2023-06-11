@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Financa;
 use App\Models\User;
 
@@ -13,19 +14,18 @@ class FinancaController extends Controller
     public function index()
     {
 
-        $financa = Financa::orderby('id')->get();
-        return view('financas.index', ['financa' => $financa]);
+        $financas = Financa::orderby('id')->get();
+        return view('financas.index', ['financa' => $financas]);
     }
     public function exibir()
     {
-
-        $financas = Financa::orderBy('status')->get();
-        $pendentes = Financa::where('status', 'pendente')->get();
-        $pagos = Financa::where('status', 'pago')->get();
-        return view('financas/Financa', ['pendentes' => $pendentes, 'pagos' => $pagos]);
+        $user = Auth::user();
+        //$status = Financa::where('status', 'pendente')->get();
+        $financas = Financa::where('responsavel_id', $user->id)->get();
+        //$pendentes = Financa::where('status', 'pendente', $user->id)->get();
+        //$pagos = Financa::where('status', 'pago', $user->id)->get();
+        return view('financas/Financa', ['financas' => $financas]);
     }
-
-
 
     public function create()
     {

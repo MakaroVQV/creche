@@ -38,7 +38,7 @@
         </div>
         
         <div class="retangulo">
-      <a href="{{ url('/financa')}}"><img src="{{asset('/imagens/icon financeiro cinza.png')}}">
+      <a href="{{ url('/financas/Financa')}}"><img src="{{asset('/imagens/icon financeiro cinza.png')}}">
         <p>Financeiro</p></a>
         </div>
       </a>
@@ -48,7 +48,7 @@
       </div>
 
       <div class="retangulo">
-      <a href="{{ url('/medico')}}"><img src="{{asset('/imagens/icon saude cinza.png')}}">
+      <a href="{{ url('/saude')}}"><img src="{{asset('/imagens/icon saude cinza.png')}}">
         <p>Saúde</p></a>
         </div>
 

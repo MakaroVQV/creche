@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Medico;
 use App\Models\Aluno;
 use App\Models\User;
@@ -105,8 +106,9 @@ class MedicoController extends Controller
     public function index2()
     {
         // dd('index');
-       // $fichas = User::with('user')->get();
-        $fichas = Medico::orderby('id')->get();
+        // $fichas = User::with('user')->get();
+        $aluno = Auth::user();
+        $fichas = Medico::where('responsavel_id', $aluno->id)->get();
         return view('/saude', ['fichas' => $fichas]);
     }
     }
