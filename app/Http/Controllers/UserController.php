@@ -111,4 +111,5 @@ class UserController extends Controller
 
         return redirect('/usuarios')->with('status', 'Usuário deletado com sucesso!');
     }
+
 }

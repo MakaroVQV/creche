@@ -12,14 +12,14 @@ class FinancaController extends Controller
 
 
     public function index()
-    {
-
+    {   
+        
         $financas = Financa::orderby('id')->get();
-        return view('financas.index', ['financa' => $financas]);
+        return view('financas.index', ['financas' => $financas]);
     }
     public function exibir()
     {
-        $user = Auth::user();
+        $user = Auth::user('responsavel');
         //$status = Financa::where('status', 'pendente')->get();
         $financas = Financa::where('responsavel_id', $user->id)->get();
         //$pendentes = Financa::where('status', 'pendente', $user->id)->get();
@@ -36,11 +36,11 @@ class FinancaController extends Controller
     public function store(Request $request)
     {
         $validated  = $request->validate([
-            'responsavel_id' => 'required',
-            'vencimento'     => 'required',
-            'valor'          => 'required',
-            'valor_pagos'    => 'required',
-            'status'         => 'required'
+            'responsavel_id'    => 'required',
+            'vencimento'        => 'required',
+            'valor'             => 'required',
+            'valor_pagos'       => 'required',
+            'status'            => 'required'
         ]);
 
         $financas = new Financa;

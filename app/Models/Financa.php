@@ -13,6 +13,7 @@ class Financa extends Model
 
 
     protected $fillable = [
+        'responsavel_nome',
         'responsavel_id',
         'vencimento',
         'valor',
