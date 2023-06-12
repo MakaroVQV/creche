@@ -10,7 +10,6 @@ use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\PostagemController;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\UserController;
-
 use Illuminate\Support\Facades\Auth;
 
 

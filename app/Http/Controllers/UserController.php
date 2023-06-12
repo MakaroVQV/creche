@@ -93,7 +93,7 @@ class UserController extends Controller
         $user->email        = $request->input('email');
         //if (trim($request))
         $user->password     = Hash::make($request->input('password'));
-        $user->telefone     =$request->input('telefone');
+        $user->telefone     = $request->input('telefone');
         $user->profile      = $request->input('profile');
         $user->save();
 
@@ -111,9 +111,4 @@ class UserController extends Controller
 
         return redirect('/usuarios')->with('status', 'Usuário deletado com sucesso!');
     }
-
-
-
-    
-
 }

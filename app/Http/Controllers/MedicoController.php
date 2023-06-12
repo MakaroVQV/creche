@@ -23,8 +23,8 @@ class MedicoController extends Controller
 
     public function create()
     {
-        $alunos = Aluno::orderBy('name', 'ASC')-> pluck('name','id');
-        return view('Medico.create',['alunos'=>$alunos]);
+        $alunos = Aluno::orderBy('name', 'ASC')->pluck('name', 'id');
+        return view('Medico.create', ['alunos' => $alunos]);
     }
 
 
@@ -42,7 +42,7 @@ class MedicoController extends Controller
             'observacoes'       => ''
         ]);
 
-        $ficha =new Medico;
+        $ficha = new Medico;
         $ficha->aluno_id        = $request->aluno_id;
         $ficha->altura          = $request->input('altura');
         $ficha->peso            = $request->input('peso');
@@ -81,7 +81,7 @@ class MedicoController extends Controller
             'tipo_sanguineo'    => 'required',
             'observacoes'       => ''
         ]);
-        $ficha =Medico::find($id);
+        $ficha = Medico::find($id);
         $ficha->altura = $request->input('altura');
         $ficha->peso = $request->input('peso');
         $ficha->alergias = $request->input('alergias');
@@ -107,9 +107,8 @@ class MedicoController extends Controller
     {
         // dd('index');
         // $fichas = User::with('user')->get();
-        $aluno = Auth::user();
-        $fichas = Medico::where('responsavel_id', $aluno->id)->get();
+        $fichas = Medico::orderby('id')->get();
+
         return view('/saude', ['fichas' => $fichas]);
     }
-    }
-
+}

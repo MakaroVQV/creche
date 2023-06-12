@@ -35,17 +35,24 @@
     </div>
     <div class="iten-menu">
       <div class="retangulo">
-      <a href="{{ url('/calendario')}}"><img src="{{asset('/imagens/icon calendario azul.png')}}">
+      <a href="{{ url('/calendario')}}"><img src="{{asset('/imagens/icon calendario cinza.png')}}">
         <p>Calendario</p></a>
         </div>
 
+        <div class="retangulo">
+      <a href="{{ url('/financas/Financa')}}"><img src="{{asset('/imagens/icon financeiro cinza.png')}}">
+        <p>Financeiro</p></a>
+        </div>
+      </a>
+
+
       <div class="retangulo">
-      <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home cinza.png')}}"><p>Home</p></a>
+      <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home azul.png')}}"><p>Home</p></a>
       </div>
 
       <div class="retangulo">
       <a href="{{ url('/saude')}}"><img src="{{asset('/imagens/icon saude cinza.png')}}">
-        <p>Médico</p></a>
+        <p>Saúde</p></a>
         </div>
 
 
@@ -54,6 +61,7 @@
         <p>Perfil</p>
       </a>
       </div>
+
       <div class="retangulo">
       <a href="{{ url('/usuarios/')}}"><img src="{{asset('/imagens/cadeado.png')}}">
       <p>Adminstração</p>
