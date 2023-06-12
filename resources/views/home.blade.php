@@ -131,8 +131,8 @@
                     Um dia especial para pessoas incríveis 💙</p>
                 </center>
                 <div class="curtir">
-                    <img src="{{asset('/imagens/coracao.png')}}" class="coracao">
-                    <p>Curtir</p>
+                <img src="{{ asset('imagens/coracao.png') }}" class="coracao" onclick="trocarImagem(this)">
+                <p onclick="trocarImagem(this)">Curtir</p>
                 </div>
             </div>
         </div>
@@ -173,6 +173,7 @@ function toggleSubMenu(subMenuId) {
     subMenu.style.display = "block";
   }
 }
+
 
         // // document.getElementById('img-1').addEventListener('click', function() {
         // // document.getElementById('menu-lateral').style.left = '0'; 
