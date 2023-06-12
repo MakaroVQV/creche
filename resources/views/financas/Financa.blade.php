@@ -115,9 +115,9 @@
         <p>Status</p>  
         </p>
       </div>
+      @foreach ($financas as $value)
+      @if ($value->status == 'pendente')
       <div class="detalhe">
-        @foreach ($pendentes as $value)
-        @endforeach
         <p class="data">{{$value->vencimento }}</p>
         <p class="pago1">{{$value->valor}}</p>
         <p class="pago2"></p>
@@ -136,6 +136,8 @@
          </form>
         </div>
       </div>
+      @endif
+      @endforeach
 
     </div>
     
@@ -150,22 +152,17 @@
       </p>
     </div>
 
-    <div class="detalhe">
-      @foreach ($pagos as $value)
-      @endforeach
-      <p class="data">{{$value->vencimento }}</p>
-      <p class="pago1">{{$value->valor}}</p>
-      <p class="pago2">{{$value->valor}}</p>
-      <p class="pagoP">{{$value->status}}</p>
-    </div>
-    <div class="detalhe">
-      @foreach ($pagos as $value)
-      @endforeach
-      <p class="data">{{$value->vencimento }}</p>
-      <p class="pago1">{{$value->valor}}</p>
-      <p class="pago2">{{$value->valor}}</p>
-      <p class="pagoP">{{$value->status}}</p>
-    </div>
+  @foreach ($financas as $value)
+    @if ($value->status == 'pago')
+      <div class="detalhe">
+        <p class="data">{{$value->vencimento }}</p>
+        <p class="pago1">{{$value->valor}}</p>
+        <p class="pago2">{{$value->valor}}</p>
+        <p class="pagoP">{{$value->status}}</p>
+      </div>
+    @endif
+  @endforeach
+
 
     </div>
 

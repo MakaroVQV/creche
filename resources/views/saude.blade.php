@@ -79,10 +79,9 @@
 
     <!--Ficha, Atestado e cardápio-->
     <div class="invisible">
+    @foreach($fichas as $value)
       <div class="cards" id="ficha-medica">
         <img src="{{asset('/imagens/icon ficha medica.png')}}">
-        @foreach($fichas as $value)
-        @endforeach
         <p>Ficha Médica</p>
         <div class="texto-expandido">
           <h1>Resumo</h1>
@@ -129,11 +128,11 @@
 
           <div class="detalhe">
             <div class="info"><img src="{{asset('/imagens/sangue.png')}}">
-              <p>{{$value->tipo_snaguineo}}</p>
+              <p>Tipo Sanguineo</p>
             </div>
             <div class="centro-info">
               <div class="sangue">
-                <p class="o">O+</p>
+                <p class="o">{{$value->tipo_sanguineo}}</p>
               </div>
             </div>
             <div class="data">fev de 2023</div>
@@ -167,6 +166,7 @@
           </div>
         </div>
       </div>
+      @endforeach
 
       <div class="cards">
         <img src="{{asset('/imagens/icon atestados.png')}}">

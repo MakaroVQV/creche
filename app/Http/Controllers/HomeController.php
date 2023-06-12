@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
+use App\Models\Postagem;
 
 class HomeController extends Controller
 {
@@ -23,6 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $postagem = Postagem::orderBy('id', 'ASC')->get();
+        return view('home', ['postagem' => $postagem]);
     }
 }

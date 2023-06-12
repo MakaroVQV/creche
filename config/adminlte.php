@@ -336,7 +336,7 @@ return [
         ],
         [
             'text' => 'Postagens',
-            'url'  => 'finaca/',
+            'url'  => 'postagem/',
             'icon' => 'fas fa-fw fa-lock',
         ],[
             'text' => 'Calendário',

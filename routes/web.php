@@ -7,6 +7,7 @@ use App\Http\Controllers\FullCalenderController;
 use App\Http\Controllers\MedicoController;
 use App\Http\Controllers\NotificadoController;
 use App\Http\Controllers\PerfilController;
+use App\Http\Controllers\PostagemController;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
@@ -19,7 +20,7 @@ Route::get('/', function () {
 
 //------------------------------ Financa ------------------------------//
 Route::get('/financas/Financa', [FinancaController::class, 'exibir'])
-->name('financas.exibir');
+->name('Financa');
 
 
 
@@ -166,3 +167,33 @@ Route::put('/medico/{id}', [MedicoController::class, 'update'] )
 //Destroy
 Route::delete('/medico/{id}', [MedicoController::class, 'destroy'] )
 ->name('medico.destroy')->middleware('can:is_admin');
+
+//------------------------------ Postagem ------------------------------//
+
+//index
+Route::get('postagem/', [PostagemController::class, 'index'])
+->name('postagem.index')->middleware('can:is_admin');
+
+//create
+Route::get('postagem/create', [PostagemController::class, 'create'])
+->name('postagem.create')->middleware('can:is_admin');
+
+//store
+Route::post('postagem/create', [PostagemController::class, 'store'])
+->name('postagem.store')->middleware('can:is_admin');
+
+//show
+Route::get('postagem/{id}', [PostagemController::class, 'show'])
+->name('postagem.show')->middleware('can:is_admin');
+
+//edit
+Route::get('/postagem/{id}/edit', [PostagemController::class, 'edit'] )
+->name('postagem.edit')->middleware('can:is_admin');
+
+//att
+Route::put('/postagem/{id}', [PostagemController::class, 'update'] )
+->name('postagem.update')->middleware('can:is_admin');
+
+//Destroy
+Route::delete('/postagem/{id}', [PostagemController::class, 'destroy'] )
+->name('postagem.destroy')->middleware('can:is_admin');
