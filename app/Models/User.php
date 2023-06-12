@@ -82,5 +82,6 @@ class User extends Authenticatable
     public function financas(): HasMany
     {
         return $this->hasMany(Financa::class,'id','responsavel_id');
+        
     }
 }
