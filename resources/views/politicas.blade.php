@@ -100,13 +100,61 @@
         </ol>
     </div>
     <div>
-        <h2>Cookies ou Ddaos de Navegação</h2>
+        <h2>Cookies ou Dados de Navegação</h2>
         <p>A <strong>Creche Escola Jardim dos Sonhos</strong> faz uso de Cookies, que são arquivos de texto enviados pela plataforma ao seu computador e que nele se armazenam, 
             que contém informações relacionadas à navegação do site. Em suma, os Cookies são utilizados para aprimorar a experiência de uso.</p>
         
         <p>Ao acessar nosso site e consentir com o uso de Cookies, você manifesta conhecer e aceitar a utilização de um sistema de coleta de dados de navegação com o 
             uso de Cookies em seu dispositivo.</p>
+
+        <p>A <strong>Creche Escola Jardim dos Sonhos</strong> utiliza os seguintes Cookies: Cookies no pré-preenchimento; Cookies no Login; .
+            Você pode, a qualquer tempo e sem nenhum custo, alterar as permissões, bloquear ou recusar os Cookies. Todavia, 
+            a revogação do consentimento de determinados Cookies pode inviabilizar o funcionamento correto de alguns recursos da plataforma.</p>
     
+        <p>Para gerenciar os cookies do seu navegador, basta fazê-lo diretamente nas configurações do navegador, na área de gestão de Cookies.</p>
+
+        <p>A atual versão da Política de Privacidade foi formulada e atualizada pela última vez em: 12 de Junho de 2023.</p>
+
+        <p>Reservamos o direito de modificar essa Política de Privacidade a qualquer tempo, principalmente em função da adequação a eventuais alterações 
+            feitas em nosso site ou em âmbito legislativo. Recomendamos que você a revise com frequência.</p>
+
+        <p>Eventuais alterações entrarão em vigor a partir de sua publicação em nosso site e sempre lhe notificaremos acerca das mudanças ocorridas.</p>
+
+        <p>Ao utilizar nossos serviços e fornecer seus dados pessoais após tais modificações, você às consente.</p>
+
+        <p>A <strong>Creche Escola Jardim dos Sonhos</strong> prevê a responsabilidade dos agentes que atuam nos processos de tratamento de dados, em conformidade com 
+            os artigos 42 ao 45 da Lei Geral de Proteção de Dados.</p>
+
+        <p>Nos comprometemos em manter esta Política de Privacidade atualizada, observando suas disposições e zelando por seu cumprimento.</p>
+
+        <p>Além disso, também assumimos o compromisso de buscar condições técnicas e organizativas seguras aptas a proteger todo o processo de tratamento de dados. 
+            Caso a Autoridade Nacional de Proteção de Dados exija a adoção de providências em relação ao tratamento de dados realizado pela <strong>Creche Escola Jardim dos Sonhos</strong>, 
+            comprometemo-nos a segui-las.</p>
+
+        <p>Conforme mencionado no parágrafo de <strong>informações pessoais seguras</strong>, embora adotemos elevados padrões de segurança a fim de evitar incidentes, não há nenhuma 
+            página virtual inteiramente livre de riscos. Nesse sentido, a <strong>Creche Escola Jardim dos Sonhos</strong> não se responsabiliza por</p>
+            <ol type="I">
+                <li>Quaisquer consequências decorrentes da negligência, imprudência ou imperícia dos usuários em relação a seus dados individuais. Garantimos e nos responsabilizamos 
+                    apenas pela segurança dos processos de tratamento de dados e do cumprimento das finalidades descritas no presente instrumento</li>
+
+            <p>Destacamos que a responsabilidade em relação à confidencialidade dos dados de acesso é do usuário.</p>
+
+                <li>Ações maliciosas de terceiros, como ataques de hackers, exceto se comprovada conduta culposa ou deliberada da Creche Escola Jardim dos Sonhos.</li>
+
+                <p>Destacamos que em caso de incidentes de segurança que possam gerar risco ou dano relevante para você ou qualquer um de nossos usuários/clientes, comunicaremos 
+                    aos afetados e à Autoridade Nacional de Proteção de Dados sobre o ocorrido e cumpriremos as providências necessárias.</p>
+
+                <li>Inveracidade das informações inseridas pelo usuário/cliente nos registros necessários para a utilização dos serviços da <strong>Creche Escola Jardim dos Sonhos</strong>; 
+                    quaisquer consequências decorrentes de informações falsas ou inseridas de má-fé são de inteiramente responsabilidade do usuário/cliente.</li>
+            </ol>
+
+            <p>A Creche Escola Jardim dos Sonhos disponibiliza os seguintes meios para que você possa entrar em contato conosco para exercer seus direitos de titular:<li><a href="mailto:crechescolajardimdosonhos@gmail.com?subject=" link HTML>crechescolajardimdosonhos@gmail.com</a></li></p>
+
+            <p>Caso tenha dúvidas sobre esta Política de Privacidade ou sobre os dados pessoais que tratamos, você pode entrar em contato com o nosso Encarregado de 
+                Proteção de Dados Pessoais, através dos seguintes canais:</p>
+
+            <p><strong>Sociedade Educacional Amaral Lima Ltda </strong></p>
+            <p><li><a href="mailto:crechescolajardimdosonhos@gmail.com?subject=" link HTML>crechescolajardimdosonhos@gmail.com</a></li></p>
         </div>
 
 
