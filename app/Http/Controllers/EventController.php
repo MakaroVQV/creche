@@ -6,15 +6,16 @@ use App\Models\Event;
 
 class EventController extends Controller
 {
-    public function loadEvents() 
+    public function loadEvents()
     {
         $events = Event::all();
 
         return response()->json($events);
     }
 
-    public function listar_eventos(){
-        $data_atual = date("y-m-d");    
+    public function listar_eventos()
+    {
+        $data_atual = date("y-m-d");
         $eventos = Event::where('end', '>=', $data_atual)->orderBy('end', 'ASC')->orderBy('title', 'ASC')->get();
         //dd($eventos);
 
@@ -26,5 +27,4 @@ class EventController extends Controller
         // @todo - jogar para dentro de uma view
 
     }
-
 }

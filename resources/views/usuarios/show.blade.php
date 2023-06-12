@@ -10,7 +10,9 @@
 <b>ID:</b>       {{$usuario->id }}   <br>
 <b>Nome:</b>     {{$usuario->name }} <br>
 <b>Email:</b>    {{$usuario->email }} <br>
+<b>Telefone:</b> {{$usuario->telefoneFormatado}}<br>
 <b>Perfil:</b>   {{$usuario->profile}} <br>
+
 
 </body>
 @endsection

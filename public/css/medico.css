@@ -545,6 +545,11 @@ font-weight: 100;
 
 /*card 3*/
 
+.cardimg {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+}
 
 .cardapio{
   width: 300px;

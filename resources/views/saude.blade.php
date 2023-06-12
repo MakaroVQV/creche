@@ -38,17 +38,17 @@
         </div>
         
         <div class="retangulo">
-      <a href="{{ url('/financa')}}"><img src="{{asset('/imagens/icon financeiro cinza.png')}}">
+      <a href="{{ url('/financas/Financa')}}"><img src="{{asset('/imagens/icon financeiro cinza.png')}}">
         <p>Financeiro</p></a>
         </div>
       </a>
 
       <div class="retangulo">
-      <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home cinza.png')}}"><p>Home</p></a>
+      <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home azul.png')}}"><p>Home</p></a>
       </div>
 
       <div class="retangulo">
-      <a href="{{ url('/medico')}}"><img src="{{asset('/imagens/icon saude azul.png')}}">
+      <a href="{{ url('/saude')}}"><img src="{{asset('/imagens/icon saude cinza.png')}}">
         <p>Saúde</p></a>
         </div>
 
@@ -56,6 +56,12 @@
       <div class="retangulo">
       <a href="{{ url('/perfil')}}"><img src="{{asset('/imagens/icon user cinza.png')}}">
         <p>Perfil</p>
+      </a>
+      </div>
+
+      <div class="retangulo">
+      <a href="{{ url('/usuarios/')}}"><img src="{{asset('/imagens/cadeado.png')}}">
+      <p>Adminstração</p>
       </a>
       </div>
     </div>
@@ -72,8 +78,8 @@
   </div>
 
     <!--Ficha, Atestado e cardápio-->
-
     <div class="invisible">
+    @foreach($fichas as $value)
       <div class="cards" id="ficha-medica">
         <img src="{{asset('/imagens/icon ficha medica.png')}}">
         <p>Ficha Médica</p>
@@ -83,15 +89,17 @@
             <div class="info"><img src="{{asset('/imagens/boneco.png')}}">
               <p class="altura-peso">Altura e peso</p>
             </div>
+            
             <div class="centro-info">
-              <p class="numero"><strong>109</strong></p>
+              <p class="numero"><strong>{{$value->altura}}</strong></p>
               <p class="cm">cm</p>
-              <p class="numero"><strong>19</strong></p>
+              <p class="numero"><strong>{{$value->peso}}</strong></p>
               <div class="kg">
                 <p>kg</p>
               </div>
             </div>
             <div class="data">fev de 2023</div>
+            
           </div>
 
           <div class="detalhe">
@@ -100,7 +108,7 @@
             </div>
             <div class="centro-info">
               <div class="alergias">
-                <p>Não espeficicado</p>
+                <p>{{$value->alergias}}</p>
               </div>
             </div>
             <div class="data">fev de 2023</div>
@@ -112,7 +120,7 @@
             </div>
             <div class="centro-info">
               <div class="medicamentos">
-                <p>Não espeficicado</p>
+                <p>{{$value->medicamentos}}</p>
               </div>
             </div>
             <div class="data">fev de 2023</div>
@@ -120,11 +128,11 @@
 
           <div class="detalhe">
             <div class="info"><img src="{{asset('/imagens/sangue.png')}}">
-              <p>Grupo Sanguíneo</p>
+              <p>Tipo Sanguineo</p>
             </div>
             <div class="centro-info">
               <div class="sangue">
-                <p class="o">O+</p>
+                <p class="o">{{$value->tipo_sanguineo}}</p>
               </div>
             </div>
             <div class="data">fev de 2023</div>
@@ -151,13 +159,14 @@
             </div>
             <div class="centro-info">
               <div class="observacao">
-                <p>Não espeficicado</p>
+                <p>{{$value->observacoes}}</p>
               </div>
             </div>
             <div class="data">fev de 2023</div>
           </div>
         </div>
       </div>
+      @endforeach
 
       <div class="cards">
         <img src="{{asset('/imagens/icon atestados.png')}}">
@@ -172,14 +181,19 @@
               </a>
             </div>
           </div>
-          {!! Form::open(['url' => 'upload/docs']) !!}
-              {!!Form::submit('', ['class' => 'btn btn-primary'])!!}
-              {!! Form::close() !!}
+          <form action="{{ route('upload_docs') }}" method="post" enctype="multipart/form-data" class="my-4">
+              @csrf
+              <div class="form-group">
+                  <label for="document"></label>
+                  <input type="file" name="document" id="document" class="form-control-file">
+              </div>
+              <button type="submit" class="btn btn-primary"></button>
+          </form> 
         </div>
       </div>
-
     
       <div class="cards">
+
       <img src="{{asset('/imagens/icon cardapio.png')}}">
       <p>Cardápio</p>
       <div class="texto-expandido">

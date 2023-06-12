@@ -38,7 +38,7 @@
         </div>
         
         <div class="retangulo">
-      <a href="{{ url('/financa')}}"><img src="{{asset('/imagens/icon financeiro cinza.png')}}">
+      <a href="{{ url('/financas/Financa')}}"><img src="{{asset('/imagens/icon financeiro cinza.png')}}">
         <p>Financeiro</p></a>
         </div>
       </a>
@@ -48,7 +48,7 @@
       </div>
 
       <div class="retangulo">
-      <a href="{{ url('/medico')}}"><img src="{{asset('/imagens/icon saude cinza.png')}}">
+      <a href="{{ url('/saude')}}"><img src="{{asset('/imagens/icon saude cinza.png')}}">
         <p>Saúde</p></a>
         </div>
 
@@ -58,7 +58,15 @@
         <p>Perfil</p>
       </a>
       </div>
+
+      <div class="retangulo">
+      <a href="{{ url('/usuarios/')}}"><img src="{{asset('/imagens/cadeado.png')}}">
+      <p>Adminstração</p>
+      </a>
+      </div>
     </div>
+
+    
 
     <!-- Footer do menu lateral -->
     <div class="footer-menu">
@@ -73,23 +81,24 @@
 
 
         <!-- Posters -->
+        @foreach($postagem as $value)
         <div class="posters">
             <div class="titulo-1">
                 <img src="{{asset('/imagens/megafone.png')}}">
-                <p>Dia Mundial da Água</p>
+                <p>{{ $value->titulo }}</p>
             </div>
             <div class="imagem-centro">
                 <img src="{{asset('/imagens/luis.jpeg')}}">
             </div>
             <div class="descricao">
-                <p>Hoje é dia de algo muito importante para todos nós!
-                    O objetivo do Dia Mundial da Água é promover conscientização sobre a relevância da água para a nossa sobrevivência e de outros seres vivos.</p>
+                <p>{{ $value->conteudo }}</p>
                 <div class="curtir">
                     <img src="{{asset('/imagens/coracao.png')}}" class="coracao">
                     <p>Curtir</p>
                 </div>
             </div>
         </div>
+        @endforeach
 
         <div class="posters">
             <div class="titulo-2">
@@ -120,7 +129,7 @@
             <div class="descricao">
                 <p>🧩 2 de abril dia mundial do autismo 🧩<br>
                     Um dia especial para pessoas incríveis 💙</p>
-                    <center>
+                </center>
                 <div class="curtir">
                     <img src="{{asset('/imagens/coracao.png')}}" class="coracao">
                     <p>Curtir</p>
