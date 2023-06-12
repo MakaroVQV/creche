@@ -25,61 +25,61 @@
       </div>
     </navbar>
 
-    <!-- Menu lateral -->
-    <div id="mySidenav" class="sidenav">
-      <div class="side">
-        <a href="javascript:void(0)" onclick="closeNav()"><img src="{{ asset('imagens/icon menu.png') }}" class="menu-cinza"></a>
-        <div><img src="{{ asset('imagens/creche.png') }}" class="logo-sidebar"></div>
-      </div>
-      <div class="iten-menu">
-        <a href="#"><img src="{{ asset('imagens/icon calendario cinza.png') }}">
-          <p>Calendario</p>
-        </a>
-
-      <a href="#" onclick="toggleSubMenu('subMenuFinanca')">
-        <img src="{{ asset('imagens/icon financeiro cinza.png') }}">
-        <p>Financeiro</p>
-        <div id="subMenuFinanca" class="sub-menu">
-          <div class="div-container">
-            <a href="financa.html#pendetes">Pendentes</a>
-            <a href="financa.html#pagas">Pagas</a>
-            <a href="financa.html#dados">Dados</a>
-          </div>
+            <!--Menu lateral-->
+            <div id="mySidenav" class="sidenav">
+    <div class="side">
+      <a href="javascript:void(0)" onclick="closeNav()"><img src="{{asset('/imagens/icon menu.png')}}" class="menu-cinza"></a>
+      <div><img src="{{asset('/imagens/creche.png')}}" class="logo-sidebar"></div>
+    </div>
+    <div class="iten-menu">
+      <div class="retangulo">
+      <a href="{{ url('/calendario')}}"><img src="{{asset('/imagens/icon calendario cinza.png')}}">
+        <p>Calendario</p></a>
+        </div>
+        
+        <div class="retangulo">
+      <a href="{{ url('/financas/Financa')}}"><img src="{{asset('/imagens/icon financeiro cinza.png')}}">
+        <p>Financeiro</p></a>
         </div>
       </a>
-      <a href="{{ url('/home')}}"><img src="{{ asset('imagens/icon home cinza.png') }}"><p>Home</p></a>
 
-        <a href="#" onclick="toggleSubMenu('subMenuMedico')">
-          <img src="{{ asset('imagens/icon saude azul.png') }}">
-          <p>Saude</p>
-          <div id="subMenuMedico" class="sub-menu">
-            <div class="div-container">
-              <a href="{{ url('/medico#ficha-medica')}}">Ficha Médica</a>
-              <a href="{{ url('/medico#atestados')}}">Atestados</a>
-              <a href="{{ url('/medico#cardapio')}}">Cardápio</a>
-            </div>
-          </div>
-        </a>
-        <div class="retangulo">
+      <div class="retangulo">
+      <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home azul.png')}}"><p>Home</p></a>
+      </div>
+
+      <div class="retangulo">
+      <a href="{{ url('/saude')}}"><img src="{{asset('/imagens/icon saude cinza.png')}}">
+        <p>Saúde</p></a>
+        </div>
+
+
+      <div class="retangulo">
       <a href="{{ url('/perfil')}}"><img src="{{asset('/imagens/icon user cinza.png')}}">
         <p>Perfil</p>
       </a>
       </div>
-    </div>
-    <!-- Footer do menu lateral -->
-    <div class="footer-menu">
-      <a href="index.html"><img src="{{ asset('imagens/sair.png') }}" class="sair"><p>Sair</p></a>
+
+      <div class="retangulo">
+      <a href="{{ url('/usuarios/')}}"><img src="{{asset('/imagens/cadeado.png')}}">
+      <p>Adminstração</p>
+      </a>
+      </div>
     </div>
 
-      <div class="copyriht"> 
+    <!-- Footer do menu lateral -->
+    <div class="footer-menu">
+      <a href="{{ url('logout')}}"><img src="{{asset('/imagens/sair.png')}}" class="sair"><p>Sair</p></a>
+    </div>
+  
+    <div class="copyriht"> 
       <img src="{{asset('/imagens/icon_copyright.png')}}" class="copyright">
       <p><strong>2023 FROM NEWPATH</strong></p>
     </div>
-    </div>
+  </div>
 
     <!--Ficha, Atestado e cardápio-->
-
     <div class="invisible">
+    @foreach($fichas as $value)
       <div class="cards" id="ficha-medica">
         <img src="{{asset('/imagens/icon ficha medica.png')}}">
         <p>Ficha Médica</p>
@@ -89,15 +89,17 @@
             <div class="info"><img src="{{asset('/imagens/boneco.png')}}">
               <p class="altura-peso">Altura e peso</p>
             </div>
+            
             <div class="centro-info">
-              <p class="numero"><strong>109</strong></p>
+              <p class="numero"><strong>{{$value->altura}}</strong></p>
               <p class="cm">cm</p>
-              <p class="numero"><strong>19</strong></p>
+              <p class="numero"><strong>{{$value->peso}}</strong></p>
               <div class="kg">
                 <p>kg</p>
               </div>
             </div>
             <div class="data">fev de 2023</div>
+            
           </div>
 
           <div class="detalhe">
@@ -106,7 +108,7 @@
             </div>
             <div class="centro-info">
               <div class="alergias">
-                <p>Não espeficicado</p>
+                <p>{{$value->alergias}}</p>
               </div>
             </div>
             <div class="data">fev de 2023</div>
@@ -118,7 +120,7 @@
             </div>
             <div class="centro-info">
               <div class="medicamentos">
-                <p>Não espeficicado</p>
+                <p>{{$value->medicamentos}}</p>
               </div>
             </div>
             <div class="data">fev de 2023</div>
@@ -126,11 +128,11 @@
 
           <div class="detalhe">
             <div class="info"><img src="{{asset('/imagens/sangue.png')}}">
-              <p>Grupo Sanguíneo</p>
+              <p>Tipo Sanguineo</p>
             </div>
             <div class="centro-info">
               <div class="sangue">
-                <p class="o">O+</p>
+                <p class="o">{{$value->tipo_sanguineo}}</p>
               </div>
             </div>
             <div class="data">fev de 2023</div>
@@ -157,13 +159,14 @@
             </div>
             <div class="centro-info">
               <div class="observacao">
-                <p>Não espeficicado</p>
+                <p>{{$value->observacoes}}</p>
               </div>
             </div>
             <div class="data">fev de 2023</div>
           </div>
         </div>
       </div>
+      @endforeach
 
       <div class="cards">
         <img src="{{asset('/imagens/icon atestados.png')}}">
@@ -178,15 +181,20 @@
               </a>
             </div>
           </div>
-          {!! Form::open(['url' => 'upload/docs']) !!}
-              {!!Form::submit('', ['class' => 'btn btn-primary'])!!}
-              {!! Form::close() !!}
+          <form action="{{ route('upload_docs') }}" method="post" enctype="multipart/form-data" class="my-4">
+              @csrf
+              <div class="form-group">
+                  <label for="document"></label>
+                  <input type="file" name="document" id="document" class="form-control-file">
+              </div>
+              <button type="submit" class="btn btn-primary"></button>
+          </form> 
         </div>
       </div>
-
     
       <div class="cards">
-      <img src="{{asset('/imagens/icon cardapio form.png')}}" class="cardimg">
+
+      <img src="{{asset('/imagens/icon cardapio.png')}}">
       <p>Cardápio</p>
       <div class="texto-expandido">
         <div class="cardapio">

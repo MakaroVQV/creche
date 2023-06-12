@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\models\User;
+use App\Models\User;
+use App\Models\Medico;
+use App\Models\Aluno;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
@@ -42,10 +44,11 @@ class UserController extends Controller
 
 
         $user = new User;
-        $user->name = $request->input('name');
-        $user->email = $request->input('email');
-        $user->password = Hash::make($request->input('password'));
-        $user->profile = $request->input('profile');
+        $user->name             = $request->input('name');
+        $user->email            = $request->input('email');
+        $user->password         = Hash::make($request->input('password'));
+        $user->telefone         = $request->input('telefone');
+        $user->profile          = $request->input('profile');
 
         $user->save();
         return redirect('/usuarios')->with('status', 'Usuário criado com sucesso!');
@@ -57,6 +60,7 @@ class UserController extends Controller
     public function show(string $id)
     {
         $usuario = User::find($id);
+        $telefoneFormatado = $usuario->telefoneFormatado;
         return view('usuarios.show', ['usuario' => $usuario]);
     }
 
@@ -81,6 +85,7 @@ class UserController extends Controller
             'email'     => 'required|email',
             //'password'  => 'required',
             //'profile'   => 'required',
+            'telefone'     => 'required'
         ]);
 
         $user = User::find($id);
@@ -88,6 +93,7 @@ class UserController extends Controller
         $user->email        = $request->input('email');
         //if (trim($request))
         $user->password     = Hash::make($request->input('password'));
+        $user->telefone     = $request->input('telefone');
         $user->profile      = $request->input('profile');
         $user->save();
 
@@ -104,14 +110,6 @@ class UserController extends Controller
         $user->delete();
 
         return redirect('/usuarios')->with('status', 'Usuário deletado com sucesso!');
-    }
-    public function teste()
-    {
-        $user = User::find(2);
-       //dd($user);
-        foreach ($user->alunos as $key => $value) {
-            echo ($value->name . '<br>');
-        }
     }
 
 }

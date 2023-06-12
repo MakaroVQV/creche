@@ -1,55 +1,46 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
 }
 
 form {
-  text-align: center;
   width: 100%;
-  padding: 40px;
-  border-radius: 5px;
-  border: 1px solid #dde3ec;
-  background: #ffffff;
-  font-weight: 500;
-  font-size: 16px;
-  color: #536387;
-  outline: none;
-  resize: none;
+  max-width: 30rem;
 }
 
-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 48px;
+label, input, textarea,button {
+  display: block;
 }
 
-h3 {
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 34px;
-  color: #07074d;
-  padding-bottom: 20px;
+input, textarea, button {
+width: 100%;
+font-weight: 700;
+padding: 1.25rem;
 }
 
-.altura-peso {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 10px;
+input, textarea {
+  margin-bottom: 1rem;
+  color: blue;
+  background: #b4b4b4;
+  border: 0.125rem solid transparent;
+  border-radius: 1.125rem;
+  transition: border-color 0.3s;
+  box-shadow: 0.3s;
 }
 
-.alergia{
-  padding-bottom: 10px;
-
-}
-.medicamentos{
-  padding-bottom: 10px;
-}
-
-.gpsanguineo{
-  padding-bottom: 10px;
-}
-.vacina{
-  padding-bottom: 10px;
+button {
+  border: none;
+  border-radius: 99px;
+  color: white;
+  background: #1d90f5;
+  cursor: pointer;
+  transition: 0.3s;
 }

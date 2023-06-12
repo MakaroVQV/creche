@@ -115,11 +115,14 @@
         <p>Status</p>  
         </p>
       </div>
+      @foreach ($financas as $value)
+      @if ($value->status == 'pendente')
       <div class="detalhe">
-        <p class="data">15/06/2023</p>
-        <p class="pago1">R$ 700,00</p>
+        <p class="data">{{$value->vencimento }}</p>
+        <p class="pago1">{{$value->valor}}</p>
         <p class="pago2"></p>
-        <p class="pendente">Pendente</p>
+        <p class="pendente">{{$value->status}}</p>
+        
         <a href="#" class="imagem-clicavel" onclick="expandirDetalhe(this);">
           <img id="seta-img" src="{{asset('/imagens/seta-azul.png')}}"/>
         </a>
@@ -133,6 +136,8 @@
          </form>
         </div>
       </div>
+      @endif
+      @endforeach
 
     </div>
     
@@ -147,30 +152,17 @@
       </p>
     </div>
 
-    <div class="detalhe">
-      <p class="data">15/06/2023</p>
-      <p class="pago1">R$ 700,00</p>
-      <p class="pago2">R$ 700,00</p>
-      <p class="pagoP">Pago</p>
-    </div>
-    <div class="detalhe">
-      <p class="data">15/05/2023</p>
-      <p class="pago1">R$ 700,00</p>
-      <p class="pago2">R$ 700,00</p>
-      <p class="pagoP">Pago</p>
-    </div>
-    <div class="detalhe">
-      <p class="data">15/04/2023</p>
-      <p class="pago1">R$ 700,00</p>
-      <p class="pago2">R$ 700,00</p>
-      <p class="pagoP">Pago</p>
-    </div>
-    <div class="detalhe">
-      <p class="data">15/03/2023</p>
-      <p class="pago1">R$ 700,00</p>
-      <p class="pago2">R$ 700,00</p>
-      <p class="pagoP">Pago</p>
-    </div>
+  @foreach ($financas as $value)
+    @if ($value->status == 'pago')
+      <div class="detalhe">
+        <p class="data">{{$value->vencimento }}</p>
+        <p class="pago1">{{$value->valor}}</p>
+        <p class="pago2">{{$value->valor}}</p>
+        <p class="pagoP">{{$value->status}}</p>
+      </div>
+    @endif
+  @endforeach
+
 
     </div>
 

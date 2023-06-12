@@ -25,6 +25,6 @@ class AlunoSeeder extends Seeder
             'responsavel_id'       => 2,
             'idade'            =>5,
             'genero'      => 'Masculino'
-        ]);
+        ]);   
     }
 }

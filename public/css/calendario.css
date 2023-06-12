@@ -1,150 +1,155 @@
-html{
-    overflow-x:hidden;
-    }
 *{
-    margin: 0;
-    padding: 0;
-    }
-  
-  p{
-    font-family: arial;
+  margin: 0;
+  padding: 0;
   }
-  
-  .navbar{
-    display: flex;
-    justify-content: space-between;
-  }
-  .esquerda-nav{
-    display: flex;
-    justify-content: space-between;
-  }
-  .menu-azul{
-    margin: 10px 10px 8px 10px;
-    cursor: pointer;
-  }
-  .logo-navbar{
-    margin-top:10px;
-    max-width: 80px;
-    max-height: 80px;
-  }
-  
-  
-  .direita-nav{
-    display: flex;
-    justify-content: space-between;
-  }
-  .logo-user{
-    padding: 5px 5px 0;
-    margin: 5px 5px 5px 5px;
-  }
-  .texto-user{
-    padding: 5px 5px 0;
-    margin: 20px 0px 0px 5px;
-    text-align: center;
-  }
-  
-  .side{
-    margin: 10px;
-    display: flex;
-    justify-content: space-between;
-  }
-  .menu-cinza{
-    margin: 8px 0 0 15px;
-    max-width: 80px;
-    max-height: 80px;
-    cursor: pointer;
-  }
-  
-  .sub-menu {
-    display: none;
-    padding-left: 20px; /* Adicione o espaçamento desejado nas opções do submenu */
-    transition: all 0.3s ease;
-  }
-  
-  .sub-menu a {
-    display: block;
-    padding-left: 20px;
-  }
-  
-  .sub-menu.show {
-    display: block;
-  }
-  .iten-menu {
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .iten-menu a {
-    text-decoration: none;
-  }
-  
-  .div-container{
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .div-container a{
-    margin: 5px 0 0 45px;
-  }
-  
-  .logo-sidebar{
-    max-width: 80px;
-    max-height: 80px;
-  }
-   
-  .iten-menu p{
-    padding-right: 80px;
-    margin-top: 40px;
-    margin-left: 10px;
-    float: left;
-  }
-  
-  .iten-menu img{
-  float: left;
-  }
-  
-  .sair{
-    width: 35px;
-    height: 35px;
-  }
-  
-  .footer-menu{
-    position: absolute;
-    bottom: 60px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    margin-left:30px;
-    font-size:15px
-  }
-  
-  .footer-menu p{
-  float: left;
+
+p{
+  font-family: arial;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+}
+.esquerda-nav{
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-azul{
+  margin: -5px 5px 0 -5px;
+  cursor: pointer;
+}
+
+
+.logo-navbar{
+  margin:-5px 0 0 0;
+  max-width: 80px;
+  max-height: 80px;
+}
+
+
+.direita-nav{
+  display: flex;
+  justify-content: space-between;
+}
+.logo-user{
+  padding: 5px 5px 0;
+  margin: 5px 5px 5px 5px;
+}
+.texto-user{
+  padding: 5px 5px 0;
+  margin: 20px 0px 0px 5px;
+  text-align: center;
+}
+
+.side{
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.menu-cinza{
+  max-width: 80px;
+  max-height: 80px;
+  cursor: pointer;
+}
+
+.sub-menu {
+  display: none;
+  padding-left: 20px; /* Adicione o espaçamento desejado nas opções do submenu */
+  transition: all 0.3s ease;
+}
+
+.sub-menu a {
+  display: block;
+  padding-left: 20px;
+}
+
+.sub-menu.show {
+  display: block;
+}
+.iten-menu {
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.iten-menu a {
+  text-decoration: none;
+}
+
+.div-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.div-container a{
+  margin: 5px 0 0 45px;
+}
+
+.logo-sidebar{
+  margin-top:10px;
+  max-width: 80px;
+  max-height: 80px;
+}
+ 
+.iten-menu p{
+  padding-right: 80px;
+  margin-top: 35px;
   margin-left: 10px;
-  margin-top: 5px;
-  align-items: center;
-  justify-content: center;
-  }
-  
-  .footer-menu img{
-    float: left;
-  }
-  
-  .copyriht {
-    margin: 20px;  
-    bottom: 0;
-    display:flex;
-    align-items:center;
-    flex-direction: row;
-    position: absolute;
-  }
-  
-  .copyriht p {
-    margin-left:5px;
-  }
+  float: left;
+}
+
+.iten-menu img{
+float: left;
+width: 25px;
+height: 25px;
+}
+
+.sair {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-menu{
+  position: absolute;
+  bottom: 90px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-left:40px;
+  font-size:15px
+}
+
+.footer-menu p{
+float: left;
+margin-left: 10px;
+margin-top: 5px;
+align-items: center;
+justify-content: center;
+}
+
+.footer-menu img{
+  float: left;
+}
+
+.copyriht {
+  top: 90%; 
+  left: 20%;
+  bottom: 0;
+  display:flex;
+  align-items:center;
+  flex-direction: row;
+  position: absolute;
+}
+
+.copyriht p {
+  margin-left:5px;
+  font-size: 10px ;
+}
+
   
   /* SIDEBAR */
   
@@ -213,6 +218,7 @@ html{
   /* When you mouse over the navigation links, change their color */
   .sidenav a:hover {
     font-weight: bold;
+    color: #004085;
   }
   
   /* Position and style the close button (top right corner) */

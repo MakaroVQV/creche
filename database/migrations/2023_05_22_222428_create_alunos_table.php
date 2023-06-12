@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('idade');
             $table->string('genero');
-            $table->string('responsavel_id');
+            $table->bigInteger('responsavel_id');
             $table->timestamps();
         });
     }

@@ -11,14 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('financas', function (Blueprint $table) {
+        Schema::create('postagens', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('responsavel_id')->nullable();
-            $table->string('responsavel_nome')->nullable(); 
-            $table->date('vencimento');
-            $table->string('valor');
-            $table->string('valor_pagos');
-            $table->string('status');
+            $table->string('titulo');
+            $table->text('conteudo');
             $table->timestamps();
         });
     }
@@ -28,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('financas');
+        Schema::dropIfExists('postagens');
     }
 };
