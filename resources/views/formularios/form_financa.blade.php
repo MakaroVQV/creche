@@ -14,7 +14,7 @@
                         <form>
                             <div class="user">
                                 <label for="user">Vencimento</label>
-                                <input class="field" name="user" placeholder="R$" required>
+                                <input type="date" name="dob" id="dob" class="data" required>
                             </div>
 
                             <div class="name">
