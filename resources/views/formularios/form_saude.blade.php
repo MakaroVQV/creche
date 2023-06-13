@@ -18,7 +18,7 @@
       <h3> Resumo </h3>
 
         <div class="altura-peso">
-          <label for="altura-peso"> Altura e Peso </label>
+          <label for="altura-peso">Altura e Peso</label>
           <input class="field" name="altura-peso" placeholder="Entre com a altura" required>
           <input class="field" name="altura-peso" placeholder="Entre com a peso" required>
           <input type="date" name="dob" id="dob" class="data"/>
@@ -26,17 +26,17 @@
         </div>
 
         <div class ="alergia">
-          <label for="alergia"> Alergias :</label>
+          <label for="alergia">Alergias:</label>
           <input class="field" name="alergia" placeholder="tem alguma alergia? quais ?">
         </div>
 
         <div class="medicamentos">
-          <label for="Medicamentos"> Medicamentos :</label>
+          <label for="Medicamentos">Medicamentos:</label>
           <input class="field" name="Medicamentos">
         </div>
 
         <div class ="gpsanguineo">
-          <label for="tipo sanguineo"> Grupo Sanguíneo :</label>
+          <label for="tipo sanguineo">Grupo Sanguíneo:</label>
 
           <select name="tipo sanguineo" id="tipo sanguineo" required>
             <optgroup label="Positivos">
@@ -55,7 +55,7 @@
         </div>
 
         <div>
-          <label for="observacoes"> Observações :</label>
+          <label for="observacoes">Observações:</label>
           <textarea id="observações" name="observações" rows="4" cols="50"></textarea>
         </div>
         <button class="button">Enviar</button>

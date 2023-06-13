@@ -21,10 +21,11 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($financa as $value)
+            @foreach($financas as $value)
             <tr>
-                <td class="">{{ $value->financas->name }}</td>
-                <td class="">{{ $value->id }}</td>
+                <td class="">{{ $value->financas->name}}</td>
+                <td class="">{{ $value->id }}
+                </td>
                 <td class="">
                     
                     <a class=" btn btn-primary" href="{{ url('financas/'. $value->id) }}">Vizualizar</a>

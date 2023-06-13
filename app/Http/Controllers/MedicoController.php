@@ -107,8 +107,12 @@ class MedicoController extends Controller
     {
         // dd('index');
         // $fichas = User::with('user')->get();
-        $fichas = Medico::orderby('id')->get();
+        //$fichas = Medico::orderBy('id')->get();
+        $aluno_id = session('aluno_id');
 
+        //dd($aluno_id);
+        $fichas = Medico::where('aluno_id', $aluno_id)->orderby('id')->get();
+        //dd ($fichas);
         return view('/saude', ['fichas' => $fichas]);
     }
 }
