@@ -598,4 +598,16 @@ font-weight: 100;
   color: #000000;
 }
 
+#botao{
+  background-color: #009CDE; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 12px;
+}
+
 /*cards*/

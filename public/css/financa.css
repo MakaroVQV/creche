@@ -410,7 +410,6 @@ transform: rotate(90deg);
 input[type="file"]{
   display: none;
   width:70%;
-
 }
 
 label {
