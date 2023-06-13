@@ -22,11 +22,9 @@
           <h5><strong>@foreach ($alunos as $aluno)
               <a href="{{ url('/selecionarAluno/' . $aluno->id)}}">
                 <div class="nome">
-                
                 @if ($aluno->id != session('aluno_id'))
                 <h4>{{ $aluno->name}}</h4>
                 @endif
-                
                 </div>
               </a>
               @endforeach</strong></h5>
