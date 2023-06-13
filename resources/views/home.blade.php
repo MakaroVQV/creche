@@ -103,7 +103,7 @@
                 </div>
 
                 <div class="flex">
-                <p>Matrículas abertas</p>
+                <p>Matrículas abertas!</p>
             </div>
             <div class="imagem-centro">
 
