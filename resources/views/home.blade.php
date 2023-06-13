@@ -103,42 +103,6 @@
             </div>
         </div>
         @endforeach
-
-        <div class="posters">
-            <div class="titulo">
-                <img src="{{asset('/imagens/megafone.png')}}" alt="">
-            </div>
-
-            <div class="flex">
-                <p></p>
-            </div>
-            <div class="imagem-centro">
-
-                <img src="{{asset('/imagens/poster_home.jpg')}}">
-            </div>
-            <div class="descricao">
-                <p></p>
-
-            </div>
-        </div>
-
-        <div class="posters">
-            <div class="titulo">
-                <img src="{{asset('/imagens/megafone.png')}}" alt="">
-            </div>
-
-            <div class="flex">
-                <p></p>
-            </div>
-
-            <div class="imagem-centro">
-
-                <img src="{{asset('/imagens/poster_home.jpg')}}">
-            </div>
-            <div class="descricao">
-                <p></p>
-            </div>
-        </div>
     </div>
 
     <!--Footer-->
