@@ -13,11 +13,10 @@ return new class extends Migration
     {
         Schema::create('financas', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('responsavel_id')->nullable();
-            $table->string('responsavel_nome')->nullable(); 
+            $table->bigInteger('responsavel_id');
             $table->date('vencimento');
             $table->string('valor');
-            $table->string('valor_pagos');
+            $table->string('valor_pagos')->nullable();
             $table->string('status');
             $table->timestamps();
         });

@@ -23,7 +23,7 @@ class Financa extends Model
 
     public function financas()
     {
-        return $this->belongsTo(User::class, 'id');    
+        return $this->belongsTo(User::class,'responsavel_id', 'id',);    
     }
 
 }

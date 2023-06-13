@@ -1,7 +1,7 @@
 @extends('adminlte::page')
 
 @section('content')
-    <title>Visualizar Usuários</title>
+    <title>Editar Fichas Medicas</title>
 </head>
 <body>
     <h1>Editar Usuários</h1>

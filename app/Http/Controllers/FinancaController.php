@@ -15,7 +15,7 @@ class FinancaController extends Controller
     {   
         
         $financas = Financa::orderby('id')->get();
-        return view('financas.index', ['financas' => $financas]);
+        return view('financas.index', ['financa' => $financas]);
     }
     public function exibir()
     {
@@ -39,7 +39,7 @@ class FinancaController extends Controller
             'responsavel_id'    => 'required',
             'vencimento'        => 'required',
             'valor'             => 'required',
-            'valor_pagos'       => 'required',
+            'valor_pagos'       => '',
             'status'            => 'required'
         ]);
 
@@ -73,7 +73,7 @@ class FinancaController extends Controller
         $validated  = $request->validate([
             'vencimento'     => 'required',
             'valor'          => 'required',
-            'valor_pagos'    => 'required',
+            'valor_pagos'    => '',
             'status'         => 'required'
         ]);
 
