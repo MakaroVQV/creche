@@ -22,10 +22,11 @@
           <h5><strong>@foreach ($alunos as $aluno)
               <a href="{{ url('/selecionarAluno/' . $aluno->id)}}">
                 <div class="nome">
-                <select name="select">
-                <option value="valor1">{{ $aluno->name}}</option>
-                </select>
-                  
+                
+                @if ($aluno->id != session('aluno_id'))
+                <h4>{{ $aluno->name}}</h4>
+                @endif
+                
                 </div>
               </a>
               @endforeach</strong></h5>
