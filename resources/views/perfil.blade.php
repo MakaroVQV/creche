@@ -135,10 +135,19 @@ function toggleSubMenu(subMenuId) {
     subMenu.style.display = "block";
   }
 }
-
         // // document.getElementById('img-1').addEventListener('click', function() {
         // // document.getElementById('menu-lateral').style.left = '0'; 
         // });
+
+          //iniciais do nome
+// Obtém o nome do usuário logado (você precisará implementar a lógica de autenticação)
+var nomeUsuario = obterNomeUsuarioLogado();
+
+// Obtém a primeira letra do nome do usuário e converte para maiúsculas
+var inicial = nomeUsuario.charAt(0).toUpperCase();
+
+// Atualiza o conteúdo da div com o ID "logo" com a inicial
+document.getElementById("circulo").textContent = inicial;
     </script>
 
 

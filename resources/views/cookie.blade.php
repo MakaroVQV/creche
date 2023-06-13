@@ -19,7 +19,7 @@
         <h2>Política</h2>
       </header>
       <div class="data">
-        <p>Este site utiliza cookies para melhorar sua experiência no site e em anúncios personalizados. <a href="#"> Saiba mais...</a></p>
+        <p>Este site utiliza cookies para melhorar sua experiência no site e em anúncios personalizados. <a href="politica.blade.php"> Saiba mais...</a></p>
       </div>
       <div class="buttons">
         <button class="button" id="acceptBtn">Concordo</button>
