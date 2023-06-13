@@ -52,7 +52,7 @@ class MedicoController extends Controller
         $ficha->observacoes     = $request->input('observacoes');
         $ficha->save();
 
-        return redirect('/Medico.index')->with('status', 'Ficha criada com sucesso!');
+        return redirect('/medico/index')->with('status', 'Ficha criada com sucesso!');
     }
 
 
@@ -90,7 +90,7 @@ class MedicoController extends Controller
         $ficha->observacoes = $request->input('observacoes');
         $ficha->save();
 
-        return redirect('/Medico/index')->with('status', 'Ficha atualizada com sucesso!');
+        return redirect('/medico/index')->with('status', 'Ficha atualizada com sucesso!');
     }
 
 

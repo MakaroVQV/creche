@@ -15,7 +15,7 @@
                 @endif
             <tr>
                 <th>Nome</th>
-                <th>ID</th>
+                <th>Responsavel ID</th>
                 <th>Ação</th>
                 <a class="col-sm btn btn-success" href="{{ url('financas/create')}}">Criar</a>
             </tr>
@@ -24,7 +24,7 @@
             @foreach($financa as $value)
             <tr>
                 <td class="">{{ $value->financas->name}}</td>
-                <td class="">{{ $value->id }}</td>
+                <td class="">{{ $value->financas->id}}</td>
                     
                 
                 <td class="">
