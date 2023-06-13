@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{asset('/css/perfil.css')}}">
+  <link rel="stylesheet" href="{{asset('/css/styleSession.css')}}">
   <title>Creche</title>
 </head>
 
@@ -19,7 +20,17 @@
       </div>
       <div class="direita-nav">
         <div class="texto-user">
-          <h5><strong>Aluno(a)</strong></h5>
+          <h5><strong>@foreach ($alunos as $aluno)
+              <a class="session" href="{{ url('/selecionarAluno/' . $aluno->id)}}">
+                <!-- <div class="nome"> -->
+                @if ($aluno->id != session('aluno_id'))
+                <div class="nome">
+                    <h3>{{ $aluno->name }}</h3>
+                </div>
+                @endif
+                <!-- </div> -->
+              </a>
+              @endforeach</strong></h5>
         </div>
         <div><img src="{{asset('/imagens/icon aluna.png')}}" class="logo-user"></div>
       </div>
@@ -71,8 +82,6 @@
         </div>
       </div>
 
-
-
       <!-- Footer do menu lateral -->
       <div class="footer-menu">
         <a href="{{ url('logout')}}"><img src="{{asset('/imagens/sair.png')}}" class="sair">
@@ -95,9 +104,9 @@
         {{-- dd ($alunos) --}}
         @foreach ($alunos as $aluno)
         @if ($aluno->id == session('aluno_id'))
-        <a href="{{ url('/selecionarAluno/' . $aluno->id)}}">
-          <div class="nome">
-            <h3>{{ $aluno->name}}</h3>
+        <a class="session" href="{{ url('/selecionarAluno/' . $aluno->id)}}">
+          <div class="nomeTeto">
+            <h3>{{ $aluno->name }}</h3>
           </div>
         </a>
         @endif

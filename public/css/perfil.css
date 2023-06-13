@@ -287,6 +287,13 @@ input[type="checkbox"] {
     }
 
     .nome{
+      /* margin: 30px 0 0 0; */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nomeTeto{
       margin: 30px 0 0 0;
       display: flex;
       align-items: center;
@@ -294,8 +301,8 @@ input[type="checkbox"] {
     }
 
     .nome h3{
-      font-size: 24px;
       font-family: arial;
+      text-decoration: none;
     }
 
     .baixo{
