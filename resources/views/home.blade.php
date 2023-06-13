@@ -27,66 +27,74 @@
 
         <!--Menu lateral-->
         <div id="mySidenav" class="sidenav">
-    <div class="side">
-      <a href="javascript:void(0)" onclick="closeNav()"><img src="{{asset('/imagens/icon menu.png')}}" class="menu-cinza"></a>
-      <div><img src="{{asset('/imagens/creche.png')}}" class="logo-sidebar"></div>
-    </div>
-    <div class="iten-menu">
-      <div class="retangulo">
-      <a href="{{ url('/calendario')}}"><img src="{{asset('/imagens/icon calendario cinza.png')}}">
-        <p>Calendario</p></a>
+            <div class="side">
+                <a href="javascript:void(0)" onclick="closeNav()"><img src="{{asset('/imagens/icon menu.png')}}" class="menu-cinza"></a>
+                <div><img src="{{asset('/imagens/creche.png')}}" class="logo-sidebar"></div>
+            </div>
+            <div class="iten-menu">
+                <div class="retangulo">
+                    <a href="{{ url('/calendario')}}"><img src="{{asset('/imagens/icon calendario cinza.png')}}">
+                        <p>Calendario</p>
+                    </a>
+                </div>
+
+                <div class="retangulo">
+                    <a href="{{ url('/financas/Financa')}}"><img src="{{asset('/imagens/icon financeiro cinza.png')}}">
+                        <p>Financeiro</p>
+                    </a>
+                </div>
+                </a>
+
+                <div class="retangulo">
+                    <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home azul.png')}}">
+                        <p>Home</p>
+                    </a>
+                </div>
+
+                <div class="retangulo">
+                    <a href="{{ url('/saude')}}"><img src="{{asset('/imagens/icon saude cinza.png')}}">
+                        <p>Saúde</p>
+                    </a>
+                </div>
+
+
+                <div class="retangulo">
+                    <a href="{{ url('/perfil')}}"><img src="{{asset('/imagens/icon user cinza.png')}}">
+                        <p>Perfil</p>
+                    </a>
+                </div>
+
+                <div class="retangulo">
+                    <a href="{{ url('/usuarios/')}}"><img src="{{asset('/imagens/cadeado.png')}}">
+                        <p>Admin</p>
+                    </a>
+                </div>
+            </div>
+
+
+
+            <!-- Footer do menu lateral -->
+            <div class="footer-menu">
+                <a href="{{ url('logout')}}"><img src="{{asset('/imagens/sair.png')}}" class="sair">
+                    <p>Sair</p>
+                </a>
+            </div>
+
+            <div class="copyriht">
+                <img src="{{asset('/imagens/icon_copyright.png')}}" class="copyright">
+                <p><strong>2023 FROM NEWPATH</strong></p>
+            </div>
         </div>
-        
-        <div class="retangulo">
-      <a href="{{ url('/financas/Financa')}}"><img src="{{asset('/imagens/icon financeiro cinza.png')}}">
-        <p>Financeiro</p></a>
-        </div>
-      </a>
-
-      <div class="retangulo">
-      <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home azul.png')}}"><p>Home</p></a>
-      </div>
-
-      <div class="retangulo">
-      <a href="{{ url('/saude')}}"><img src="{{asset('/imagens/icon saude cinza.png')}}">
-        <p>Saúde</p></a>
-        </div>
-
-
-      <div class="retangulo">
-      <a href="{{ url('/perfil')}}"><img src="{{asset('/imagens/icon user cinza.png')}}">
-        <p>Perfil</p>
-      </a>
-      </div>
-
-      <div class="retangulo">
-      <a href="{{ url('/usuarios/')}}"><img src="{{asset('/imagens/cadeado.png')}}">
-      <p>Admin</p>
-      </a>
-      </div>
-    </div>
-
-    
-
-    <!-- Footer do menu lateral -->
-    <div class="footer-menu">
-      <a href="{{ url('logout')}}"><img src="{{asset('/imagens/sair.png')}}" class="sair"><p>Sair</p></a>
-    </div>
-  
-    <div class="copyriht"> 
-      <img src="{{asset('/imagens/icon_copyright.png')}}" class="copyright">
-      <p><strong>2023 FROM NEWPATH</strong></p>
-    </div>
-  </div>
-
 
         <!-- Posters -->
         @foreach($postagem as $value)
         <div class="posters">
             <div class="titulo">
                 <img src="{{asset('/imagens/megafone.png')}}">
-                </div>
-                <center><p>{{ $value->titulo }}</p> </center>
+            </div>
+            <center>
+                <p>{{ $value->titulo }}</p>
+            </center>
             <div class="imagem-centro">
                 <img src="{{asset('/imagens/luis.jpg')}}">
             </div>
@@ -95,6 +103,42 @@
             </div>
         </div>
         @endforeach
+
+        <div class="posters">
+            <div class="titulo">
+                <img src="{{asset('/imagens/megafone.png')}}" alt="">
+            </div>
+
+            <div class="flex">
+                <p></p>
+            </div>
+            <div class="imagem-centro">
+
+                <img src="{{asset('/imagens/poster_home.jpg')}}">
+            </div>
+            <div class="descricao">
+                <p></p>
+
+            </div>
+        </div>
+
+        <div class="posters">
+            <div class="titulo">
+                <img src="{{asset('/imagens/megafone.png')}}" alt="">
+            </div>
+
+            <div class="flex">
+                <p></p>
+            </div>
+
+            <div class="imagem-centro">
+
+                <img src="{{asset('/imagens/poster_home.jpg')}}">
+            </div>
+            <div class="descricao">
+                <p></p>
+            </div>
+        </div>
     </div>
 
     <!--Footer-->
@@ -103,17 +147,17 @@
     <script>
         /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
         function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-  document.body.style.backgroundColor = "rgba(0,0,0,0.0)";
-}
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.0)";
+        }
 
-/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft = "0";
-  document.body.style.backgroundColor = "white";
-}
+        /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
 
 
 
