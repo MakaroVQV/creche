@@ -86,8 +86,7 @@
             <div class="titulo">
                 <img src="{{asset('/imagens/megafone.png')}}">
                 </div>
-
-                <p>{{ $value->titulo }}</p>
+                <center><p>{{ $value->titulo }}</p> </center>
             <div class="imagem-centro">
                 <img src="{{asset('/imagens/luis.jpg')}}">
             </div>
@@ -96,45 +95,6 @@
             </div>
         </div>
         @endforeach
-
-        <div class="posters">
-            <div class="titulo">
-                <img src="{{asset('/imagens/megafone.png')}}" alt="">
-                </div>
-
-                <div class="flex">
-                <p>Dia internacional da Mulher</p>
-            </div>
-            <div class="imagem-centro">
-
-                <img src="{{asset('/imagens/poster_home.jpg')}}">
-            </div>
-            <div class="descricao">
-                <p>Nós da Jardim dos Sonhos viemos parabenizar todas as mulheres de dentro e fora da nossa instituição. Mas, principalmente a nossa grande equipe, composta quase que totalmente por excepcionais mulheres!</p>
-              
-            </div>
-        </div>
-
-        <div class="posters">
-            <div class="titulo">
-                <img src="{{asset('/imagens/megafone.png')}}" alt="">
-                </div>
-
-                <div class="flex">
-                <p>Dia Mundial do Autismo</p>
-                </div>
-
-            <div class="imagem-centro">
-
-                <img src="{{asset('/imagens/poster_home.jpg')}}">
-                </div>
-            <center>
-            <div class="descricao">
-                <p>🧩 2 de abril dia mundial do autismo 🧩<br>
-                    Um dia especial para pessoas incríveis 💙</p>
-                </center>
-            </div>
-        </div>
     </div>
 
     <!--Footer-->
