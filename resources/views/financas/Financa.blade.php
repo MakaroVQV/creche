@@ -164,21 +164,25 @@
           <img src="{{asset('/imagens/pix.png')}}">
         </div>
         <div class="chave-aleatoria">
-          <p>Chave Aleatória:</p>
+          <p class="key"><strong>Chave Aleatória:</strong></p>
           <p>1234567891011121314151617181920</p>
         </div>
         </div>
         <div class="agencia">
           <div class="imagem-agencia">
+          </div>
+
             <img src="{{asset('/imagens/transferencia.png')}}">
             <div class="conta">
-              <p>Agência: </p>
-              <p>Conta:</p>
+              <div class="agency">
+              <p><strong>Agência:</strong></p> <p>1234</p>
+            </div>
+            <div class="acount">
+              <p><strong>Conta:</strong></p> <p>12345-6</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
     
 
 </body>
