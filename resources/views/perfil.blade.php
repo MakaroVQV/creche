@@ -25,7 +25,7 @@
                 <!-- <div class="nome"> -->
                 @if ($aluno->id != session('aluno_id'))
                 <div class="nome">
-                    <h3><button>{{ $aluno->name }}</button></h3>
+                    <h3><button class="botao">{{ $aluno->name }}</button></h3>
                 </div>
                 @endif
                 <!-- </div> -->
