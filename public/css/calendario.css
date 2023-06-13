@@ -323,3 +323,11 @@ justify-content: center;
     width: 400px;
     height: 400px;
 }
+
+th{
+  font-family: arial;
+}
+
+tr{
+  font-family: arial;
+}
