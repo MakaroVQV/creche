@@ -19,7 +19,7 @@ class FinancaController extends Controller
     }
     public function exibir()
     {
-        $user = Auth::user('responsavel');
+        $user = Auth::user('id');
         //$status = Financa::where('status', 'pendente')->get();
         $financas = Financa::where('responsavel_id', $user->id)->get();
         //$pendentes = Financa::where('status', 'pendente', $user->id)->get();

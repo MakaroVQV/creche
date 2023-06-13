@@ -61,7 +61,7 @@
 
       <div class="retangulo">
       <a href="{{ url('/usuarios/')}}"><img src="{{asset('/imagens/cadeado.png')}}">
-      <p>Adminstração</p>
+      <p>Admin</p>
       </a>
       </div>
     </div>

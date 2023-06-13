@@ -25,7 +25,6 @@
             <tr>
                 <td class="">{{ $value->financas->name}}</td>
                 <td class="">{{ $value->id }}
-                {{ Auth::user()->name }}
                 </td>
                 <td class="">
                     
