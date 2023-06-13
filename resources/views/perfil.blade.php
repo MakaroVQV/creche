@@ -99,7 +99,7 @@
     <div class="invisivel">
       <div class="cima">
         <div class="circulo">
-          <h2>CS</h2>
+          <h2>User</h2>
         </div>
         {{-- dd ($alunos) --}}
         @foreach ($alunos as $aluno)
