@@ -14,12 +14,12 @@ class PostagemSeeder extends Seeder
     public function run(): void
     {
         DB::table('postagens')->insert([
-            'titulo' => 'Dia internacional da Mulher',
-            'conteudo' => 'Nós da Jardim dos Sonhos viemos parabenizar todas as mulheres de dentro e fora da nossa instituição. Mas, principalmente a nossa grande equipe, composta quase que totalmente por excepcionais mulheres!',
+            'titulo' => 'Matrículas abertas',
+            'conteudo' => 'Renovação de matrículas abertas e novas vagas disponiveis! Entre em contato conosco via telefone para mais informações.',
         ]);
         DB::table('postagens')->insert([
-            'titulo' => 'Dia Mundial do Autismo',
-            'conteudo' => '🧩 2 de abril dia mundial do autismo 🧩          Um dia especial para pessoas incríveis 💙',
+            'titulo' => 'Festa Junina',
+            'conteudo' => 'Alunos e Ex-alunos, convidamos você e sua família para comemorar os nossos 10 anos junto de um incrível arrai, teremos diversas comidas típicas, além de incríveis gincanas e muitas brincadeiras. Não perca tempo, venha se divertir conosco.',
         ]);
     }
 }
