@@ -141,13 +141,13 @@ function toggleSubMenu(subMenuId) {
 
           //iniciais do nome
 // Obtém o nome do usuário logado (você precisará implementar a lógica de autenticação)
-var nomeUsuario = obterNomeUsuarioLogado();
+//var nameUsuario = obterNomeUsuarioLogado();
 
 // Obtém a primeira letra do nome do usuário e converte para maiúsculas
-var inicial = nomeUsuario.charAt(0).toUpperCase();
+//var inicial = nameUsuario.charAt(0).toUpperCase();
 
-// Atualiza o conteúdo da div com o ID "logo" com a inicial
-document.getElementById("circulo").textContent = inicial;
+// Atualiza o conteúdo da div com o ID "circulo" com a inicial
+//document.getElementById("circulo").textContent = inicial;
     </script>
 
 
