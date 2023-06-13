@@ -86,20 +86,6 @@
         <img src="{{asset('/imagens/icon_copyright.png')}}" class="copyright">
         <p><strong>2023 FROM NEWPATH</strong></p>
       </div>
-
-
-
-      <!-- Footer do menu lateral -->
-      <div class="footer-menu">
-        <a href="index.html"><img src="{{ asset('imagens/sair.png') }}" class="sair">
-          <p>Sair</p>
-        </a>
-      </div>
-
-      <div class="copyriht">
-        <img src="{{asset('/imagens/icon_copyright.png')}}" class="copyright">
-        <p><strong>2023 FROM NEWPATH</strong></p>
-      </div>
     </div>
     <div class="container">
 
