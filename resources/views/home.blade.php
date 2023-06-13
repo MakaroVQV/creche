@@ -103,14 +103,14 @@
                 </div>
 
                 <div class="flex">
-                <p>Dia internacional da Mulher</p>
+                <p>Matrículas abertas</p>
             </div>
             <div class="imagem-centro">
 
                 <img src="{{asset('/imagens/poster_home.jpg')}}">
             </div>
             <div class="descricao">
-                <p>Nós da Jardim dos Sonhos viemos parabenizar todas as mulheres de dentro e fora da nossa instituição. Mas, principalmente a nossa grande equipe, composta quase que totalmente por excepcionais mulheres!</p>
+                <p>Renovação de matrículas abertas e novas vagas disponiveis! Entre em contato conosco via telefone para mais informações.</p>
               
             </div>
         </div>
@@ -121,7 +121,7 @@
                 </div>
 
                 <div class="flex">
-                <p>Dia Mundial do Autismo</p>
+                <p>Festa Junina</p>
                 </div>
 
             <div class="imagem-centro">
@@ -130,9 +130,9 @@
                 </div>
             <center>
             <div class="descricao">
-                <p>🧩 2 de abril dia mundial do autismo 🧩<br>
-                    Um dia especial para pessoas incríveis 💙</p>
-                </center>
+                <p>Alunos e Ex-alunos, convidamos você e sua família para comemorar os nossos 10 anos junto de um incrível arrai, teremos diversas comidas típicas, além de incríveis gincanas e muitas brincadeiras.<br>
+                    Não perca tempo, venha se divertir conosco.</p>
+            </center>
             </div>
         </div>
     </div>
