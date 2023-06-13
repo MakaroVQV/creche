@@ -13,6 +13,7 @@ class Financa extends Model
 
 
     protected $fillable = [
+        'responsavel_nome',
         'responsavel_id',
         'vencimento',
         'valor',
@@ -23,7 +24,7 @@ class Financa extends Model
 
     public function financas()
     {
-        return $this->belongsTo(User::class, 'responsavel_id');
+        return $this->belongsTo(User::class);
         
     }
 

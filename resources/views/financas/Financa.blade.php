@@ -27,7 +27,7 @@
         <!--Menu lateral-->
         <div id="mySidenav" class="sidenav">
     <div class="side">
-      <a href="javascript:void(0)" onclick="closeNav()"><img src="{{asset('/imagens/icon menu cinza.png')}}" class="menu-cinza"></a>
+      <a href="javascript:void(0)" onclick="closeNav()"><img src="{{asset('/imagens/icon menu.png')}}" class="menu-cinza"></a>
       <div><img src="{{asset('/imagens/creche.png')}}" class="logo-sidebar"></div>
     </div>
     <div class="iten-menu">
@@ -115,9 +115,9 @@
         <p>Status</p>  
         </p>
       </div>
+      @foreach ($financas as $value)
+      @if ($value->status == 'pendente')
       <div class="detalhe">
-        @foreach ($pendentes as $value)
-        @endforeach
         <p class="data">{{$value->vencimento }}</p>
         <p class="pago1">{{$value->valor}}</p>
         <p class="pago2"></p>
@@ -136,6 +136,8 @@
          </form>
         </div>
       </div>
+      @endif
+      @endforeach
 
     </div>
     
@@ -150,22 +152,17 @@
       </p>
     </div>
 
-    <div class="detalhe">
-      @foreach ($pagos as $value)
-      @endforeach
-      <p class="data">{{$value->vencimento }}</p>
-      <p class="pago1">{{$value->valor}}</p>
-      <p class="pago2">{{$value->valor}}</p>
-      <p class="pagoP">{{$value->status}}</p>
-    </div>
-    <div class="detalhe">
-      @foreach ($pagos as $value)
-      @endforeach
-      <p class="data">{{$value->vencimento }}</p>
-      <p class="pago1">{{$value->valor}}</p>
-      <p class="pago2">{{$value->valor}}</p>
-      <p class="pagoP">{{$value->status}}</p>
-    </div>
+  @foreach ($financas as $value)
+    @if ($value->status == 'pago')
+      <div class="detalhe">
+        <p class="data">{{$value->vencimento }}</p>
+        <p class="pago1">{{$value->valor}}</p>
+        <p class="pago2">{{$value->valor}}</p>
+        <p class="pagoP">{{$value->status}}</p>
+      </div>
+    @endif
+  @endforeach
+
 
     </div>
 
@@ -178,21 +175,25 @@
           <img src="{{asset('/imagens/pix.png')}}">
         </div>
         <div class="chave-aleatoria">
-          <p>Chave Aleatória:</p>
+          <p class="key"><strong>Chave Aleatória:</strong></p>
           <p>1234567891011121314151617181920</p>
         </div>
         </div>
         <div class="agencia">
           <div class="imagem-agencia">
+          </div>
+
             <img src="{{asset('/imagens/transferencia.png')}}">
             <div class="conta">
-              <p>Agência: </p>
-              <p>Conta:</p>
+              <div class="agency">
+              <p><strong>Agência:</strong></p> <p>1234</p>
+            </div>
+            <div class="acount">
+              <p><strong>Conta:</strong></p> <p>12345-6</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
     
 
 </body>

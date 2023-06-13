@@ -3,29 +3,29 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\models\Financa;
-use App\models\User;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Financa;
+use App\Models\User;
 
 class FinancaController extends Controller
 {
 
 
     public function index()
-    {
-
-        $financa = Financa::orderby('id')->get();
-        return view('financas.index', ['financa' => $financa]);
+    {   
+        
+        $financas = Financa::orderby('id')->get();
+        return view('financas.index', ['financas' => $financas]);
     }
     public function exibir()
     {
-
-        $financas = Financa::orderBy('status')->get();
-        $pendentes = Financa::where('status', 'pendente')->get();
-        $pagos = Financa::where('status', 'pago')->get();
-        return view('financas/Financa', ['pendentes' => $pendentes, 'pagos' => $pagos]);
+        $user = Auth::user('responsavel');
+        //$status = Financa::where('status', 'pendente')->get();
+        $financas = Financa::where('responsavel_id', $user->id)->get();
+        //$pendentes = Financa::where('status', 'pendente', $user->id)->get();
+        //$pagos = Financa::where('status', 'pago', $user->id)->get();
+        return view('financas/Financa', ['financas' => $financas]);
     }
-
-
 
     public function create()
     {
@@ -36,11 +36,11 @@ class FinancaController extends Controller
     public function store(Request $request)
     {
         $validated  = $request->validate([
-            'responsavel_id' => 'required',
-            'vencimento'     => 'required',
-            'valor'          => 'required',
-            'valor_pagos'    => 'required',
-            'status'         => 'required'
+            'responsavel_id'    => 'required',
+            'vencimento'        => 'required',
+            'valor'             => 'required',
+            'valor_pagos'       => 'required',
+            'status'            => 'required'
         ]);
 
         $financas = new Financa;

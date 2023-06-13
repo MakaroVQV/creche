@@ -20,7 +20,6 @@ class Medico extends Model
     public function ficha()
     {
         return $this->belongsTo(Aluno::class, 'aluno_id');
-        
     }
 }
 

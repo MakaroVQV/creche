@@ -10,7 +10,7 @@ class NotificadoController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     public function index()
     {
         return view('notificado');

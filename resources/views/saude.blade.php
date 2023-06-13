@@ -38,17 +38,17 @@
         </div>
         
         <div class="retangulo">
-      <a href="{{ url('/financa')}}"><img src="{{asset('/imagens/icon financeiro cinza.png')}}">
+      <a href="{{ url('/financas/Financa')}}"><img src="{{asset('/imagens/icon financeiro cinza.png')}}">
         <p>Financeiro</p></a>
         </div>
       </a>
 
       <div class="retangulo">
-      <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home cinza.png')}}"><p>Home</p></a>
+      <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home azul.png')}}"><p>Home</p></a>
       </div>
 
       <div class="retangulo">
-      <a href="{{ url('/medico')}}"><img src="{{asset('/imagens/icon saude azul.png')}}">
+      <a href="{{ url('/saude')}}"><img src="{{asset('/imagens/icon saude cinza.png')}}">
         <p>Saúde</p></a>
         </div>
 
@@ -58,6 +58,7 @@
         <p>Perfil</p>
       </a>
       </div>
+
       <div class="retangulo">
       <a href="{{ url('/usuarios/')}}"><img src="{{asset('/imagens/cadeado.png')}}">
       <p>Adminstração</p>
@@ -78,10 +79,9 @@
 
     <!--Ficha, Atestado e cardápio-->
     <div class="invisible">
+    @foreach($fichas as $value)
       <div class="cards" id="ficha-medica">
         <img src="{{asset('/imagens/icon ficha medica.png')}}">
-        @foreach($fichas as $value)
-        @endforeach
         <p>Ficha Médica</p>
         <div class="texto-expandido">
           <h1>Resumo</h1>
@@ -128,11 +128,11 @@
 
           <div class="detalhe">
             <div class="info"><img src="{{asset('/imagens/sangue.png')}}">
-              <p>{{$value->tipo_snaguineo}}</p>
+              <p>Tipo Sanguineo</p>
             </div>
             <div class="centro-info">
               <div class="sangue">
-                <p class="o">O+</p>
+                <p class="o">{{$value->tipo_sanguineo}}</p>
               </div>
             </div>
             <div class="data">fev de 2023</div>
@@ -166,6 +166,7 @@
           </div>
         </div>
       </div>
+      @endforeach
 
       <div class="cards">
         <img src="{{asset('/imagens/icon atestados.png')}}">
@@ -180,9 +181,14 @@
               </a>
             </div>
           </div>
-          {!! Form::open(['url' => 'upload/docs']) !!}
-              {!!Form::submit('', ['class' => 'btn btn-primary'])!!}
-              {!! Form::close() !!}
+          <form action="{{ route('upload_docs') }}" method="post" enctype="multipart/form-data" class="my-4">
+              @csrf
+              <div class="form-group">
+                  <label for="document"></label>
+                  <input type="file" name="document" id="document" class="form-control-file">
+              </div>
+              <button type="submit" class="btn btn-primary"></button>
+          </form> 
         </div>
       </div>
     

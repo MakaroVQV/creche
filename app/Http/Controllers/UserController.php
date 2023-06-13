@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\models\User;
-use App\models\Medico;
-use App\models\Aluno;
+use App\Models\User;
+use App\Models\Medico;
+use App\Models\Aluno;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
@@ -93,7 +93,7 @@ class UserController extends Controller
         $user->email        = $request->input('email');
         //if (trim($request))
         $user->password     = Hash::make($request->input('password'));
-        $user->telefone     =$request->input('telefone');
+        $user->telefone     = $request->input('telefone');
         $user->profile      = $request->input('profile');
         $user->save();
 
@@ -111,9 +111,5 @@ class UserController extends Controller
 
         return redirect('/usuarios')->with('status', 'Usuário deletado com sucesso!');
     }
-
-
-
-    
 
 }

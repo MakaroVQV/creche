@@ -14,16 +14,32 @@ p{
 .esquerda-nav{
   display: flex;
   justify-content: space-between;
+  padding: 0 0 40px 0;
+}
+
+h5 {
+  font-family: arial;
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .menu-azul{
-  margin: -5px 5px 0 -5px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 5px;
+  bottom: 0;
   cursor: pointer;
 }
 
 
 .logo-navbar{
-  margin:-5px 0 0 0;
+  position: absolute;
+  top: 10px;
+  left: 70px;
+  right: 5px;
+  bottom: 0;
   max-width: 80px;
   max-height: 80px;
 }
@@ -34,12 +50,20 @@ p{
   justify-content: space-between;
 }
 .logo-user{
-  padding: 5px 5px 0;
+  position: absolute;
+  top: 5px;
+  left: auto;
+  right: 0;
+  bottom: 0;
   margin: 5px 5px 5px 5px;
 }
+
 .texto-user{
-  padding: 5px 5px 0;
-  margin: 20px 0px 0px 5px;
+  position: absolute;
+  top: 30px;
+  left: auto;
+  right: 60px;
+  bottom: 0;
   text-align: center;
 }
 
@@ -49,8 +73,11 @@ p{
   justify-content: space-between;
 }
 .menu-cinza{
-  max-width: 80px;
-  max-height: 80px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 5px;
+  bottom: 0;
   cursor: pointer;
 }
 
