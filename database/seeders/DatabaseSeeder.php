@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             AlunoSeeder::class,
             MedicoSeeder::class,
             FinancaSeeder::class,
+            PostagemSeeder::class,
         ]);
     }
 }
