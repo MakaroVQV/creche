@@ -297,6 +297,10 @@ input[type="checkbox"] {
   border-radius: 8px;
 }
 
+.invi{
+  flex-direction: column;
+}
+
 .financa a {
   color: #000000;
   text-decoration: none;
@@ -442,8 +446,11 @@ label img {
   margin-right: 10px;
 }
 
-.imagem-clicavel {
+.imagem-clicavel{
   margin: 10px 0 0 0;
+  color: #A7DAF4;
+  background-color: #A7DAF4;
+  padding-left:40px;
 }
 
 .imagem-clicavel img {
@@ -452,6 +459,7 @@ label img {
   transform: rotate(-90deg);
   cursor: pointer;
   transition: all ease-in-out 0.3s;
+  opacity: 0.0;
 }
 
 .seta-girada {
