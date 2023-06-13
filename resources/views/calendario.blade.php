@@ -11,7 +11,6 @@
 </head>
 
 <body>
-
   <!-- Menu acima-->
   <div class="main">
     <navbar class="navbar">
@@ -29,68 +28,65 @@
 
     <!--Menu lateral-->
     <div id="mySidenav" class="sidenav">
-    <div class="side">
-      <a href="javascript:void(0)" onclick="closeNav()"><img src="{{asset('/imagens/icon menu.png')}}" class="menu-cinza"></a>
-      <div><img src="{{asset('/imagens/creche.png')}}" class="logo-sidebar"></div>
-    </div>
-    <div class="iten-menu">
-      <div class="retangulo">
-      <a href="{{ url('/calendario')}}"><img src="{{asset('/imagens/icon calendario cinza.png')}}">
-        <p>Calendario</p></a>
+      <div class="side">
+        <a href="javascript:void(0)" onclick="closeNav()"><img src="{{asset('/imagens/icon menu.png')}}" class="menu-cinza"></a>
+        <div><img src="{{asset('/imagens/creche.png')}}" class="logo-sidebar"></div>
+      </div>
+      <div class="iten-menu">
+        <div class="retangulo">
+          <a href="{{ url('/calendario')}}"><img src="{{asset('/imagens/icon calendario cinza.png')}}">
+            <p>Calendario</p>
+          </a>
         </div>
 
         <div class="retangulo">
-      <a href="{{ url('/financas/Financa')}}"><img src="{{asset('/imagens/icon financeiro cinza.png')}}">
-        <p>Financeiro</p></a>
+          <a href="{{ url('/financas/Financa')}}"><img src="{{asset('/imagens/icon financeiro cinza.png')}}">
+            <p>Financeiro</p>
+          </a>
         </div>
-      </a>
+        </a>
 
-
-      <div class="retangulo">
-      <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home azul.png')}}"><p>Home</p></a>
-      </div>
-
-      <div class="retangulo">
-      <a href="{{ url('/saude')}}"><img src="{{asset('/imagens/icon saude cinza.png')}}">
-        <p>Saúde</p></a>
+        <div class="retangulo">
+          <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home azul.png')}}">
+            <p>Home</p>
+          </a>
         </div>
 
+        <div class="retangulo">
+          <a href="{{ url('/saude')}}"><img src="{{asset('/imagens/icon saude cinza.png')}}">
+            <p>Saúde</p>
+          </a>
+        </div>
 
-      <div class="retangulo">
-      <a href="{{ url('/perfil')}}"><img src="{{asset('/imagens/icon user cinza.png')}}">
-        <p>Perfil</p>
-      </a>
+
+        <div class="retangulo">
+          <a href="{{ url('/perfil')}}"><img src="{{asset('/imagens/icon user cinza.png')}}">
+            <p>Perfil</p>
+          </a>
+        </div>
+
+        <div class="retangulo">
+          <a href="{{ url('/usuarios/')}}"><img src="{{asset('/imagens/cadeado.png')}}">
+            <p>Admin</p>
+          </a>
+        </div>
       </div>
 
-      <div class="retangulo">
-      <a href="{{ url('/usuarios/')}}"><img src="{{asset('/imagens/cadeado.png')}}">
-      <p>Adminstração</p>
-      </a>
+
+
+      <!-- Footer do menu lateral -->
+      <div class="footer-menu">
+        <a href="{{ url('logout')}}"><img src="{{asset('/imagens/sair.png')}}" class="sair">
+          <p>Sair</p>
+        </a>
+      </div>
+
+      <div class="copyriht">
+        <img src="{{asset('/imagens/icon_copyright.png')}}" class="copyright">
+        <p><strong>2023 FROM NEWPATH</strong></p>
       </div>
     </div>
 
-    <!-- Footer do menu lateral -->
-    <div class="footer-menu">
-      <a href="{{ url('logout')}}"><img src="{{asset('/imagens/sair.png')}}" class="sair"><p>Sair</p></a>
-    </div>
-  
-    <div class="copyriht"> 
-      <img src="{{asset('/imagens/icon_copyright.png')}}" class="copyright">
-      <p><strong>2023 FROM NEWPATH</strong></p>
-    </div>
-
-
-
-    <!-- Footer do menu lateral -->
-    <div class="footer-menu">
-      <a href="index.html"><img src="{{ asset('imagens/sair.png') }}" class="sair"><p>Sair</p></a>
-    </div>
-
-      <div class="copyriht"> 
-      <img src="{{asset('/imagens/icon_copyright.png')}}" class="copyright">
-      <p><strong>2023 FROM NEWPATH</strong></p>
-    </div>
-    </div>
     <div class="container">
 
 
@@ -103,7 +99,7 @@
           </tr>
         </thead>
         <tbody>
-        @foreach ($eventos as $value)
+          @foreach ($eventos as $value)
           <tr>
             <td scope="row">{{ $value->title }}</td>
             <td scope="row">{{ $value-> start }}</td>

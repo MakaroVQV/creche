@@ -19,15 +19,7 @@
       </div>
       <div class="direita-nav">
         <div class="texto-user">
-          <h5><strong>@foreach ($alunos as $aluno)
-              <a href="{{ url('/selecionarAluno/' . $aluno->id)}}">
-                <div class="nome">
-                @if ($aluno->id != session('aluno_id'))
-                <h4>{{ $aluno->name}}</h4>
-                @endif
-                </div>
-              </a>
-              @endforeach</strong></h5>
+          <h5><strong>Aluno(a)</strong></h5>
         </div>
         <div><img src="{{asset('/imagens/icon aluna.png')}}" class="logo-user"></div>
       </div>
@@ -74,10 +66,12 @@
 
         <div class="retangulo">
           <a href="{{ url('/usuarios/')}}"><img src="{{asset('/imagens/cadeado.png')}}">
-            <p>Adminstração</p>
+            <p>Admin</p>
           </a>
         </div>
       </div>
+
+
 
       <!-- Footer do menu lateral -->
       <div class="footer-menu">
