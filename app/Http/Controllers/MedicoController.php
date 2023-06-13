@@ -20,6 +20,7 @@ class MedicoController extends Controller
         return view('Medico.index', ['fichas' => $fichas]);
     }
 
+    
 
     public function create()
     {
