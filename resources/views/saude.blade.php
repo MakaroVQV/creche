@@ -14,72 +14,81 @@
   <div class="main">
     <navbar class="navbar">
       <div class="esquerda-nav">
-        <div onclick="openNav()"><img src="{{ asset('imagens/icon menu.png') }}" class="menu-azul"></div>
-        <div><img src="{{ asset('imagens/creche.png') }}" class="logo-navbar"></div>
+        <div onclick="openNav()"><img src="{{asset('/imagens/icon menu.png')}}" class="menu-azul"></div>
+        <div><img src="{{asset('/imagens/creche.png')}}" class="logo-navbar"></div>
       </div>
       <div class="direita-nav">
         <div class="texto-user">
           <h5><strong>Aluno(a)</strong></h5>
         </div>
-        <div><img src="{{ asset('imagens/icon aluna.png') }}" class="logo-user"></div>
+        <div><img src="{{asset('/imagens/icon aluna.png')}}" class="logo-user"></div>
       </div>
     </navbar>
 
-            <!--Menu lateral-->
-            <div id="mySidenav" class="sidenav">
-    <div class="side">
-      <a href="javascript:void(0)" onclick="closeNav()"><img src="{{asset('/imagens/icon menu.png')}}" class="menu-cinza"></a>
-      <div><img src="{{asset('/imagens/creche.png')}}" class="logo-sidebar"></div>
-    </div>
-    <div class="iten-menu">
-      <div class="retangulo">
-      <a href="{{ url('/calendario')}}"><img src="{{asset('/imagens/icon calendario cinza.png')}}">
-        <p>Calendario</p></a>
-        </div>
-        
+    <!--Menu lateral-->
+    <div id="mySidenav" class="sidenav">
+      <div class="side">
+        <a href="javascript:void(0)" onclick="closeNav()"><img src="{{asset('/imagens/icon menu.png')}}" class="menu-cinza"></a>
+        <div><img src="{{asset('/imagens/creche.png')}}" class="logo-sidebar"></div>
+      </div>
+      <div class="iten-menu">
         <div class="retangulo">
-      <a href="{{ url('/financas/Financa')}}"><img src="{{asset('/imagens/icon financeiro cinza.png')}}">
-        <p>Financeiro</p></a>
-        </div>
-      </a>
-
-      <div class="retangulo">
-      <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home azul.png')}}"><p>Home</p></a>
-      </div>
-
-      <div class="retangulo">
-      <a href="{{ url('/saude')}}"><img src="{{asset('/imagens/icon saude cinza.png')}}">
-        <p>Saúde</p></a>
+          <a href="{{ url('/calendario')}}"><img src="{{asset('/imagens/icon calendario cinza.png')}}">
+            <p>Calendario</p>
+          </a>
         </div>
 
+        <div class="retangulo">
+          <a href="{{ url('/financas/Financa')}}"><img src="{{asset('/imagens/icon financeiro cinza.png')}}">
+            <p>Financeiro</p>
+          </a>
+        </div>
+        </a>
 
-      <div class="retangulo">
-      <a href="{{ url('/perfil')}}"><img src="{{asset('/imagens/icon user cinza.png')}}">
-        <p>Perfil</p>
-      </a>
+        <div class="retangulo">
+          <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home azul.png')}}">
+            <p>Home</p>
+          </a>
+        </div>
+
+        <div class="retangulo">
+          <a href="{{ url('/saude')}}"><img src="{{asset('/imagens/icon saude cinza.png')}}">
+            <p>Saúde</p>
+          </a>
+        </div>
+
+
+        <div class="retangulo">
+          <a href="{{ url('/perfil')}}"><img src="{{asset('/imagens/icon user cinza.png')}}">
+            <p>Perfil</p>
+          </a>
+        </div>
+
+        <div class="retangulo">
+          <a href="{{ url('/usuarios/')}}"><img src="{{asset('/imagens/cadeado.png')}}">
+            <p>Admin</p>
+          </a>
+        </div>
       </div>
 
-      <div class="retangulo">
-      <a href="{{ url('/usuarios/')}}"><img src="{{asset('/imagens/cadeado.png')}}">
-      <p>Adminstração</p>
-      </a>
+
+
+      <!-- Footer do menu lateral -->
+      <div class="footer-menu">
+        <a href="{{ url('logout')}}"><img src="{{asset('/imagens/sair.png')}}" class="sair">
+          <p>Sair</p>
+        </a>
+      </div>
+
+      <div class="copyriht">
+        <img src="{{asset('/imagens/icon_copyright.png')}}" class="copyright">
+        <p><strong>2023 FROM NEWPATH</strong></p>
       </div>
     </div>
-
-    <!-- Footer do menu lateral -->
-    <div class="footer-menu">
-      <a href="{{ url('logout')}}"><img src="{{asset('/imagens/sair.png')}}" class="sair"><p>Sair</p></a>
-    </div>
-  
-    <div class="copyriht"> 
-      <img src="{{asset('/imagens/icon_copyright.png')}}" class="copyright">
-      <p><strong>2023 FROM NEWPATH</strong></p>
-    </div>
-  </div>
 
     <!--Ficha, Atestado e cardápio-->
     <div class="invisible">
-    @foreach($fichas as $value)
+      @foreach($fichas as $value)
       <div class="cards" id="ficha-medica">
         <img src="{{asset('/imagens/icon ficha medica.png')}}">
         <p>Ficha Médica</p>
@@ -89,7 +98,7 @@
             <div class="info"><img src="{{asset('/imagens/boneco.png')}}">
               <p class="altura-peso">Altura e peso</p>
             </div>
-            
+
             <div class="centro-info">
               <p class="numero"><strong>{{$value->altura}}</strong></p>
               <p class="cm">cm</p>
@@ -99,7 +108,7 @@
               </div>
             </div>
             <div class="data">fev de 2023</div>
-            
+
           </div>
 
           <div class="detalhe">
@@ -182,51 +191,51 @@
             </div>
           </div>
           <form action="{{ route('upload_docs') }}" method="post" enctype="multipart/form-data" class="my-4">
-              @csrf
-              <div class="form-group">
-                  <label for="document"></label>
-                  <input type="file" name="document" id="document" class="form-control-file">
-              </div>
-              <button type="submit" class="btn btn-primary"></button>
-          </form> 
+            @csrf
+            <div class="form-group">
+              <label for="document"></label>
+              <input type="file" name="document" id="document" class="form-control-file">
+            </div>
+            <button type="submit" class="btn btn-primary"></button>
+          </form>
         </div>
       </div>
-    
+
       <div class="cards">
 
-      <img src="{{asset('/imagens/icon cardapio.png')}}">
-      <p>Cardápio</p>
-      <div class="texto-expandido">
-        <div class="cardapio">
-          <p><strong>Colocação</strong></p>
-          <div class="descricao">
-            <p>Mini pão francês com manteiga;<br>  Café com leite</p>
+        <img src="{{asset('/imagens/icon cardapio.png')}}">
+        <p>Cardápio</p>
+        <div class="texto-expandido">
+          <div class="cardapio">
+            <p><strong>Colocação</strong></p>
+            <div class="descricao">
+              <p>Mini pão francês com manteiga;<br> Café com leite</p>
+            </div>
           </div>
-        </div>
-        <div class="cardapio">
-          <p><strong>Lanche da manhã</strong></p>
-          <div class="descricao">
-          <p>Biscoito maionese;<br> Suco de maracujá</p>
+          <div class="cardapio">
+            <p><strong>Lanche da manhã</strong></p>
+            <div class="descricao">
+              <p>Biscoito maionese;<br> Suco de maracujá</p>
+            </div>
           </div>
-        </div>
-        <div class="cardapio">
-          <p><strong>Almoço</strong></p>
-          <div class="descricao">
-            <p>Arroz, Feijão preto, Carne moída, Macarrão a bolonhesa;<br><br>
-            Suco: Limonada;<br><br>
-            Sobremesa: Maçã
-            </p>
+          <div class="cardapio">
+            <p><strong>Almoço</strong></p>
+            <div class="descricao">
+              <p>Arroz, Feijão preto, Carne moída, Macarrão a bolonhesa;<br><br>
+                Suco: Limonada;<br><br>
+                Sobremesa: Maçã
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="cardapio">
-          <p><strong>Lanche da Tarde</strong></p>
-          <div class="descricao">
-            <p>Duo de frutas (maçã e banana)</p>
+          <div class="cardapio">
+            <p><strong>Lanche da Tarde</strong></p>
+            <div class="descricao">
+              <p>Duo de frutas (maçã e banana)</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
 
     <script>

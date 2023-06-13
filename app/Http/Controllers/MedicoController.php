@@ -20,6 +20,7 @@ class MedicoController extends Controller
         return view('Medico.index', ['fichas' => $fichas]);
     }
 
+    
 
     public function create()
     {
@@ -52,7 +53,7 @@ class MedicoController extends Controller
         $ficha->observacoes     = $request->input('observacoes');
         $ficha->save();
 
-        return redirect('/Medico.index')->with('status', 'Ficha criada com sucesso!');
+        return redirect('/medico/index')->with('status', 'Ficha criada com sucesso!');
     }
 
 
@@ -90,7 +91,7 @@ class MedicoController extends Controller
         $ficha->observacoes = $request->input('observacoes');
         $ficha->save();
 
-        return redirect('/Medico/index')->with('status', 'Ficha atualizada com sucesso!');
+        return redirect('/medico/index')->with('status', 'Ficha atualizada com sucesso!');
     }
 
 
@@ -107,7 +108,12 @@ class MedicoController extends Controller
     {
         // dd('index');
         // $fichas = User::with('user')->get();
-        $fichas = Medico::orderBy('id')->get();
+        //$fichas = Medico::orderBy('id')->get();
+        $aluno_id = session('aluno_id');
+
+        //dd($aluno_id);
+        $fichas = Medico::where('aluno_id', $aluno_id)->orderby('id')->get();
+        //dd ($fichas);
         return view('/saude', ['fichas' => $fichas]);
     }
 }

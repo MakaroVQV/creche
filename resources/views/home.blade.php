@@ -61,7 +61,7 @@
 
       <div class="retangulo">
       <a href="{{ url('/usuarios/')}}"><img src="{{asset('/imagens/cadeado.png')}}">
-      <p>Adminstração</p>
+      <p>Admin</p>
       </a>
       </div>
     </div>
@@ -106,7 +106,8 @@
                 <p>Dia internacional da Mulher</p>
             </div>
             <div class="imagem-centro">
-                <img src="{{asset('/imagens/luis.jpg')}}">
+
+                <img src="{{asset('/imagens/poster_home.jpg')}}">
             </div>
             <div class="descricao">
                 <p>Nós da Jardim dos Sonhos viemos parabenizar todas as mulheres de dentro e fora da nossa instituição. Mas, principalmente a nossa grande equipe, composta quase que totalmente por excepcionais mulheres!</p>
@@ -124,8 +125,9 @@
                 </div>
 
             <div class="imagem-centro">
-                <img src="{{asset('/imagens/luis.jpg')}}">
-            </div>
+
+                <img src="{{asset('/imagens/poster_home.jpg')}}">
+                </div>
             <center>
             <div class="descricao">
                 <p>🧩 2 de abril dia mundial do autismo 🧩<br>

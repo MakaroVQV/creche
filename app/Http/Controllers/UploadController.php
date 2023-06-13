@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Document;
 
-class UploadController extends Controller
-{
+class UploadController extends Controller{
+
+
+
     public function form_docs(){
         //dd('form_docs');
     return view('upload/form_docs');

@@ -6,7 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{asset('/css/calendario.css')}}">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{asset('/css/tableCalendario.css')}}">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
   <title>Creche</title>
 </head>
 
@@ -29,72 +30,81 @@
 
     <!--Menu lateral-->
     <div id="mySidenav" class="sidenav">
-    <div class="side">
-      <a href="javascript:void(0)" onclick="closeNav()"><img src="{{asset('/imagens/icon menu.png')}}" class="menu-cinza"></a>
-      <div><img src="{{asset('/imagens/creche.png')}}" class="logo-sidebar"></div>
-    </div>
-    <div class="iten-menu">
-      <div class="retangulo">
-      <a href="{{ url('/calendario')}}"><img src="{{asset('/imagens/icon calendario cinza.png')}}">
-        <p>Calendario</p></a>
+      <div class="side">
+        <a href="javascript:void(0)" onclick="closeNav()"><img src="{{asset('/imagens/icon menu.png')}}" class="menu-cinza"></a>
+        <div><img src="{{asset('/imagens/creche.png')}}" class="logo-sidebar"></div>
+      </div>
+      <div class="iten-menu">
+        <div class="retangulo">
+          <a href="{{ url('/calendario')}}"><img src="{{asset('/imagens/icon calendario cinza.png')}}">
+            <p>Calendario</p>
+          </a>
         </div>
 
         <div class="retangulo">
-      <a href="{{ url('/financas/Financa')}}"><img src="{{asset('/imagens/icon financeiro cinza.png')}}">
-        <p>Financeiro</p></a>
+          <a href="{{ url('/financas/Financa')}}"><img src="{{asset('/imagens/icon financeiro cinza.png')}}">
+            <p>Financeiro</p>
+          </a>
         </div>
-      </a>
+        </a>
 
 
-      <div class="retangulo">
-      <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home azul.png')}}"><p>Home</p></a>
-      </div>
-
-      <div class="retangulo">
-      <a href="{{ url('/saude')}}"><img src="{{asset('/imagens/icon saude cinza.png')}}">
-        <p>Saúde</p></a>
+        <div class="retangulo">
+          <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home azul.png')}}">
+            <p>Home</p>
+          </a>
         </div>
 
+        <div class="retangulo">
+          <a href="{{ url('/saude')}}"><img src="{{asset('/imagens/icon saude cinza.png')}}">
+            <p>Saúde</p>
+          </a>
+        </div>
 
-      <div class="retangulo">
-      <a href="{{ url('/perfil')}}"><img src="{{asset('/imagens/icon user cinza.png')}}">
-        <p>Perfil</p>
-      </a>
+
+        <div class="retangulo">
+          <a href="{{ url('/perfil')}}"><img src="{{asset('/imagens/icon user cinza.png')}}">
+            <p>Perfil</p>
+          </a>
+        </div>
+
+        <div class="retangulo">
+          <a href="{{ url('/usuarios/')}}"><img src="{{asset('/imagens/cadeado.png')}}">
+            <p>Admin</p>
+          </a>
+        </div>
       </div>
 
-      <div class="retangulo">
-      <a href="{{ url('/usuarios/')}}"><img src="{{asset('/imagens/cadeado.png')}}">
-      <p>Adminstração</p>
-      </a>
+      <!-- Footer do menu lateral -->
+      <div class="footer-menu">
+        <a href="{{ url('logout')}}"><img src="{{asset('/imagens/sair.png')}}" class="sair">
+          <p>Sair</p>
+        </a>
       </div>
-    </div>
 
-    <!-- Footer do menu lateral -->
-    <div class="footer-menu">
-      <a href="{{ url('logout')}}"><img src="{{asset('/imagens/sair.png')}}" class="sair"><p>Sair</p></a>
-    </div>
-  
-    <div class="copyriht"> 
-      <img src="{{asset('/imagens/icon_copyright.png')}}" class="copyright">
-      <p><strong>2023 FROM NEWPATH</strong></p>
-    </div>
+      <div class="copyriht">
+        <img src="{{asset('/imagens/icon_copyright.png')}}" class="copyright">
+        <p><strong>2023 FROM NEWPATH</strong></p>
+      </div>
 
 
 
-    <!-- Footer do menu lateral -->
-    <div class="footer-menu">
-      <a href="index.html"><img src="{{ asset('imagens/sair.png') }}" class="sair"><p>Sair</p></a>
-    </div>
+      <!-- Footer do menu lateral -->
+      <div class="footer-menu">
+        <a href="index.html"><img src="{{ asset('imagens/sair.png') }}" class="sair">
+          <p>Sair</p>
+        </a>
+      </div>
 
-      <div class="copyriht"> 
-      <img src="{{asset('/imagens/icon_copyright.png')}}" class="copyright">
-      <p><strong>2023 FROM NEWPATH</strong></p>
-    </div>
+      <div class="copyriht">
+        <img src="{{asset('/imagens/icon_copyright.png')}}" class="copyright">
+        <p><strong>2023 FROM NEWPATH</strong></p>
+      </div>
     </div>
     <div class="container">
 
 
-      <table class="table table-white table-striped">
+      <!-- <table class="table table-white table-striped">
         <thead>
           <tr>
             <th scope="col">Evento</th>
@@ -111,6 +121,19 @@
           </tr>
           @endforeach
         </tbody>
+      </table> -->
+
+      <table>
+        <tr>
+          <th>Evento</th>
+          <th>Começo</th>
+          <th>Término</th>
+        </tr>
+        <tr>
+          <td>{{ $value->title }}</td>
+          <td>{{ $value-> start }}</td>
+          <td>{{ $value-> end }}</td>
+        </tr>
       </table>
 
     </div>

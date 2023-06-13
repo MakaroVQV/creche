@@ -3,7 +3,7 @@
 @section('content')
 
 <head>
-    <title>Visualizar Usuários</title>
+    <title>Visualizar Fichas Medicas</title>
 </head>
 <body>
     <h1>Visualizar Fichas</h1>

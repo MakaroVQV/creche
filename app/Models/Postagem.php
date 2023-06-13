@@ -12,4 +12,10 @@ class Postagem extends Model
 
     protected $table = 'postagens';
 
+
+    protected $fillable = [
+        'titulo',
+        'conteudo',
+    ];
+
 }
