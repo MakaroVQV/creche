@@ -89,7 +89,7 @@
 
                 <p>{{ $value->titulo }}</p>
             <div class="imagem-centro">
-                <img src="{{asset('/imagens/luis.jpeg')}}">
+                <img src="{{asset('/imagens/luis.jpg')}}">
             </div>
             <div class="descricao">
                 <p>{{ $value->conteudo }}</p>
@@ -106,7 +106,7 @@
                 <p>Dia internacional da Mulher</p>
             </div>
             <div class="imagem-centro">
-                <img src="{{asset('/imagens/luis.jpeg')}}">
+                <img src="{{asset('/imagens/luis.jpg')}}">
             </div>
             <div class="descricao">
                 <p>Nós da Jardim dos Sonhos viemos parabenizar todas as mulheres de dentro e fora da nossa instituição. Mas, principalmente a nossa grande equipe, composta quase que totalmente por excepcionais mulheres!</p>
@@ -124,7 +124,7 @@
                 </div>
 
             <div class="imagem-centro">
-                <img src="{{asset('/imagens/luis.jpeg')}}">
+                <img src="{{asset('/imagens/luis.jpg')}}">
             </div>
             <center>
             <div class="descricao">
