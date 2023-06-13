@@ -130,7 +130,7 @@
                 </div>        
             <div class="descricao">
                 <p>Alunos e Ex-alunos, convidamos você e sua família para comemorar os nossos 10 anos junto de um incrível arrai, teremos diversas comidas típicas, além de incríveis gincanas e muitas brincadeiras.</p>
-                <p>Não perca tempo, venha se divertir conosco.</p>
+                <p>Não perca tempo, venha se divertir conosco!</p>
             </div>
         </div>
     </div>
