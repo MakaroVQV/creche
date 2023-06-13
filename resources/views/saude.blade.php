@@ -177,19 +177,11 @@
       </div>
       @endforeach
 
-      <div class="cards">
+
+      <div class="cards" id="divClicavel">
         <img src="{{asset('/imagens/icon atestados.png')}}">
         <p>Atestado</p>
         <div class="texto-expandido">
-          <div class="atestado">
-            <div class="box">
-              <p><strong>Atestado de Aptidão Física</strong></p>
-            </div>
-            <div class="meu-arquivo">
-              <p><strong>atestado_cardio.pdf</strong></p>
-              </a>
-            </div>
-          </div>
           <form action="{{ route('upload_docs') }}" method="post" enctype="multipart/form-data" class="my-4">
             @csrf
             <div class="form-group">
@@ -202,7 +194,6 @@
       </div>
 
       <div class="cards">
-
         <img src="{{asset('/imagens/icon cardapio.png')}}">
         <p>Cardápio</p>
         <div class="texto-expandido">
@@ -283,6 +274,13 @@
           card.classList.toggle('card-normal'); // Adicione essa linha para alternar entre as classes
         });
       });
+
+      var document = document.getElementByid('document');
+      var divClicavel = document.getElementbyid('divClicavel');
+
+      document.addEventListener('click', function(event){
+        event.stopPropagation();
+      })
 
       // // document.getElementById('img-1').addEventListener('click', function() {
       // // document.getElementById('menu-lateral').style.left = '0'; 
