@@ -14,14 +14,24 @@ p{
 .esquerda-nav{
   display: flex;
   justify-content: space-between;
+  padding: 0 0 40px 0;
+
 }
 .menu-azul{
-  margin: 10px 10px 8px 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 5px;
+  bottom: 0;
   cursor: pointer;
 }
 
 .logo-navbar{
-  margin-top:10px;
+  position: absolute;
+  top: 10px;
+  left: 70px;
+  right: 5px;
+  bottom: 0;
   max-width: 80px;
   max-height: 80px;
 }
@@ -31,13 +41,22 @@ p{
   display: flex;
   justify-content: space-between;
 }
+
 .logo-user{
-  padding: 5px 5px 0;
+  position: absolute;
+  top: 5px;
+  left: auto;
+  right: 0;
+  bottom: 0;
   margin: 5px 5px 5px 5px;
 }
+
 .texto-user{
-  padding: 5px 5px 0;
-  margin: 20px 0px 0px 5px;
+  position: absolute;
+  top: 30px;
+  left: auto;
+  right: 60px;
+  bottom: 0;
   text-align: center;
 }
 
@@ -317,7 +336,15 @@ input[type="checkbox"] {
 
 .titulo p{
   color: #939090;
+  margin: 0 0 0 60px;
 }
+
+.titulo p,
+  .detalhe p,
+  .titulo a,
+  .titulo .pago1 {
+    flex-basis: 10%;
+  }
 
 .detalhe{
   background: #A7DAF4;
@@ -326,7 +353,6 @@ input[type="checkbox"] {
   height: 50px;
   display: flex;
   justify-content: space-evenly;
-  align-items:flex-start;
   position: relative;
   border-radius: 8px;
   transition: all ease-in-out 0.3s;
@@ -360,27 +386,25 @@ transform: rotate(90deg);
 }
 
 .pago2{
-  padding: 0 15px 0 0;
-  overflow: hidden;
+  margin: 0 0 0 0;
 }
 
 .pagoP{
-  margin: 0 10px 0 0;
+  padding: 0 190px 0 0;
   color: #3BA12F;
-  overflow: hidden;
+}
+
+.pago1{
+  margin: 0 0 0 0;
 }
 
 .data{
-  margin: 0 0 0 10px;
-  overflow: hidden;
+  margin: 0 0 0 0;
 }
 
 .pendente {
   color: #F8AE00;
-  padding: 0 0 0 60px;
-  margin: 15px -10px 0 0;
   font-weight: 200;
-  overflow: hidden;
 }
 
 input[type="file"]{
@@ -454,6 +478,38 @@ label img {
 }
 
 .chave img{
-  max-width: 100px;
+  max-width: 80px;
   max-height: 150px;
+  margin: 0 0 20px 0;
+}
+
+.imagem-agencia{
+  margin: 0 auto 0 auto;
+}
+
+.agencia img{
+  max-width: 40px;
+  max-height: 40px;
+  margin: 0 auto 20px auto;
+}
+
+.key{
+  margin: 0 0 10px -20px;
+}
+
+.agency{
+  display: flex;
+}
+
+.agency p{
+  margin: 0 20px 0 0;
+}
+
+.acount{
+  display: flex;
+}
+
+.acount p{
+  margin: 0 20px 0 0;
+
 }

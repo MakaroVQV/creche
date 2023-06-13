@@ -83,26 +83,26 @@
         <!-- Posters -->
         @foreach($postagem as $value)
         <div class="posters">
-            <div class="titulo-1">
+            <div class="titulo">
                 <img src="{{asset('/imagens/megafone.png')}}">
+                </div>
+
                 <p>{{ $value->titulo }}</p>
-            </div>
             <div class="imagem-centro">
                 <img src="{{asset('/imagens/luis.jpg')}}">
             </div>
             <div class="descricao">
                 <p>{{ $value->conteudo }}</p>
-                <div class="curtir">
-                    <img src="{{asset('/imagens/coracao.png')}}" class="coracao">
-                    <p>Curtir</p>
-                </div>
             </div>
         </div>
         @endforeach
 
         <div class="posters">
-            <div class="titulo-2">
+            <div class="titulo">
                 <img src="{{asset('/imagens/megafone.png')}}" alt="">
+                </div>
+
+                <div class="flex">
                 <p>Dia internacional da Mulher</p>
             </div>
             <div class="imagem-centro">
@@ -110,18 +110,19 @@
             </div>
             <div class="descricao">
                 <p>Nós da Jardim dos Sonhos viemos parabenizar todas as mulheres de dentro e fora da nossa instituição. Mas, principalmente a nossa grande equipe, composta quase que totalmente por excepcionais mulheres!</p>
-                <div class="curtir">
-                    <img src="{{asset('/imagens/coracao.png')}}" class="coracao">
-                    <p>Curtir</p>
-                </div>
+              
             </div>
         </div>
 
         <div class="posters">
-            <div class="titulo-3">
+            <div class="titulo">
                 <img src="{{asset('/imagens/megafone.png')}}" alt="">
+                </div>
+
+                <div class="flex">
                 <p>Dia Mundial do Autismo</p>
-            </div>
+                </div>
+
             <div class="imagem-centro">
                 <img src="{{asset('/imagens/luis.jpg')}}">
             </div>
@@ -130,10 +131,6 @@
                 <p>🧩 2 de abril dia mundial do autismo 🧩<br>
                     Um dia especial para pessoas incríveis 💙</p>
                 </center>
-                <div class="curtir">
-                    <img src="{{asset('/imagens/coracao.png')}}" class="coracao">
-                    <p>Curtir</p>
-                </div>
             </div>
         </div>
     </div>
@@ -156,28 +153,11 @@ function closeNav() {
   document.body.style.backgroundColor = "white";
 }
 
-function toggleSubMenu(subMenuId) {
-  var subMenu = document.getElementById(subMenuId);
-  var isOpen = subMenu.classList.contains('open');
 
-  // Fecha todos os submenus
-  var subMenus = document.getElementsByClassName("sub-menu");
-  for (var i = 0; i < subMenus.length; i++) {
-    subMenus[i].classList.remove('open');
-    subMenus[i].style.display = "none";
-  }
-
-  // Abre ou fecha o submenu atual
-  if (!isOpen) {
-    subMenu.classList.add('open');
-    subMenu.style.display = "block";
-  }
-}
 
         // // document.getElementById('img-1').addEventListener('click', function() {
         // // document.getElementById('menu-lateral').style.left = '0'; 
         // });
     </script>
-
 
 </body>
