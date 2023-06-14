@@ -34,16 +34,5 @@ class MedicoSeeder extends Seeder
             'tipo_sanguineo'    => 'O-',
             'observacoes'       => 'Criança diabética',
         ]);
-
-        DB::table('fichas_medica')->insert([
-            'aluno_id'          => '3',
-            'altura'            => '100',
-            'peso'              => '45',
-            'alergias'          => '',
-            'medicamentos'      => '',
-            'tipo_sanguineo'    => 'AB+',
-            'observacoes'       => '',
-        ]);
-
     }
 }

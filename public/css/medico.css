@@ -554,17 +554,11 @@ font-weight: 100;
   color: #DF0209;
 }
 
-.btn-primary{
-  background-image: url("../imagens/upload.png");
-  background-color: #009CDE;
-  width:48px ;
-  height:50px ;
-  margin: 380px 0 0 250px;
+.my-4{
+  margin: 450px auto 0 auto;
   border-radius: 8px;
-  text-decoration: none;
-  border: none;
   background-repeat: no-repeat, no-repeat;
-  background-size: 100%
+  background-size: 100%;
 }
 
 /*card 3*/
@@ -602,6 +596,18 @@ font-weight: 100;
 
 .descricao p{
   color: #000000;
+}
+
+#botao{
+  background-color: #009CDE; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 12px;
 }
 
 /*cards*/
