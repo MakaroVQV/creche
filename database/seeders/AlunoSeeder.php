@@ -20,11 +20,5 @@ class AlunoSeeder extends Seeder
             'genero'      => 'Masculino'
         ]);
         
-        DB::table('alunos')->insert([
-            'name'          => 'Erick Filho 2',
-            'responsavel_id'       => 2,
-            'idade'            =>5,
-            'genero'      => 'Masculino'
-        ]);   
     }
 }

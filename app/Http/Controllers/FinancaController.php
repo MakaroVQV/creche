@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Financa;
 use App\Models\User;
+use App\Models\Aluno;
 
 class FinancaController extends Controller
 {
@@ -15,11 +16,11 @@ class FinancaController extends Controller
     {   
         
         $financas = Financa::orderby('id')->get();
-        return view('financas.index', ['financas' => $financas]);
+        return view('financas.index', ['financa' => $financas]);
     }
     public function exibir()
     {
-        $user = Auth::user('responsavel');
+        $user = Auth::user('id');
         //$status = Financa::where('status', 'pendente')->get();
         $financas = Financa::where('responsavel_id', $user->id)->get();
         //$pendentes = Financa::where('status', 'pendente', $user->id)->get();
@@ -39,7 +40,7 @@ class FinancaController extends Controller
             'responsavel_id'    => 'required',
             'vencimento'        => 'required',
             'valor'             => 'required',
-            'valor_pagos'       => 'required',
+            'valor_pagos'       => '',
             'status'            => 'required'
         ]);
 
@@ -73,7 +74,7 @@ class FinancaController extends Controller
         $validated  = $request->validate([
             'vencimento'     => 'required',
             'valor'          => 'required',
-            'valor_pagos'    => 'required',
+            'valor_pagos'    => '',
             'status'         => 'required'
         ]);
 

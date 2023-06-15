@@ -318,6 +318,13 @@ input[type="checkbox"] {
     }
 
     .nome{
+      /* margin: 30px 0 0 0; */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nomeTeto{
       margin: 30px 0 0 0;
       display: flex;
       align-items: center;
@@ -325,8 +332,8 @@ input[type="checkbox"] {
     }
 
     .nome h3{
-      font-size: 24px;
       font-family: arial;
+      text-decoration: none;
     }
 
     .baixo{
@@ -387,6 +394,22 @@ input[type="checkbox"] {
     .numero img{
       margin: 0 10px 0 10px;
       float: left;
+    }
+
+    .botao{
+      position: absolute;
+      top: -15px;
+      right: 30px;
+      background-color: #009CDE; /* Green */
+      border: none;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 12px;
+      width: 100px;
+      height: 50px;
     }
     
     

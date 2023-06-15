@@ -197,3 +197,8 @@ Route::put('/postagem/{id}', [PostagemController::class, 'update'] )
 //Destroy
 Route::delete('/postagem/{id}', [PostagemController::class, 'destroy'] )
 ->name('postagem.destroy')->middleware('can:is_admin');
+
+//--------------------------------------------------------------------------
+
+Route::get('selecionarAluno/{id}', [PerfilController::class, 'selecionarAluno'] )
+->name('selecionarAluno');

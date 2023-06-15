@@ -9,8 +9,8 @@
     <title>Creche</title>
 </head>
 <body>
-   <!-- Menu acima-->
-   <div class="main">
+    <!-- Menu acima-->
+    <div class="main">
         <navbar class="navbar">
             <div class="esquerda-nav">
                 <div onclick="openNav()"><img src="{{asset('/imagens/icon menu.png')}}" class="menu-azul"></div>
@@ -37,37 +37,18 @@
         </div>
         
         <div class="retangulo">
-      <a href="#" onclick="toggleSubMenu('subMenuFinanca')">
-        <img src="{{asset('/imagens/icon financeiro azul.png')}}">
-        <div class="esquerda"><img src="{{asset('/imagens/icon seta cinza.png')}}" id="seta1"></div>
-        <p>Financeiro</p>
-        </div>
-        <div id="subMenuFinanca" class="sub-menu">
-          <div class="div-container">
-            <a href="{{ url('/financa#pendentes')}}">Pendentes</a>
-            <a href="{{ url('/financa#pagas')}}">Pagas</a>
-            <a href="{{ url('/financa#dados')}}">Dados</a>
-          </div>
+      <a href="{{ url('/financas/Financa')}}"><img src="{{asset('/imagens/icon financeiro cinza.png')}}">
+        <p>Financeiro</p></a>
         </div>
       </a>
 
       <div class="retangulo">
-      <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home cinza.png')}}"><p>Home</p></a>
+      <a href="{{ url('/home')}}"><img src="{{asset('/imagens/icon home azul.png')}}"><p>Home</p></a>
       </div>
 
       <div class="retangulo">
-      <a href="#" onclick="toggleSubMenu('subMenuMedico')">
-        <img src="{{asset('/imagens/icon saude cinza.png')}}">
-        <div class="esquerda"><img src="{{asset('imagens/icon seta cinza.png')}}" id="seta2"></div>
-        <p>Saude</p>
-        </div>
-
-        <div id="subMenuMedico" class="sub-menu">
-          <div class="div-container">
-            <a href="{{ url('/medico#ficha-medica')}}">Ficha Médica</a>
-            <a href="{{ url('/medico#atestados')}}">Atestados</a>
-            <a href="{{ url('/medico#cardapio')}}">Cardápio</a>
-          </div>
+      <a href="{{ url('/saude')}}"><img src="{{asset('/imagens/icon saude cinza.png')}}">
+        <p>Saúde</p></a>
         </div>
 
 
@@ -76,7 +57,15 @@
         <p>Perfil</p>
       </a>
       </div>
+
+      <div class="retangulo">
+      <a href="{{ url('/usuarios/')}}"><img src="{{asset('/imagens/cadeado.png')}}">
+      <p>Admin</p>
+      </a>
+      </div>
     </div>
+
+    
 
     <!-- Footer do menu lateral -->
     <div class="footer-menu">
@@ -123,15 +112,16 @@
         <p class="pago2"></p>
         <p class="pendente">{{$value->status}}</p>
         
+        
         <a href="#" class="imagem-clicavel" onclick="expandirDetalhe(this);">
           <img id="seta-img" src="{{asset('/imagens/seta-azul.png')}}"/>
         </a>
+        
         <div id="conteudo-oculto" class="oculto">
           <!-- Conteúdo oculto -->
          <form action="">
-          <div>
-            <label for="arquivo">Anexar arquivo <img src="{{asset('/imagens/anexo-cinza.png')}}"></label>
-            <input type="file" name="arquivo" id="arquivo">
+          <div class="invi">
+            <label for="document">Anexar arquivo <img src="{{asset('/imagens/anexo-cinza.png')}}"></label>
           </div>
          </form>
         </div>
