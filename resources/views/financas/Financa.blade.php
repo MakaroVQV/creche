@@ -112,15 +112,16 @@
         <p class="pago2"></p>
         <p class="pendente">{{$value->status}}</p>
         
+        
         <a href="#" class="imagem-clicavel" onclick="expandirDetalhe(this);">
           <img id="seta-img" src="{{asset('/imagens/seta-azul.png')}}"/>
         </a>
+        
         <div id="conteudo-oculto" class="oculto">
           <!-- Conteúdo oculto -->
          <form action="">
-          <div>
-            <label for="arquivo">Anexar arquivo <img src="{{asset('/imagens/anexo-cinza.png')}}"></label>
-            <input type="file" name="arquivo" id="arquivo">
+          <div class="invi">
+            <label for="document">Anexar arquivo <img src="{{asset('/imagens/anexo-cinza.png')}}"></label>
           </div>
          </form>
         </div>

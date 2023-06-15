@@ -188,7 +188,7 @@
               <label for="document"></label>
               <input type="file" name="document" id="document" class="form-control-file">
             </div>
-            <button type="submit" class="btn btn-primary"></button>
+            <button type="submit" class="btn btn-primary" id="botao">Enviar  </button>
           </form>
         </div>
       </div>
