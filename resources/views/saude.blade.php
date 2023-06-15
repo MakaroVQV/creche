@@ -179,19 +179,22 @@
 
 
       <div class="cards" id="divClicavel">
-        <img src="{{asset('/imagens/icon atestados.png')}}">
-        <p>Atestado</p>
-        <div class="texto-expandido">
-          <form action="{{ route('upload_docs') }}" method="post" enctype="multipart/form-data" class="my-4">
-            @csrf
-            <div class="form-group">
-              <label for="document"></label>
-              <input type="file" name="document" id="document" class="form-control-file">
-            </div>
-            <button type="submit" class="btn btn-primary" id="botao">Enviar  </button>
-          </form>
+          <img src="{{asset('/imagens/icon atestados.png')}}">
+          <p>Atestado</p>
+          <div class="texto-expandido">
+            <form action="{{ route('upload_docs') }}" method="post" enctype="multipart/form-data" class="my-4">
+              @csrf
+              <div class="form-group">
+                <label for="document">
+                <input type="file" name="document" id="document" class="form-control-file">
+            </label>
+              </div>
+              <label for="submit">
+             <button type="submit" class="btn btn-primary" id="botao">Enviar</button>
+            </label>
+           </form>
+          </div>
         </div>
-      </div>
 
       <div class="cards">
         <img src="{{asset('/imagens/icon cardapio.png')}}">
@@ -244,43 +247,41 @@
         document.body.style.backgroundColor = "white";
       }
 
-      function toggleSubMenu(subMenuId) {
-        var subMenu = document.getElementById(subMenuId);
-        var isOpen = subMenu.classList.contains('open');
-
-        // Fecha todos os submenus
-        var subMenus = document.getElementsByClassName("sub-menu");
-        for (var i = 0; i < subMenus.length; i++) {
-          subMenus[i].classList.remove('open');
-          subMenus[i].style.display = "none";
-        }
-
-        // Abre ou fecha o submenu atual
-        if (!isOpen) {
-          subMenu.classList.add('open');
-          subMenu.style.display = "block";
-        }
-      }
-
-      // constante para os cards cards se abrirem
-
       const cards = document.querySelectorAll('.cards');
 
-      cards.forEach(card => {
-        card.addEventListener('click', () => {
-          const textoExpandido = card.querySelector('.texto-expandido');
-          card.classList.toggle('expandido');
-          textoExpandido.classList.toggle('mostrar');
-          card.classList.toggle('card-normal'); // Adicione essa linha para alternar entre as classes
-        });
-      });
+cards.forEach(card => {
+card.addEventListener('click', () => {
+const textoExpandido = card.querySelector('.texto-expandido');
+card.classList.toggle('expandido');
+textoExpandido.classList.toggle('mostrar');
+card.classList.toggle('card-normal');
+});
+});
 
-      var document = document.getElementByid('document');
-      var divClicavel = document.getElementbyid('divClicavel');
+var divClicavel = document.getElementById('divClicavel');
+var elementosInternos = divClicavel.querySelectorAll('input, button, select, label'); // Adicione outros elementos internos, se necessário
 
-      document.addEventListener('click', function(event){
-        event.stopPropagation();
-      })
+elementosInternos.forEach(elemento => {
+elemento.addEventListener('click', function(event) {
+event.stopPropagation();
+});
+});
+
+function validarFormulario() {
+var inputFile = document.getElementById('document');
+if (inputFile.files.length === 0) {
+alert('Selecione um arquivo');
+return false;
+} else {
+var botaoEnviar = document.getElementById('botao');
+botaoEnviar.innerText = 'Enviado';
+var imagemEnviado = document.createElement('img');
+imagemEnviado.src = './imagem/salvo.png'; // Defina o caminho para a imagem desejada
+var divBotao = document.getElementById('divClicavel');
+divBotao.appendChild(imagemEnviado);
+return true;
+}
+}
 
       // // document.getElementById('img-1').addEventListener('click', function() {
       // // document.getElementById('menu-lateral').style.left = '0'; 
