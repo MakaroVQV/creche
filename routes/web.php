@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\CardapioController;
 use App\Http\Controllers\FinancaController;
 use App\Http\Controllers\FullCalenderController;
 use App\Http\Controllers\MedicoController;
@@ -139,6 +140,7 @@ Route::get('/teste', [App\Http\Controllers\UserController::class, 'teste']);
 Route::get('/saude',[MedicoController::class,'index2'])
 ->name('saude.index');
 
+
 Route::get('/medico/index',[MedicoController::class,'index'])
 ->name('medico.index');
 
@@ -198,7 +200,35 @@ Route::put('/postagem/{id}', [PostagemController::class, 'update'] )
 Route::delete('/postagem/{id}', [PostagemController::class, 'destroy'] )
 ->name('postagem.destroy')->middleware('can:is_admin');
 
-//--------------------------------------------------------------------------
+//-----------------------------------------------------------------------//
 
 Route::get('selecionarAluno/{id}', [PerfilController::class, 'selecionarAluno'] )
 ->name('selecionarAluno');
+
+//------------------------------ Cardapio ------------------------------//
+
+Route::get('/cardapio', [CardapioController::class, 'index'] )
+->name('cardapio.index')->middleware('can:is_admin');
+
+//create
+Route::get('/cardapio/create', [CardapioController::class, 'create'] )
+->name('cardapio.create')->middleware('can:is_admin');
+
+//Salvar
+Route::post('/cardapio/create', [CardapioController::class, 'store'] )
+->name('cardapio.store')->middleware('can:is_admin');
+
+Route::get('/cardapio/{id}', [CardapioController::class, 'show'] )
+->name('cardapio.show')->middleware('can:is_admin');
+
+//edit
+Route::get('/cardapio/{id}/edit', [CardapioController::class, 'edit'] )
+->name('cardapio.edit')->middleware('can:is_admin');
+
+//att
+Route::put('/cardapio/{id}', [CardapioController::class, 'update'] )
+->name('cardapio.update')->middleware('can:is_admin');
+
+//Destroy
+Route::delete('/cardapio/{id}', [CardapioController::class, 'destroy'] )
+->name('cardapio.destroy')->middleware('can:is_admin');

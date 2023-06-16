@@ -48,7 +48,7 @@ protected function authenticated(Request $request, $user)
         return redirect()->route('usuarios.index');
     }
     else {
-        return redirect('/home');
+        return redirect('/perfil');
     }
 }
 }

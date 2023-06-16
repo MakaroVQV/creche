@@ -316,7 +316,9 @@ html{
   flex-direction: row;
   align-items: center;
   cursor: pointer;
-  transition: all 0.5s ease-in-out
+  transition: all 0.5s ease-in-out;
+  /* margin-right: auto;
+  margin-left: auto; */
 }
 
 .cards:hover{
@@ -600,22 +602,6 @@ font-weight: 100;
 
 #botao{
   background-color: #009CDE; /* Green */
-  border: none;
-  color: white;
-  padding: 10px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 12px;
-}
-
-.descricao p{
-  color: #000000;
-}
-
-#botao{
-  background-color: #009CDE; /* Green */
   margin: 10px 0 0 0;
   border: none;
   color: white;
@@ -660,17 +646,20 @@ label{
   cursor: pointer;
 }
 
-.cards .btn-primary {
-  pointer-events: none;
-  cursor: pointer;
-}
-
-#botao {
-  pointer-events: none;
-}
-
 #botao-label{
     pointer-events: none;
+}
+
+footer{
+  padding: 100px;
+}
+
+#imagem-animada{
+  margin: 0 0 -10px 10px;
+  width: 40px;
+  height: 40px;
+  display: none;
+  transition: opacity 0.9s ease-in-out;
 }
 
 /*cards*/

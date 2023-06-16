@@ -109,19 +109,21 @@
         </tbody>
       </table> -->
 
-      <table>
+      <table>      
         <tr>
           <th>Evento</th>
           <th>Começo</th>
           <th>Término</th>
         </tr>
+
+        @foreach ($eventos as $value)
         <tr>
           <td>{{ $value->title }}</td>
           <td>{{ $value-> start }}</td>
           <td>{{ $value-> end }}</td>
         </tr>
+        @endforeach
       </table>
-
     </div>
 
     <div class="circulo"></div>

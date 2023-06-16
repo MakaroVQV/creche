@@ -117,7 +117,7 @@
       <div class="baixo">
         <div class="left">
           <div class="titulo-1">
-            <p>Nome completo do Responsável</p>
+            <p>Nome do Responsável</p>
           </div>
           <div class="texto-1">
             <p>{{$usuario->name }}</p>

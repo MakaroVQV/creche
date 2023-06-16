@@ -14,10 +14,10 @@ class AlunoSeeder extends Seeder
     public function run(): void
     {
         DB::table('alunos')->insert([
-            'name'          => 'Erick Filho 1',
+            'name'                 => 'Sara Matos',
             'responsavel_id'       => 2,
-            'idade'            =>5,
-            'genero'      => 'Masculino'
+            'idade'                => 5,
+            'genero'               => 'Feminino'
         ]);
         
     }

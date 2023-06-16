@@ -15,8 +15,8 @@ class EventTableSeeder extends Seeder
     {
         DB::table('events')->insert([
             'title'          => 'Final',
-            'start'         => '2023-06-21 19:30:00',
-            'end'      => '2023-06-21 20:30:00',
+            'start'          => '2023-06-21 19:30:00',
+            'end'            => '2023-06-21 20:30:00',
         ]);
     }
 }

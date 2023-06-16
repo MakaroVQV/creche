@@ -179,114 +179,162 @@
 
 
       <div class="cards" id="divClicavel">
-          <img src="{{asset('/imagens/icon atestados.png')}}">
-          <p>Atestado</p>
-          <div class="texto-expandido">
-            <form action="{{ route('upload_docs') }}" method="post" enctype="multipart/form-data" class="my-4">
-              @csrf
-              <div class="form-group">
-                <label for="document">
-                <input type="file" name="document" id="document" class="form-control-file">
-            </label>
-              </div>
-              <label for="submit">
-             <button type="submit" class="btn btn-primary" id="botao">Enviar</button>
-            </label>
-           </form>
-          </div>
-        </div>
-
-      <div class="cards">
-        <img src="{{asset('/imagens/icon cardapio.png')}}">
-        <p>Cardápio</p>
+        <img src="{{asset('/imagens/icon_atestados.png')}}">
+        <p>Atestado</p>
         <div class="texto-expandido">
-          <div class="cardapio">
-            <p><strong>Colocação</strong></p>
-            <div class="descricao">
-              <p>Mini pão francês com manteiga;<br> Café com leite</p>
+          <form action="{{ route('upload_docs') }}" method="post" enctype="multipart/form-data" class="my-4">
+            @csrf
+            <div class="form-group">
+              <label for="document">
+                <input type="file" name="document" id="document" class="form-control-file">
+              </label>
             </div>
-          </div>
-          <div class="cardapio">
-            <p><strong>Lanche da manhã</strong></p>
-            <div class="descricao">
-              <p>Biscoito maionese;<br> Suco de maracujá</p>
-            </div>
-          </div>
-          <div class="cardapio">
-            <p><strong>Almoço</strong></p>
-            <div class="descricao">
-              <p>Arroz, Feijão preto, Carne moída, Macarrão a bolonhesa;<br><br>
-                Suco: Limonada;<br><br>
-                Sobremesa: Maçã
-              </p>
-            </div>
-          </div>
-          <div class="cardapio">
-            <p><strong>Lanche da Tarde</strong></p>
-            <div class="descricao">
-              <p>Duo de frutas (maçã e banana)</p>
-            </div>
-          </div>
+            <div class="enviar">
+              <label for="submit">
+                <button type="submit" class="btn btn-primary" id="botao">Enviar</button>
+              </label>
+          </form>
+          <img src="imagens/salvo.png" id="imagem-animada">
         </div>
       </div>
     </div>
 
+    @foreach ($cardapio as $info)
+    <div class="cards">
+      <img src="{{asset('/imagens/icon cardapio.png')}}">
+      <p>Cardápio</p>
+      <div class="texto-expandido">
+        <div class="cardapio">
+          <p><strong>Colação</strong></p>
+          <div class="descricao">
+            <p>{{$info->colacao}}</p>
+          </div>
+        </div>
+        <div class="cardapio">
+          <p><strong>Lanche da manhã</strong></p>
+          <div class="descricao">
+            <p>{{$info->lanche_manha}}</p>
+          </div>
+        </div>
+        <div class="cardapio">
+          <p><strong>Almoço</strong></p>
+          <div class="descricao">
+            <p>{{$info->almoco}}</p>
+          </div>
+        </div>
+        <div class="cardapio">
+          <p><strong>Lanche da Tarde</strong></p>
+          <div class="descricao">
+            <p>{{$info->lanche_tarde}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  @endforeach
 
-    <script>
-      /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
-      function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
-        document.getElementById("main").style.marginLeft = "250px";
-        document.body.style.backgroundColor = "rgba(0,0,0,0.0)";
+
+  <script>
+    /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+      document.body.style.backgroundColor = "rgba(0,0,0,0.0)";
+    }
+
+    /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
+      document.body.style.backgroundColor = "white";
+    }
+
+    function toggleSubMenu(subMenuId) {
+      var subMenu = document.getElementById(subMenuId);
+      var isOpen = subMenu.classList.contains('open');
+
+      // Fecha todos os submenus
+      var subMenus = document.getElementsByClassName("sub-menu");
+      for (var i = 0; i < subMenus.length; i++) {
+        subMenus[i].classList.remove('open');
+        subMenus[i].style.display = "none";
       }
 
-      /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
-      function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-        document.getElementById("main").style.marginLeft = "0";
-        document.body.style.backgroundColor = "white";
+      // Abre ou fecha o submenu atual
+      if (!isOpen) {
+        subMenu.classList.add('open');
+        subMenu.style.display = "block";
       }
+    }
 
-      const cards = document.querySelectorAll('.cards');
+    // constante para os cards cards se abrirem
 
-cards.forEach(card => {
-card.addEventListener('click', () => {
-const textoExpandido = card.querySelector('.texto-expandido');
-card.classList.toggle('expandido');
-textoExpandido.classList.toggle('mostrar');
-card.classList.toggle('card-normal');
-});
-});
+    const cards = document.querySelectorAll('.cards');
 
-var divClicavel = document.getElementById('divClicavel');
-var elementosInternos = divClicavel.querySelectorAll('input, button, select, label'); // Adicione outros elementos internos, se necessário
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        const textoExpandido = card.querySelector('.texto-expandido');
+        card.classList.toggle('expandido');
+        textoExpandido.classList.toggle('mostrar');
+        card.classList.toggle('card-normal');
+      });
+    });
 
-elementosInternos.forEach(elemento => {
-elemento.addEventListener('click', function(event) {
-event.stopPropagation();
-});
-});
+    var divClicavel = document.getElementById('divClicavel');
+    var elementosInternos = divClicavel.querySelectorAll('input, button, select, label'); // Adicione outros elementos internos, se necessário
 
-function validarFormulario() {
-var inputFile = document.getElementById('document');
-if (inputFile.files.length === 0) {
-alert('Selecione um arquivo');
-return false;
-} else {
-var botaoEnviar = document.getElementById('botao');
-botaoEnviar.innerText = 'Enviado';
-var imagemEnviado = document.createElement('img');
-imagemEnviado.src = './imagem/salvo.png'; // Defina o caminho para a imagem desejada
-var divBotao = document.getElementById('divClicavel');
-divBotao.appendChild(imagemEnviado);
-return true;
-}
-}
+    elementosInternos.forEach(elemento => {
+      elemento.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+    });
 
-      // // document.getElementById('img-1').addEventListener('click', function() {
-      // // document.getElementById('menu-lateral').style.left = '0'; 
-      // });
-    </script>
+    function validarFormulario() {
+      var inputFile = document.getElementById('document');
+      if (inputFile.files.length === 0) {
+        alert('Selecione um arquivo');
+        return false;
+      } else {
+        var botaoEnviar = document.getElementById('botao');
+        botaoEnviar.innerText = 'Enviado';
+
+        //caso o código abaixo não funcione
+        //window.imagemSalva = "{{ asset('imagem/salvo.png') }}";
+        //var imagemEnviado = document.createElement('img');
+        //imagemEnviado.src = window.imagemSalva;
+
+        var imagemEnviado = document.createElement('img');
+        imagemEnviado.src = './imagem/salvo.png'; // Defina o caminho para a imagem desejada
+
+        var divBotao = document.getElementById('divClicavel');
+        divBotao.appendChild(imagemEnviado);
+        return true;
+      }
+    }
+
+    document.getElementById('botao').addEventListener('click', function(event) {
+      event.preventDefault(); // Impede o comportamento padrão de enviar o formulário
+
+      var imagemAnimada = document.getElementById('imagem-animada');
+      imagemAnimada.style.display = 'inline-block';
+      imagemAnimada.style.opacity = 1;
+
+      setTimeout(function() {
+        imagemAnimada.style.opacity = 0;
+      }, 2000);
+    });
+
+    var imagemAnimada = document.getElementById('imagem-animada');
+    imagemAnimada.addEventListener('transitionend', function() {
+      if (imagemAnimada.style.opacity === '0') {
+        imagemAnimada.style.display = 'none';
+      }
+    });
+
+    // // document.getElementById('img-1').addEventListener('click', function() {
+    // // document.getElementById('menu-lateral').style.left = '0'; 
+    // });
+  </script>
 
 
 </body>

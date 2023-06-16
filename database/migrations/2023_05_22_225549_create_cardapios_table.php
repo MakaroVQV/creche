@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('cardapios', function (Blueprint $table) {
             $table->id();
-            $table->string('colocao');
-            $table->string('lache_manha');
+            $table->string('colacao');
+            $table->string('lanche_manha');
             $table->string('almoco');
-            $table->string('lache_tarde');
+            $table->string('lanche_tarde');
             $table->timestamps();
         });
     }

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Medico;
 use App\Models\Aluno;
-use App\Models\User;
+use App\Models\Cardapio;
 use Illuminate\Support\Facades\Hash;
 
 class MedicoController extends Controller
@@ -45,6 +45,7 @@ class MedicoController extends Controller
 
         $ficha = new Medico;
         $ficha->aluno_id        = $request->aluno_id;
+        $ficha->cardapio_id     = $request->cardapio_id;
         $ficha->altura          = $request->input('altura');
         $ficha->peso            = $request->input('peso');
         $ficha->alergias        = $request->input('alergias');
@@ -113,7 +114,8 @@ class MedicoController extends Controller
 
         //dd($aluno_id);
         $fichas = Medico::where('aluno_id', $aluno_id)->orderby('id')->get();
+        $cardapio = Cardapio::orderby('id')->get();
         //dd ($fichas);
-        return view('/saude', ['fichas' => $fichas]);
+        return view('/saude', ['fichas' => $fichas, 'cardapio' => $cardapio]);
     }
 }

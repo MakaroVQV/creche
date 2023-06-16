@@ -330,6 +330,11 @@ return [
             'icon' => 'fas fa-fw fa-lock',
         ],
         [
+            'text' => 'Cardápio',
+            'url'  => 'cardapio/',
+            'icon' => 'fas fa-fw fa-lock',
+        ],
+        [
             'text' => 'Finanças',
             'url'  => 'financas/',
             'icon' => 'fas fa-fw fa-lock',
@@ -338,7 +343,8 @@ return [
             'text' => 'Postagens',
             'url'  => 'postagem/',
             'icon' => 'fas fa-fw fa-lock',
-        ],[
+        ],
+        [
             'text' => 'Calendário',
             'url'  => '/usuarios/fullcalender',
             'icon' => 'nav-icon fas fa-calendar-alt',
