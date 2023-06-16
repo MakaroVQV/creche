@@ -299,7 +299,7 @@ html{
 
 .invisible{
   margin: auto;
-  width: 1400px;
+  width: auto;
   justify-content: space-between;
   display:flex;
 }
