@@ -45,7 +45,6 @@ class MedicoController extends Controller
 
         $ficha = new Medico;
         $ficha->aluno_id        = $request->aluno_id;
-        $ficha->cardapio_id     = $request->cardapio_id;
         $ficha->altura          = $request->input('altura');
         $ficha->peso            = $request->input('peso');
         $ficha->alergias        = $request->input('alergias');

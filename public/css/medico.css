@@ -225,7 +225,7 @@ html{
     }
     
     
-    /* When you mouse over the navigation links, change their color */
+    /* When you mouse over the navigation links, change their color */b
     .sidenav a:hover {
       font-weight: bold;
       color: #004085;
@@ -600,7 +600,7 @@ font-weight: 100;
   color: #000000;
 }
 
-#botao{
+#teste{
   background-color: #009CDE; /* Green */
   margin: 10px 0 0 0;
   border: none;

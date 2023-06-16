@@ -19,6 +19,18 @@ class AlunoSeeder extends Seeder
             'idade'                => 5,
             'genero'               => 'Feminino'
         ]);
+        DB::table('alunos')->insert([
+            'name'                 => 'Felipe Matos',
+            'responsavel_id'       => 2,
+            'idade'                => 8,
+            'genero'               => 'Masculino'
+        ]);
+        DB::table('alunos')->insert([
+            'name'                 => 'Jorge',
+            'responsavel_id'       => 3,
+            'idade'                => 7,
+            'genero'               => 'Masculino'
+        ]);
         
     }
 }
